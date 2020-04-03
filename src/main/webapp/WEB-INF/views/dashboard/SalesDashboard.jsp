@@ -494,7 +494,7 @@
 					</li>
 					<li class="list-group-item d-flex pd-x-20">
 						<div class="avatar">
-							<img src="../../assets/img/img23.jpg" class="rounded-circle" alt="">
+							<img src="../../assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="pd-l-10">
 							<p class="tx-medium mg-b-0">Reynante Labares</p>
@@ -519,7 +519,7 @@
 					</li>
 					<li class="list-group-item d-flex pd-x-20">
 						<div class="avatar">
-							<img src="../../assets/img/img16.jpg" class="rounded-circle" alt="">
+							<img src="../../assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="pd-l-10">
 							<p class="tx-medium mg-b-0">Marianne Audrey</p>

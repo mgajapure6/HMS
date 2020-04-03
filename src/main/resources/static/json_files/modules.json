@@ -98,60 +98,6 @@
 		]
 	},
 	{
-		"module_name": "Sales",
-		"isLink": false,
-		"module_icon": "shopping-bag",
-		"menu": [
-			{
-				"menu_name": "Estimates",
-				"isLink": true,
-				"url": "app/sales/estimatesMaster"
-			},
-			{
-				"menu_name": "Invoice",
-				"isLink": true,
-				"url": "app/sales/invoiceMaster"
-			},
-			{
-				"menu_name": "Recurring Invoices",
-				"isLink": true,
-				"url": "app/sales/recurringInvoiceMaster"
-			},
-			{
-				"menu_name": "Customers",
-				"isLink": true,
-				"url": "app/sales/customerMaster"
-			}
-		]
-	},
-	{
-		"module_name": "Giravi",
-		"isLink": false,
-		"module_icon": "shopping-bag",
-		"menu": [
-			{
-				"menu_name": "Giravi Master",
-				"isLink": true,
-				"url": "app/giravi/giraviMaster"
-			},
-			{
-				"menu_name": "Giravi Customers",
-				"isLink": true,
-				"url": "gahan/GahanCustomer"
-			},
-			{
-				"menu_name": "Giravi Items",
-				"isLink": true,
-				"url": "gahan/GahanItems"
-			},
-			{
-				"menu_name": "Giravi Report",
-				"isLink": true,
-				"url": "gahan/GahanReport"
-			}
-		]
-	},
-	{
 		"module_name": "Settings",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -180,6 +126,135 @@
 				"menu_name": "Loan Duration Master",
 				"isLink": true,
 				"url": "app/setting/loanDurationMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Party",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Party Master",
+				"isLink": true,
+				"url": "app/party/partyMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Aappointment",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Appointment Master",
+				"isLink": true,
+				"url": "app/appointment/appointmentMaster"
+			}
+		]
+	},{
+		"module_name": "Patient",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Out Patient Master",
+				"isLink": true,
+				"url": "app/patient/outPatientMaster"
+			},
+			{
+				"menu_name": "In Patient Master",
+				"isLink": true,
+				"url": "app/patient/inPatientMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Doctor",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Doctor Master",
+				"isLink": true,
+				"url": "app/doctor/doctorMaster"
+			}
+		]
+	},{
+		"module_name": "Billing",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Billing Master",
+				"isLink": true,
+				"url": "app/billing/billingMaster"
+			}
+		]
+	},{
+		"module_name": "Blood Bank",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Blood Bank Master",
+				"isLink": true,
+				"url": "app/bloodBank/bloodBankMaster"
+			}
+		]
+	},{
+		"module_name": "Lab",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Lab Master",
+				"isLink": true,
+				"url": "app/lab/labMaster"
+			}
+		]
+	},{
+		"module_name": "Ward / Room",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Room Master",
+				"isLink": true,
+				"url": "app/room/roomMaster"
+			}
+		]
+	},{
+		"module_name": "Payroll",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Payroll Master",
+				"isLink": true,
+				"url": "app/payroll/payrollMaster"
+			}
+		]
+	},{
+		"module_name": "Employee",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Employee Master",
+				"isLink": true,
+				"url": "app/employee/employeeMaster"
+			}
+		]
+	},{
+		"module_name": "Donation",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Organ Donation Master",
+				"isLink": true,
+				"url": "app/donation/organDonationMaster"
 			}
 		]
 	},

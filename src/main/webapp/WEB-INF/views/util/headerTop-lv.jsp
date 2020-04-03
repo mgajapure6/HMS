@@ -17,7 +17,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img6.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Socrates Itumay</strong>
@@ -31,7 +31,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Joyce Chua</strong>
@@ -45,7 +45,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img7.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Althea Cabardo</strong>
@@ -59,7 +59,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img9.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Adrian Monino</strong>
@@ -86,7 +86,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img6.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -101,7 +101,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -116,7 +116,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img7.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -131,7 +131,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img9.jpg" class="rounded-circle" alt="">
+							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
