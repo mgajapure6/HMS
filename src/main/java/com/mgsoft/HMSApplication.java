@@ -28,17 +28,14 @@ import com.mgsoft.module.admin.beans.Menu;
 import com.mgsoft.module.admin.beans.Module;
 import com.mgsoft.module.admin.repository.MenuRepository;
 import com.mgsoft.module.admin.repository.ModuleRepository;
-import com.mgsoft.module.customer.beans.Customer;
-import com.mgsoft.module.customer.repositories.CustomerRepository;
-import com.mgsoft.module.giravi.beans.GiraviItem;
-import com.mgsoft.module.giravi.beans.Loan;
+import com.mgsoft.module.customer.beans.PartyMaster;
+import com.mgsoft.module.customer.repositories.PartyMasterRepository;
 import com.mgsoft.module.inventory.beans.InvItem;
 import com.mgsoft.module.inventory.beans.ItemCategory;
 import com.mgsoft.module.inventory.repositories.InvItemRepository;
 import com.mgsoft.module.inventory.repositories.ItemCategoryRepository;
 import com.mgsoft.module.setting.beans.Tax;
 import com.mgsoft.module.setting.repositories.TaxRepository;
-import com.mgsoft.util.DateUtil;
 
 @SpringBootApplication
 @EnableConfigurationProperties
@@ -52,7 +49,7 @@ public class HMSApplication extends SpringBootServletInitializer {
 	private ItemCategoryRepository categoryRepository;
 	
 	@Autowired
-	private CustomerRepository customerRepository;
+	private PartyMasterRepository partyMasterRepository;
 	
 	@Autowired
 	private MenuRepository menuRepository;
@@ -85,9 +82,7 @@ public class HMSApplication extends SpringBootServletInitializer {
 			    Files.delete(filePath);
 			    //f1.delete();
 			}
-		
-			
-			
+
 			Tax tax = new Tax();
 			tax.setAuthName("MGG");
 			tax.setStatus("Active");
@@ -98,56 +93,16 @@ public class HMSApplication extends SpringBootServletInitializer {
 			
 			taxRepository.save(tax);
 			
-			Customer customer = new Customer();
+			PartyMaster customer = new PartyMaster();
 			customer.setCity("Sakoli");
-			customer.setCusAddrL1("Civil Line,");
-			customer.setCusAddrL2("Behind Vetarnary hospital,");
+			customer.setAddrL1("Civil Line,");
+			customer.setAddrL2("Behind Vetarnary hospital,");
 			customer.setPincode("441802");
 			customer.setState("MH");
 			customer.setMobile("8055880605");
-			customer.setCusName("Mayur G Gajapure");
+			customer.setName("Mayur G Gajapure");
 			customer.setEmail("mgg@gmail.com");
-			customer = customerRepository.save(customer);
-			
-			Loan loan = new Loan();
-			loan.setId(0);
-			loan.setLoanNumber("L-43434");
-			loan.setIntrestRate((float) 2.5);
-			loan.setLoanAmount((float) 1000.00);
-			loan.setLoanDate(DateUtil.stringToDate(DateUtil.getCurrentDate(), "dd-MM-yyyy"));
-			//loan.setLoanTransactions(null);
-			loan.setIntrestAmount((float) 230.00);
-			loan.setNetPayableAmount((float) 1230.00);
-			loan.setTenurePeriod((float) 6);
-			loan.setTenureType("M");
-			loan.setDescription("xyz");
-			loan.setStatus("U");
-			loan.setCloseStatus("N");
-			loan.setCustomer(customer);
-			
-			List<GiraviItem> itemsList = new ArrayList<>();
-			
-			GiraviItem gi = new GiraviItem();
-			gi.setId(0);
-			gi.setItmName("Men Ring");
-			gi.setItmMetalType("G");
-			gi.setItmDesc("Gold Men Ring");
-			gi.setItmEligibleAmount((float) 15000.00);
-			gi.setItmGrossWeight((float) 5.0);
-			gi.setItmGrossWeightUom("gm");
-			gi.setItmNetWeight((float) 4.5);
-			gi.setItmNetWeightUom("gm");
-			gi.setItmQty((float) 1);
-			gi.setItmValuation((float) 20000);
-			gi.setLoan(loan);
-			itemsList.add(gi);
-			
-			loan.setGiraviItems(itemsList);
-			ArrayList<Loan> loanList = new ArrayList<>();
-			loanList.add(loan);
-			customer.setLoans(loanList);
-			
-			customerRepository.save(customer);
+			customer = partyMasterRepository.save(customer);
 			
 			ItemCategory category1 = new ItemCategory();
 			ItemCategory category2 = new ItemCategory();
@@ -200,8 +155,6 @@ public class HMSApplication extends SpringBootServletInitializer {
 			
 			categoryRepository.save(category1);
 			categoryRepository.save(category2);
-			
-			
 			
 			InvItem bottal = new InvItem();
 			bottal.setBrand("H2");
