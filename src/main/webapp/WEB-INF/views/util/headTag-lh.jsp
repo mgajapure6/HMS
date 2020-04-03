@@ -14,6 +14,8 @@
 <link href="lib/datatable/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="lib/select2/css/select2.min.css" rel="stylesheet">
 <link href="lib/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
+<link href="lib/bootstrap-table/extension/jquery.treegrid.css" rel="stylesheet">
+<link href="lib/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
 <!-- DashForge CSS -->
 <link rel="stylesheet" href="assets/horizontal/css/dashforge.css">
 <link href="lib/demo/dashforge.demo.css" rel="stylesheet">

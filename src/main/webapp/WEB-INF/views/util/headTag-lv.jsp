@@ -15,5 +15,9 @@
 <link href="lib/select2/css/select2.min.css" rel="stylesheet">
 <link href="lib/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
 <link href="lib/demo/dashforge.demo.css" rel="stylesheet">
+<link href="lib/bootstrap-table/extension/jquery.treegrid.css" rel="stylesheet">
+<link href="lib/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+
+
 <link href="assets/css/dashforge.css" rel="stylesheet">
 <link href="assets/commonCss.css" rel="stylesheet">

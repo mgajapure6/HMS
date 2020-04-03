@@ -1,11 +1,15 @@
 [
 	{
+		"id": 1,
+		"pid": 0,
 		"module_name": "Dashboard",
 		"isLink": true,
 		"module_icon": "shopping-bag",
 		"url": "app/dashboard/s"
 	},
 	{
+		"id": 2,
+		"pid": 0,
 		"module_name": "Admin",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -49,6 +53,8 @@
 		]
 	},
 	{
+		"id": 3,
+		"pid": 0,
 		"module_name": "Accounting",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -71,6 +77,8 @@
 		]
 	},
 	{
+		"id": 4,
+		"pid": 0,
 		"module_name": "Inventory",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -103,6 +111,8 @@
 		]
 	},
 	{
+		"id": 5,
+		"pid": 0,
 		"module_name": "Settings",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -135,6 +145,8 @@
 		]
 	},
 	{
+		"id": 6,
+		"pid": 0,
 		"module_name": "Party",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -147,6 +159,8 @@
 		]
 	},
 	{
+		"id": 7,
+		"pid": 0,
 		"module_name": "Aappointment",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -157,7 +171,10 @@
 				"url": "app/appointment/appointmentMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 8,
+		"pid": 0,
 		"module_name": "Patient",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -175,6 +192,8 @@
 		]
 	},
 	{
+		"id": 9,
+		"pid": 0,
 		"module_name": "Doctor",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -185,7 +204,10 @@
 				"url": "app/doctor/doctorMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 10,
+		"pid": 0,
 		"module_name": "Billing",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -196,7 +218,10 @@
 				"url": "app/billing/billingMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 11,
+		"pid": 0,
 		"module_name": "Blood Bank",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -207,7 +232,10 @@
 				"url": "app/bloodBank/bloodBankMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 12,
+		"pid": 0,
 		"module_name": "Lab",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -218,7 +246,10 @@
 				"url": "app/lab/labMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 13,
+		"pid": 0,
 		"module_name": "Ward / Room",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -229,7 +260,10 @@
 				"url": "app/room/roomMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 14,
+		"pid": 0,
 		"module_name": "Payroll",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -240,7 +274,10 @@
 				"url": "app/payroll/payrollMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 15,
+		"pid": 0,
 		"module_name": "Employee",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -251,7 +288,10 @@
 				"url": "app/employee/employeeMaster"
 			}
 		]
-	},{
+	},
+	{
+		"id": 16,
+		"pid": 0,
 		"module_name": "Donation",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -264,6 +304,8 @@
 		]
 	},
 	{
+		"id": 17,
+		"pid": 0,
 		"module_name": "Login",
 		"isLink": false,
 		"module_icon": "shopping-bag",

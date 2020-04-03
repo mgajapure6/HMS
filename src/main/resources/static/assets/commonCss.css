@@ -320,3 +320,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+.table tr th, .table tr th {
+	vertical-align: middle !important;
+}
