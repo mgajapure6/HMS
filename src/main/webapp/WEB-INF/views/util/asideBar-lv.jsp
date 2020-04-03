@@ -6,7 +6,7 @@
 <aside class="aside aside-fixed aside-main-new">
 	<div class="aside-header">
 		<a href="http://themepixels.me/dashforge/index.html" class="aside-logo">
-			dash <span>forge</span>
+			HM <span>System</span>
 		</a>
 		<a href="#" class="aside-menu-link">
 			<i data-feather="menu"></i> <i data-feather="x"></i>
