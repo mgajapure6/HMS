@@ -1,0 +1,96 @@
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: rgba(0, 0, 0, .9);
+}
+
+.dataTables_length  .select2-container {
+	z-index: 1001 !important;
+}
+
+.table tr td {
+	vertical-align: middle !important;
+}
+
+.modal-content>.alert {
+	border-radius: 0;
+}
+
+.mandlabel::first-letter {
+	color: red !important;
+}
+
+.right {
+	text-align: right;
+}
+
+.select2-selection.parsley-success, .select2-selection.parsley-success:focus
+	{
+	box-shadow: none !important;
+	border-color: #10b759;
+}
+
+.select2-selection.parsley-error, .select2-selection.parsley-error:focus
+	{
+	box-shadow: none !important;
+	border-color: #dc3545;
+}
+
+.btn.disabled, .btn:disabled {
+	color: #b9b9b9;
+	background-color: #737373;
+	border-color: #5d5d5d;
+	cursor: not-allowed;
+}
+
+.nav-aside .nav-link-new.activeLink {
+	opacity: 1;
+	color: #0168fa !important;
+	font-weight: 500;
+}
+
+.hide, .hidden {
+	display: none;
+}
+
+.footer {
+	background-color: transparent;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.df-example::before {
+	content: attr(data-label);
+	display: block;
+	position: absolute;
+	top: -8px;
+	left: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
+		sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	background-color: inherit;
+	color: #7c8794;
+	padding: 0px 5px;
+}

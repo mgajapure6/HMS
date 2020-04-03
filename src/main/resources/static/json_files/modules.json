@@ -1,0 +1,198 @@
+[
+	{
+		"module_name": "Dashboard",
+		"isLink": true,
+		"module_icon": "shopping-bag",
+		"url": "app/dashboard/s"
+	},
+	{
+		"module_name": "Admin",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Entity Master",
+				"isLink": true,
+				"status": "E",
+				"url": "app/admin/entityMaster"
+			},
+			{
+				"menu_name": "Module Master",
+				"isLink": true,
+				"url": "app/admin/moduleMaster"
+			},
+			{
+				"menu_name": "Menu Master",
+				"isLink": true,
+				"url": "app/admin/menuMaster"
+			},
+			{
+				"menu_name": "Role Master",
+				"isLink": true,
+				"url": "app/admin/roleMaster"
+			},
+			{
+				"menu_name": "User Master",
+				"isLink": true,
+				"url": "app/admin/userMaster"
+			},
+			{
+				"menu_name": "Branch Master",
+				"isLink": true,
+				"url": "app/admin/branchMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Accounting",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Account Master",
+				"isLink": true,
+				"url": "app/accounting/accountMaster"
+			},
+			{
+				"menu_name": "Journal Master",
+				"isLink": true,
+				"url": "app/accounting/journalMaster"
+			},
+			{
+				"menu_name": "Ledger Master",
+				"isLink": true,
+				"url": "app/accounting/ledgerMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Inventory",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Category Master",
+				"isLink": true,
+				"url": "app/inventory/categoryMaster"
+			},
+			{
+				"menu_name": "Location Master",
+				"isLink": true,
+				"url": "app/inventory/locationMaster"
+			},
+			{
+				"menu_name": "Attribute Master",
+				"isLink": true,
+				"url": "app/inventory/attributeMaster"
+			},
+			{
+				"menu_name": "Item / Service Master",
+				"isLink": true,
+				"url": "app/inventory/itemServiceMaster"
+			},
+			{
+				"menu_name": "Stock Adjustment",
+				"isLink": true,
+				"url": "app/inventory/stockAdjustment"
+			}
+		]
+	},
+	{
+		"module_name": "Sales",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Estimates",
+				"isLink": true,
+				"url": "app/sales/estimatesMaster"
+			},
+			{
+				"menu_name": "Invoice",
+				"isLink": true,
+				"url": "app/sales/invoiceMaster"
+			},
+			{
+				"menu_name": "Recurring Invoices",
+				"isLink": true,
+				"url": "app/sales/recurringInvoiceMaster"
+			},
+			{
+				"menu_name": "Customers",
+				"isLink": true,
+				"url": "app/sales/customerMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Giravi",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Giravi Master",
+				"isLink": true,
+				"url": "app/giravi/giraviMaster"
+			},
+			{
+				"menu_name": "Giravi Customers",
+				"isLink": true,
+				"url": "gahan/GahanCustomer"
+			},
+			{
+				"menu_name": "Giravi Items",
+				"isLink": true,
+				"url": "gahan/GahanItems"
+			},
+			{
+				"menu_name": "Giravi Report",
+				"isLink": true,
+				"url": "gahan/GahanReport"
+			}
+		]
+	},
+	{
+		"module_name": "Settings",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Tax Master",
+				"isLink": true,
+				"url": "app/setting/taxMaster"
+			},
+			{
+				"menu_name": "Discount Master",
+				"isLink": true,
+				"url": "app/setting/discountMaster"
+			},
+			{
+				"menu_name": "Unit Of Measurment",
+				"isLink": true,
+				"url": "app/setting/uomMaster"
+			},
+			{
+				"menu_name": "Rate Of Interest Master",
+				"isLink": true,
+				"url": "app/setting/roiMaster"
+			},
+			{
+				"menu_name": "Loan Duration Master",
+				"isLink": true,
+				"url": "app/setting/loanDurationMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Login",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Login",
+				"isLink": true,
+				"url": "app/login"
+			}
+		]
+	}
+]
