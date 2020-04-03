@@ -17,7 +17,7 @@
 <script src="lib/jquery.redirect/jquery.redirect.js"></script>
 <script src="lib/jquery-confirm/dist/jquery-confirm.min.js"></script>
 <script src="lib/webcam/jquery.userCam.js"></script>
-<script src="assets/horizontal/js/dashforge.js"></script>
-<script src="assets/vertical/js/dashforge.aside.js"></script>
-<script src="assets/horizontal/js/dashforge.settings.js"></script>
-<script src="assets/horizontal/js.js"></script>
+<script src="assets/js/dashforge.js"></script>
+<script src="assets/js/dashforge.aside.js"></script>
+<script src="assets/js/dashforge.settings.js"></script>
+<script src="assets/js.js"></script>

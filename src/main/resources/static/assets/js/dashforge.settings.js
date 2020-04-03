@@ -11,7 +11,7 @@ $(function(){
 
       var hasMode = Cookies.get('df-mode');
       if(hasMode) {
-        $('head').append('<link id="dfMode" rel="stylesheet" href="../../assets/horizontal/css/skin.'+hasMode+'.css">')
+        $('head').append('<link id="dfMode" rel="stylesheet" href="../../assets/vertical/css/skin.'+hasMode+'.css">')
         $('body').find('.df-mode').each(function(){
           var name = $(this).attr('data-title');
           if(name === hasMode) {
@@ -24,7 +24,7 @@ $(function(){
 
       var hasSkin = Cookies.get('df-skin');
       if(hasSkin) {
-        $('head').append('<link id="dfSkin" rel="stylesheet" href="../../assets/horizontal/css/skin.'+hasSkin+'.css">')
+        $('head').append('<link id="dfSkin" rel="stylesheet" href="../../assets/vertical/css/skin.'+hasSkin+'.css">')
         $('body').find('.df-skin').each(function(){
           var name = $(this).attr('data-title');
           if(name === hasSkin) {
@@ -52,7 +52,7 @@ $(function(){
       $(this).addClass('active');
 
       var mode = $(this).attr('data-title');
-      console.log('mode',mode);
+
       if(mode === 'classic') {
         $('#dfMode').remove();
 
@@ -61,12 +61,12 @@ $(function(){
 
         if($('#dfMode').length === 0) {
           if($('#dfSkin').length === 0) {
-            $('head').append('<link id="dfMode" rel="stylesheet" href="../../assets/horizontal/css/skin.'+mode+'.css">');
+            $('head').append('<link id="dfMode" rel="stylesheet" href="../../assets/vertical/css/skin.'+mode+'.css">');
           } else {
-            $('<link id="dfMode" rel="stylesheet" href="../../assets/horizontal/css/skin.'+mode+'.css">').insertBefore($('#dfSkin'));
+            $('<link id="dfMode" rel="stylesheet" href="../../assets/vertical/css/skin.'+mode+'.css">').insertBefore($('#dfSkin'));
           }
         } else {
-          $('#dfMode').attr('href', '../../assets/horizontal/css/skin.'+mode+'.css');
+          $('#dfMode').attr('href', '../../assets/vertical/css/skin.'+mode+'.css');
         }
 
         Cookies.set('df-mode', mode);
@@ -89,9 +89,9 @@ $(function(){
     } else {
 
       if($('#dfSkin').length === 0) {
-        $('head').append('<link id="dfSkin" rel="stylesheet" href="../../assets/horizontal/css/skin.'+skin+'.css">')
+        $('head').append('<link id="dfSkin" rel="stylesheet" href="../../assets/vertical/css/skin.'+skin+'.css">')
       } else {
-        $('#dfSkin').attr('href', '../../assets/horizontal/css/skin.'+skin+'.css');
+        $('#dfSkin').attr('href', '../../assets/vertical/css/skin.'+skin+'.css');
       }
 
       Cookies.set('df-skin', skin);

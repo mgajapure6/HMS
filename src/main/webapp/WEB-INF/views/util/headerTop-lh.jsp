@@ -11,14 +11,14 @@
 	</a>
 	<div class="navbar-brand">
 		<a href="#" class="df-logo">
-			dash <span>forge</span>
+			HM <span>System</span>
 		</a>
 	</div>
 	<!-- navbar-brand -->
 	<div id="navbarMenu" class="navbar-menu-wrapper">
 		<div class="navbar-menu-header">
 			<a href="#" class="df-logo">
-				dash <span>forge</span>
+				HM <span>System</span>
 			</a>
 			<a id="mainMenuClose" href="#">
 				<i data-feather="x"></i>
