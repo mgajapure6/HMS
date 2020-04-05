@@ -163,14 +163,9 @@
 		"module_icon": "shopping-bag",
 		"menu": [
 			{
-				"menu_name": "Out Patient Master",
+				"menu_name": "Patient Master",
 				"isLink": true,
-				"url": "app/patient/outPatientMaster"
-			},
-			{
-				"menu_name": "In Patient Master",
-				"isLink": true,
-				"url": "app/patient/inPatientMaster"
+				"url": "app/patient/patientMaster"
 			}
 		]
 	},

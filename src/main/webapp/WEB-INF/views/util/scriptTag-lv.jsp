@@ -20,6 +20,8 @@
 <script src="lib/bootstrap-table/extension/jquery.treegrid.min.js"></script>
 <script src="lib/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="lib/bootstrap-table/extension/bootstrap-table-treegrid.min.js"></script>
+<script src="lib/dualListboxTransfer/js/jquery.transfer.js?v=0.0.6"></script>
+
 
 <script src="assets/js/dashforge.js"></script>
 <script src="assets/js/dashforge.aside.js"></script>

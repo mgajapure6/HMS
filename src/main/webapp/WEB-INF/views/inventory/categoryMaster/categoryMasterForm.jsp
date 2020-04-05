@@ -17,8 +17,6 @@
 	margin-top: 10px;
 }
 </style>
-<!-- <link rel="stylesheet" type="text/css" href="lib/dualListboxTransfer/icon_font/css/icon_font.css" /> -->
-<link rel="stylesheet" type="text/css" href="lib/dualListboxTransfer/css/jquery.transfer.css?v=0.0.3" />
 </head>
 <body>
 	<input type="hidden" value="${category.id == null ? 0 : category.id}" id="categoryId">
@@ -80,7 +78,7 @@
 			</div>
 		</form>
 	</div>
-	<script type="text/javascript" src="lib/dualListboxTransfer/js/jquery.transfer.js?v=0.0.6"></script>
+	
 	<script type="text/javascript">
 		var dataArray1 = [ {
 			"city" : "Beijing",

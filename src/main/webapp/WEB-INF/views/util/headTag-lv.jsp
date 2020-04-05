@@ -17,6 +17,7 @@
 <link href="lib/demo/dashforge.demo.css" rel="stylesheet">
 <link href="lib/bootstrap-table/extension/jquery.treegrid.css" rel="stylesheet">
 <link href="lib/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+<link href="lib/dualListboxTransfer/css/jquery.transfer.css?v=0.0.3" rel="stylesheet"/>
 
 
 <link href="assets/css/dashforge.css" rel="stylesheet">
