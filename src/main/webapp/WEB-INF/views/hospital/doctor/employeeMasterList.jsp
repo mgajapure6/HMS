@@ -27,7 +27,7 @@
 			<h4 class="mg-b-0 tx-spacing--1">Employee Master</h4>
 		</div>
 		<div class="d-md-block">
-			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onclick="loadNewDoctorForm(this,'N')">
+			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onclick="loadEmployeeForm(this,'N')">
 				<i class="fa fa-plus"></i> <span class="spinner-border spinner-border-sm hide spinIcon"></span> <span class="title"> Add New Employee</span>
 			</button>
 		</div>
