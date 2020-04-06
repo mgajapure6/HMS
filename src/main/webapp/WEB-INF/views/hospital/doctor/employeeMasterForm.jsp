@@ -45,31 +45,31 @@
 			<div class="form-group row">
 				<label for="name" class="col-sm-2 col-form-label mandlabel">Employee Name </label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="name" placeholder="Employee Name" data-parsley-trigger="keyup" data-parsley-minlength="2" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="please enter at least 2 character. ">
+					<input type="text" class="form-control mandatory" id="name" placeholder="Employee Name" data-parsley-trigger="keyup" data-parsley-minlength="2" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="please enter at least 2 character. ">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="nameOl" class="col-sm-2 col-form-label">Employee Name Ol </label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control mandatory" id="nameOl" placeholder="Employee name other language">
+					<input type="text" class="form-control" id="nameOl" placeholder="Employee name other language">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="address" class="col-sm-2 col-form-label">Employee Address </label>
+				<label for="address" class="col-sm-2 col-form-label mandlabel">Employee Address </label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control mandatory" id="address" placeholder="Employee Address">
+					<input type="text" class="form-control mandatory" id="address" placeholder="Employee Address"  data-parsley-trigger="keyup" data-parsley-minlength="2" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="please enter at least 2 character. ">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="contact" class="col-sm-2 col-form-label">Employee Contact </label>
+				<label for="contact" class="col-sm-2 col-form-label mandlabel">Employee Contact </label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control mandatory" id="contact" placeholder="Employee Contact">
+					<input type="text" class="form-control mandatory" id="contact" placeholder="Employee Contact"  data-parsley-trigger="keyup" data-parsley-minlength="2" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="please enter at least 2 character. ">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="email" class="col-sm-2 col-form-label">Employee E-mail </label>
+				<label for="email" class="col-sm-2 col-form-label mandlabel">Employee E-mail </label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control mandatory" id="email" placeholder="Employee E-Mail">
+					<input type="text" class="form-control mandatory" id="email" placeholder="Employee E-Mail"  data-parsley-trigger="keyup" data-parsley-minlength="2" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="please enter at least 2 character. ">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -77,7 +77,7 @@
 				<div class="col-sm-10">
 					<select id="type" class="form-control">
 						<c:forEach items="${employeeType}" var="empType">
-							<option value="${empType.id} }">${empType.name}</option>
+							<option value="${empType.id}">${empType.name}</option>
 						</c:forEach>
 					</select>
 				</div>
@@ -138,6 +138,10 @@
 				$('.employeeForm-div').find('.alert').remove();
 				$('#name').val(employeeJsonObj.name);
 				$('#nameOl').val(employeeJsonObj.nameOl);
+				$('#address').val(employeeJsonObj.address);
+				$('#contact').val(employeeJsonObj.contact);
+				$('#email').val(employeeJsonObj.email);
+				$("#type").val(employeeJsonObj.typeId);
 				if (employeeJsonObj.status == "E") {
 					$('#mStatusE').prop("checked", true);
 				} else {
@@ -160,10 +164,15 @@
 			}
 
 			var formData = {
-				'name' : $('#name').val(),
-				'nameOl' : $('#nameOl').val(),
-				'status' : $('#employeeForm').find('input[name="mStatus"]:checked').val(),
-				'employeeId' : employeeId,
+				'name' 		: $('#name').val(),
+				'nameOl' 	: $('#nameOl').val(),
+				'address' 	: $('#address').val(),
+				'contact' 	: $('#contact').val(),
+				'email' 	: $('#email').val(),
+				'typeId' 	: $('#type').val(),
+				'typeName' 	: $("#type").find("option:selected").text(),
+				'status' 	: $('#employeeForm').find('input[name="mStatus"]:checked').val(),
+				'employeeId': employeeId,
 				'flag' : flag
 			}
 

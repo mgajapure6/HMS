@@ -30,6 +30,9 @@ import com.mgsoft.module.admin.repository.MenuRepository;
 import com.mgsoft.module.admin.repository.ModuleRepository;
 import com.mgsoft.module.customer.beans.PartyMaster;
 import com.mgsoft.module.customer.repositories.PartyMasterRepository;
+import com.mgsoft.module.hospital.beans.EmployeeType;
+import com.mgsoft.module.hospital.repositories.EmployeeRepository;
+import com.mgsoft.module.hospital.repositories.EmployeeTypeRepository;
 import com.mgsoft.module.inventory.beans.InvItem;
 import com.mgsoft.module.inventory.beans.ItemCategory;
 import com.mgsoft.module.inventory.repositories.InvItemRepository;
@@ -62,7 +65,10 @@ public class HMSApplication extends SpringBootServletInitializer {
 	
 	@Autowired
 	ServletContext context;
-
+	
+	@Autowired
+	EmployeeTypeRepository employeeTypeRepository;
+	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(HMSApplication.class);
@@ -171,6 +177,19 @@ public class HMSApplication extends SpringBootServletInitializer {
 			bottal.setStatus("Active");
 			
 			invItemRepository.save(bottal);
+			
+			EmployeeType empType = new EmployeeType();
+			empType.setName("Doctor");
+			empType.setNameOl("Doctor");
+			empType.setStatus("E");
+			
+			employeeTypeRepository.save(empType);
+			
+			EmployeeType empType2 = new EmployeeType();
+			empType2.setName("Nurse");
+			empType2.setNameOl("Nurse");
+			empType2.setStatus("E");
+			employeeTypeRepository.save(empType2);
 			
 			
 //			JSONParser parser = new JSONParser();
