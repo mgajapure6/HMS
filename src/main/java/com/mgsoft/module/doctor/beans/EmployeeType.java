@@ -1,4 +1,4 @@
-package com.mgsoft.module.hospital.beans;
+package com.mgsoft.module.doctor.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

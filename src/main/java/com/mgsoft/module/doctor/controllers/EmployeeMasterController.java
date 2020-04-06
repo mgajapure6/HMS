@@ -1,4 +1,4 @@
-package com.mgsoft.module.hospital.controllers;
+package com.mgsoft.module.doctor.controllers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mgsoft.module.hospital.beans.Employee;
-import com.mgsoft.module.hospital.repositories.EmployeeRepository;
-import com.mgsoft.module.hospital.repositories.EmployeeTypeRepository;
+import com.mgsoft.module.doctor.beans.Employee;
+import com.mgsoft.module.doctor.repositories.EmployeeRepository;
+import com.mgsoft.module.doctor.repositories.EmployeeTypeRepository;
 import com.mgsoft.module.inventory.beans.ItemCategory;
 
 @Controller
