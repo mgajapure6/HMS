@@ -1,21 +1,17 @@
 package com.mgsoft.module.patient.beans;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.Lob;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table
@@ -27,90 +23,205 @@ public class PatientMaster implements Serializable {
 	private Long id;
 
 	@Column
-	private Date regDate;
+	@JsonFormat(pattern = "dd-MM-yyyy", shape = JsonFormat.Shape.STRING)
+	private Date patientRegDate;
 
 	@Column
-	private String firstName;
+	private String patientFName;
 
 	@Column
-	private String middleName;
+	private String patientMName;
 
 	@Column
-	private String lastName;
+	private String patientLName;
 
 	@Column
-	private String address1;
+	private String patientAddr1;
 
 	@Column
-	private String address2;
+	private String patientAddr2;
 
 	@Column
-	private String city;
+	private String patientCity;
 
 	@Column
-	private String state;
+	private String patientState;
 
 	@Column
-	private String zip;
+	private String patientZip;
 
 	@Column
-	private String mobile;
+	private String patientMob;
 
 	@Column
-	private String altMobile;
+	private String patientAltMob;
 
 	@Column
-	private String email;
+	private String patientEmail;
 
 	@Column
-	private String landlineNo;
+	private String patientLLNo;
 
 	@Column
-	private String gender;
+	private String patientGender;
 
 	@Column
-	private Date dob;
+	@JsonFormat(pattern = "dd-MM-yyyy", shape = JsonFormat.Shape.STRING)
+	private Date patientDob;
 
 	@Column
-	private String languageKnow;
+	private String patientLangKnow;
 
 	@Column
-	private String education;
+	private String patientEdu;
 
 	@Column
-	private String occupation;
+	private String patientOccup;
 
 	@Column
-	private String maritalStatus;
+	private String patientMStatus;
 
 	@Column
-	private String idProof;
+	private String patientIdProof;
 
 	@Column
-	private String idProofNumber;
+	private String patientIdProofNum;
 
 	@Lob
-	private byte[] idProofDocImage;
+	private byte[] patientIdProofDocImg;
 
 	@Column
-	private String addrProof;
+	private String patientAddrProof;
 
 	@Column
-	private String addrProofNumber;
+	private String patientAddrProofNum;
 
 	@Lob
-	private byte[] addrProofDocImage;
+	private byte[] patientAddrProofDocImg;
 
 	@Lob
 	private byte[] patientImage;
 
 	@Column
-	private String status;
+	private String patientStatus;
+	
+	@Column
+	private String gardFName;
 
-	@OneToMany(cascade = { CascadeType.ALL })
-	@JoinTable(name = "patient_insurance", joinColumns = { @JoinColumn(name = "patient_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "insurance_id") })
-	private List<InsuranceMaster> insuranceMasters = new ArrayList<>();
+	@Column
+	private String gardMName;
+
+	@Column
+	private String gardLName;
+
+	@Column
+	private String gardAddr1;
+
+	@Column
+	private String gardAddr2;
+
+	@Column
+	private String gardCity;
+
+	@Column
+	private String gardState;
+
+	@Column
+	private String gardZip;
+
+	@Column
+	private String gardMob;
+
+	@Column
+	private String gardAltMob;
+
+	@Column
+	private String gardEmail;
+
+	@Column
+	private String gardLLNo;
+
+	@Column
+	private String gardGender;
+
+	@Column
+	@JsonFormat(pattern = "dd-MM-yyyy", shape = JsonFormat.Shape.STRING)
+	private Date gardDob;
+
+	@Column
+	private String gardLangKnow;
+
+	@Column
+	private String gardEdu;
+
+	@Column
+	private String gardOccup;
+
+	@Column
+	private String gardMStatus;
+
+	@Column
+	private String gardIdProof;
+
+	@Column
+	private String gardIdProofNum;
+
+	@Lob
+	private byte[] gardIdProofDocImg;
+
+	@Column
+	private String gardAddrProof;
+
+	@Column
+	private String gardAddrProofNum;
+
+	@Lob
+	private byte[] gardAddrProofDocImg;
+
+	@Lob
+	private byte[] gardPatientImg;
+
+	@Column
+	private String gardStatus;
+
+	@Column
+	private String insurType;
+	
+	@Column
+	private String insurHolderName;
+	
+	@Column
+	private String insurPlanName;
+	
+	@Column
+	private String insurName;
+	
+	@Column
+	private String insurMobile;
+	
+	@Column
+	private String insurAddr1;
+	
+	@Column
+	private String insurAddr2;
+	
+	@Column
+	private String insurSocialSecurityNo;
+	
+	@Column
+	private String insurPolicyId;
+	
+	@Column
+	private String insurPolicyNo;
+	
+	@Column
+	private String insurGroupNo;
+	
+	@Column
+	private String insurClaimAddr;
+	
+	@Column
+	private String insurRelationship;
 
 	public Long getId() {
 		return id;
@@ -120,205 +231,204 @@ public class PatientMaster implements Serializable {
 		this.id = id;
 	}
 
-	public Date getRegDate() {
-		return regDate;
+	public Date getPatientRegDate() {
+		return patientRegDate;
 	}
 
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setPatientRegDate(Date patientRegDate) {
+		this.patientRegDate = patientRegDate;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getPatientFName() {
+		return patientFName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setPatientFName(String patientFName) {
+		this.patientFName = patientFName;
 	}
 
-	public String getMiddleName() {
-		return middleName;
+	public String getPatientMName() {
+		return patientMName;
 	}
 
-	public void setMiddleName(String middleName) {
-		this.middleName = middleName;
+	public void setPatientMName(String patientMName) {
+		this.patientMName = patientMName;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getPatientLName() {
+		return patientLName;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setPatientLName(String patientLName) {
+		this.patientLName = patientLName;
 	}
 
-	public String getAddress1() {
-		return address1;
+	public String getPatientAddr1() {
+		return patientAddr1;
 	}
 
-	public void setAddress1(String address1) {
-		this.address1 = address1;
+	public void setPatientAddr1(String patientAddr1) {
+		this.patientAddr1 = patientAddr1;
 	}
 
-	public String getAddress2() {
-		return address2;
+	public String getPatientAddr2() {
+		return patientAddr2;
 	}
 
-	public void setAddress2(String address2) {
-		this.address2 = address2;
+	public void setPatientAddr2(String patientAddr2) {
+		this.patientAddr2 = patientAddr2;
 	}
 
-	public String getCity() {
-		return city;
+	public String getPatientCity() {
+		return patientCity;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setPatientCity(String patientCity) {
+		this.patientCity = patientCity;
 	}
 
-	public String getState() {
-		return state;
+	public String getPatientState() {
+		return patientState;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+	public void setPatientState(String patientState) {
+		this.patientState = patientState;
 	}
 
-	public String getZip() {
-		return zip;
+	public String getPatientZip() {
+		return patientZip;
 	}
 
-	public void setZip(String zip) {
-		this.zip = zip;
+	public void setPatientZip(String patientZip) {
+		this.patientZip = patientZip;
 	}
 
-	public String getMobile() {
-		return mobile;
+	public String getPatientMob() {
+		return patientMob;
 	}
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public void setPatientMob(String patientMob) {
+		this.patientMob = patientMob;
 	}
 
-	public String getAltMobile() {
-		return altMobile;
+	public String getPatientAltMob() {
+		return patientAltMob;
 	}
 
-	public void setAltMobile(String altMobile) {
-		this.altMobile = altMobile;
+	public void setPatientAltMob(String patientAltMob) {
+		this.patientAltMob = patientAltMob;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getPatientEmail() {
+		return patientEmail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPatientEmail(String patientEmail) {
+		this.patientEmail = patientEmail;
 	}
 
-	public String getLandlineNo() {
-		return landlineNo;
+	public String getPatientLLNo() {
+		return patientLLNo;
 	}
 
-	public void setLandlineNo(String landlineNo) {
-		this.landlineNo = landlineNo;
+	public void setPatientLLNo(String patientLLNo) {
+		this.patientLLNo = patientLLNo;
 	}
 
-	public String getGender() {
-		return gender;
+	public String getPatientGender() {
+		return patientGender;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setPatientGender(String patientGender) {
+		this.patientGender = patientGender;
 	}
 
-	public Date getDob() {
-		return dob;
+	public Date getPatientDob() {
+		return patientDob;
 	}
 
-	public void setDob(Date dob) {
-		this.dob = dob;
+	public void setPatientDob(Date patientDob) {
+		this.patientDob = patientDob;
 	}
 
-
-	public String getLanguageKnow() {
-		return languageKnow;
+	public String getPatientLangKnow() {
+		return patientLangKnow;
 	}
 
-	public void setLanguageKnow(String languageKnow) {
-		this.languageKnow = languageKnow;
+	public void setPatientLangKnow(String patientLangKnow) {
+		this.patientLangKnow = patientLangKnow;
 	}
 
-	public String getEducation() {
-		return education;
+	public String getPatientEdu() {
+		return patientEdu;
 	}
 
-	public void setEducation(String education) {
-		this.education = education;
+	public void setPatientEdu(String patientEdu) {
+		this.patientEdu = patientEdu;
 	}
 
-	public String getOccupation() {
-		return occupation;
+	public String getPatientOccup() {
+		return patientOccup;
 	}
 
-	public void setOccupation(String occupation) {
-		this.occupation = occupation;
+	public void setPatientOccup(String patientOccup) {
+		this.patientOccup = patientOccup;
 	}
 
-	public String getMaritalStatus() {
-		return maritalStatus;
+	public String getPatientMStatus() {
+		return patientMStatus;
 	}
 
-	public void setMaritalStatus(String maritalStatus) {
-		this.maritalStatus = maritalStatus;
+	public void setPatientMStatus(String patientMStatus) {
+		this.patientMStatus = patientMStatus;
 	}
 
-	public String getIdProof() {
-		return idProof;
+	public String getPatientIdProof() {
+		return patientIdProof;
 	}
 
-	public void setIdProof(String idProof) {
-		this.idProof = idProof;
+	public void setPatientIdProof(String patientIdProof) {
+		this.patientIdProof = patientIdProof;
 	}
 
-	public String getIdProofNumber() {
-		return idProofNumber;
+	public String getPatientIdProofNum() {
+		return patientIdProofNum;
 	}
 
-	public void setIdProofNumber(String idProofNumber) {
-		this.idProofNumber = idProofNumber;
+	public void setPatientIdProofNum(String patientIdProofNum) {
+		this.patientIdProofNum = patientIdProofNum;
 	}
 
-	public byte[] getIdProofDocImage() {
-		return idProofDocImage;
+	public byte[] getPatientIdProofDocImg() {
+		return patientIdProofDocImg;
 	}
 
-	public void setIdProofDocImage(byte[] idProofDocImage) {
-		this.idProofDocImage = idProofDocImage;
+	public void setPatientIdProofDocImg(byte[] patientIdProofDocImg) {
+		this.patientIdProofDocImg = patientIdProofDocImg;
 	}
 
-	public String getAddrProof() {
-		return addrProof;
+	public String getPatientAddrProof() {
+		return patientAddrProof;
 	}
 
-	public void setAddrProof(String addrProof) {
-		this.addrProof = addrProof;
+	public void setPatientAddrProof(String patientAddrProof) {
+		this.patientAddrProof = patientAddrProof;
 	}
 
-	public String getAddrProofNumber() {
-		return addrProofNumber;
+	public String getPatientAddrProofNum() {
+		return patientAddrProofNum;
 	}
 
-	public void setAddrProofNumber(String addrProofNumber) {
-		this.addrProofNumber = addrProofNumber;
+	public void setPatientAddrProofNum(String patientAddrProofNum) {
+		this.patientAddrProofNum = patientAddrProofNum;
 	}
 
-	public byte[] getAddrProofDocImage() {
-		return addrProofDocImage;
+	public byte[] getPatientAddrProofDocImg() {
+		return patientAddrProofDocImg;
 	}
 
-	public void setAddrProofDocImage(byte[] addrProofDocImage) {
-		this.addrProofDocImage = addrProofDocImage;
+	public void setPatientAddrProofDocImg(byte[] patientAddrProofDocImg) {
+		this.patientAddrProofDocImg = patientAddrProofDocImg;
 	}
 
 	public byte[] getPatientImage() {
@@ -329,20 +439,324 @@ public class PatientMaster implements Serializable {
 		this.patientImage = patientImage;
 	}
 
-	public String getStatus() {
-		return status;
+	public String getPatientStatus() {
+		return patientStatus;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setPatientStatus(String patientStatus) {
+		this.patientStatus = patientStatus;
 	}
 
-	public List<InsuranceMaster> getInsuranceMasters() {
-		return insuranceMasters;
+	public String getGardFName() {
+		return gardFName;
 	}
 
-	public void setInsuranceMasters(List<InsuranceMaster> insuranceMasters) {
-		this.insuranceMasters = insuranceMasters;
+	public void setGardFName(String gardFName) {
+		this.gardFName = gardFName;
+	}
+
+	public String getGardMName() {
+		return gardMName;
+	}
+
+	public void setGardMName(String gardMName) {
+		this.gardMName = gardMName;
+	}
+
+	public String getGardLName() {
+		return gardLName;
+	}
+
+	public void setGardLName(String gardLName) {
+		this.gardLName = gardLName;
+	}
+
+	public String getGardAddr1() {
+		return gardAddr1;
+	}
+
+	public void setGardAddr1(String gardAddr1) {
+		this.gardAddr1 = gardAddr1;
+	}
+
+	public String getGardAddr2() {
+		return gardAddr2;
+	}
+
+	public void setGardAddr2(String gardAddr2) {
+		this.gardAddr2 = gardAddr2;
+	}
+
+	public String getGardCity() {
+		return gardCity;
+	}
+
+	public void setGardCity(String gardCity) {
+		this.gardCity = gardCity;
+	}
+
+	public String getGardState() {
+		return gardState;
+	}
+
+	public void setGardState(String gardState) {
+		this.gardState = gardState;
+	}
+
+	public String getGardZip() {
+		return gardZip;
+	}
+
+	public void setGardZip(String gardZip) {
+		this.gardZip = gardZip;
+	}
+
+	public String getGardMob() {
+		return gardMob;
+	}
+
+	public void setGardMob(String gardMob) {
+		this.gardMob = gardMob;
+	}
+
+	public String getGardAltMob() {
+		return gardAltMob;
+	}
+
+	public void setGardAltMob(String gardAltMob) {
+		this.gardAltMob = gardAltMob;
+	}
+
+	public String getGardEmail() {
+		return gardEmail;
+	}
+
+	public void setGardEmail(String gardEmail) {
+		this.gardEmail = gardEmail;
+	}
+
+	public String getGardLLNo() {
+		return gardLLNo;
+	}
+
+	public void setGardLLNo(String gardLLNo) {
+		this.gardLLNo = gardLLNo;
+	}
+
+	public String getGardGender() {
+		return gardGender;
+	}
+
+	public void setGardGender(String gardGender) {
+		this.gardGender = gardGender;
+	}
+
+	public Date getGardDob() {
+		return gardDob;
+	}
+
+	public void setGardDob(Date gardDob) {
+		this.gardDob = gardDob;
+	}
+
+	public String getGardLangKnow() {
+		return gardLangKnow;
+	}
+
+	public void setGardLangKnow(String gardLangKnow) {
+		this.gardLangKnow = gardLangKnow;
+	}
+
+	public String getGardEdu() {
+		return gardEdu;
+	}
+
+	public void setGardEdu(String gardEdu) {
+		this.gardEdu = gardEdu;
+	}
+
+	public String getGardOccup() {
+		return gardOccup;
+	}
+
+	public void setGardOccup(String gardOccup) {
+		this.gardOccup = gardOccup;
+	}
+
+	public String getGardMStatus() {
+		return gardMStatus;
+	}
+
+	public void setGardMStatus(String gardMStatus) {
+		this.gardMStatus = gardMStatus;
+	}
+
+	public String getGardIdProof() {
+		return gardIdProof;
+	}
+
+	public void setGardIdProof(String gardIdProof) {
+		this.gardIdProof = gardIdProof;
+	}
+
+	public String getGardIdProofNum() {
+		return gardIdProofNum;
+	}
+
+	public void setGardIdProofNum(String gardIdProofNum) {
+		this.gardIdProofNum = gardIdProofNum;
+	}
+
+	public byte[] getGardIdProofDocImg() {
+		return gardIdProofDocImg;
+	}
+
+	public void setGardIdProofDocImg(byte[] gardIdProofDocImg) {
+		this.gardIdProofDocImg = gardIdProofDocImg;
+	}
+
+	public String getGardAddrProof() {
+		return gardAddrProof;
+	}
+
+	public void setGardAddrProof(String gardAddrProof) {
+		this.gardAddrProof = gardAddrProof;
+	}
+
+	public String getGardAddrProofNum() {
+		return gardAddrProofNum;
+	}
+
+	public void setGardAddrProofNum(String gardAddrProofNum) {
+		this.gardAddrProofNum = gardAddrProofNum;
+	}
+
+	public byte[] getGardAddrProofDocImg() {
+		return gardAddrProofDocImg;
+	}
+
+	public void setGardAddrProofDocImg(byte[] gardAddrProofDocImg) {
+		this.gardAddrProofDocImg = gardAddrProofDocImg;
+	}
+
+	public byte[] getGardPatientImg() {
+		return gardPatientImg;
+	}
+
+	public void setGardPatientImg(byte[] gardPatientImg) {
+		this.gardPatientImg = gardPatientImg;
+	}
+
+	public String getGardStatus() {
+		return gardStatus;
+	}
+
+	public void setGardStatus(String gardStatus) {
+		this.gardStatus = gardStatus;
+	}
+
+	public String getInsurType() {
+		return insurType;
+	}
+
+	public void setInsurType(String insurType) {
+		this.insurType = insurType;
+	}
+
+	public String getInsurHolderName() {
+		return insurHolderName;
+	}
+
+	public void setInsurHolderName(String insurHolderName) {
+		this.insurHolderName = insurHolderName;
+	}
+
+	public String getInsurPlanName() {
+		return insurPlanName;
+	}
+
+	public void setInsurPlanName(String insurPlanName) {
+		this.insurPlanName = insurPlanName;
+	}
+
+	public String getInsurName() {
+		return insurName;
+	}
+
+	public void setInsurName(String insurName) {
+		this.insurName = insurName;
+	}
+
+	public String getInsurMobile() {
+		return insurMobile;
+	}
+
+	public void setInsurMobile(String insurMobile) {
+		this.insurMobile = insurMobile;
+	}
+
+	public String getInsurAddr1() {
+		return insurAddr1;
+	}
+
+	public void setInsurAddr1(String insurAddr1) {
+		this.insurAddr1 = insurAddr1;
+	}
+
+	public String getInsurAddr2() {
+		return insurAddr2;
+	}
+
+	public void setInsurAddr2(String insurAddr2) {
+		this.insurAddr2 = insurAddr2;
+	}
+
+	public String getInsurSocialSecurityNo() {
+		return insurSocialSecurityNo;
+	}
+
+	public void setInsurSocialSecurityNo(String insurSocialSecurityNo) {
+		this.insurSocialSecurityNo = insurSocialSecurityNo;
+	}
+
+	public String getInsurPolicyId() {
+		return insurPolicyId;
+	}
+
+	public void setInsurPolicyId(String insurPolicyId) {
+		this.insurPolicyId = insurPolicyId;
+	}
+
+	public String getInsurPolicyNo() {
+		return insurPolicyNo;
+	}
+
+	public void setInsurPolicyNo(String insurPolicyNo) {
+		this.insurPolicyNo = insurPolicyNo;
+	}
+
+	public String getInsurGroupNo() {
+		return insurGroupNo;
+	}
+
+	public void setInsurGroupNo(String insurGroupNo) {
+		this.insurGroupNo = insurGroupNo;
+	}
+
+	public String getInsurClaimAddr() {
+		return insurClaimAddr;
+	}
+
+	public void setInsurClaimAddr(String insurClaimAddr) {
+		this.insurClaimAddr = insurClaimAddr;
+	}
+
+	public String getInsurRelationship() {
+		return insurRelationship;
+	}
+
+	public void setInsurRelationship(String insurRelationship) {
+		this.insurRelationship = insurRelationship;
 	}
 
 }

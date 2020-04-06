@@ -103,8 +103,8 @@
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGender" class="">Gender</label>
-									<select id="inputGender" name="" class="form-control" required>
+									<label for="patientGender" class="">Gender</label>
+									<select id="patientGender" name="" class="form-control" required>
 										<option selected value="Male">Male</option>
 										<option value="Female">Female</option>
 										<option value="Other">Other</option>
@@ -115,58 +115,59 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputDob" class="mandlabel">Date Of Birth</label>
-									<input type="text" name="" class="form-control mandatory" id="inputDob" placeholder="Date Of Birth" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-message="Enter Valid Date. ">
+									<label for="patientDob" class="mandlabel">Date Of Birth</label>
+									<input type="text" name="" class="form-control mandatory dobDateCleave1" id="patientDob" placeholder="Date Of Birth" required data-parsley-trigger="keyup" data-parsley-trigger="change" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-message="Enter Valid Date. ">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputMobile" class="mandlabel">Mobile No.</label>
-									<input type="text" name="" class="form-control mandatory" id="inputMobile" placeholder="Mobile Number" required data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-message="Enter Valid Mobile No. ">
-								</div>
-							</div>
-						</div>
-						<div class="row row-sm">
-							<div class="col">
-								<div class="form-group">
-									<label for="inputAltMobile" class="">Alternate Mobile No.</label>
-									<input type="text" name="" class="form-control" id="inputAltMobile" placeholder="Alternate Mobile Number" data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-message="Enter Valid Mobile No. ">
-								</div>
-							</div>
-							<div class="col">
-								<div class="form-group">
-									<label for="inputLandLineNo" class="">Land Line No.</label>
-									<input type="text" name="" class="form-control" id="inputLandLineNo" placeholder="Land Line Number" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="15" data-parsley-minlength-message="Enter Valid Land Line No. ">
+									<label for="patientMob" class="mandlabel">Mobile No.</label>
+									<input type="text" name="" class="form-control mandatory mobileCleave1" id="patientMob" placeholder="Mobile Number" required data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-message="Enter Valid Mobile No. ">
 								</div>
 							</div>
 						</div>
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputAddress1" class="mandlabel">Address Line 1</label>
-									<input type="text" name="" class="form-control mandatory" id="inputAddress1" placeholder="1234 Main St" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="400" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="patientAltMob" class="">Alternate Mobile No.</label>
+									<input type="text" name="" class="form-control mobileCleave2" id="patientAltMob" placeholder="Alternate Mobile Number" data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-message="Enter Valid Mobile No. ">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputAddress2">Address Line 2</label>
-									<input type="text" name="" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+									<label for="patientLLNo" class="">Land Line No.</label>
+									<input type="text" name="" class="form-control" id="patientLLNo" placeholder="Land Line Number" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="15" data-parsley-minlength-message="Enter Valid Land Line No. ">
 								</div>
 							</div>
 						</div>
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputCity" class="mandlabel">City</label>
-									<input type="text" name="" class="form-control mandatory" id="inputCity" placeholder="City / Town name" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="50" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="patientAddr1" class="mandlabel">Address Line 1</label>
+									<input type="text" name="" class="form-control mandatory" id="patientAddr1" placeholder="1234 Main St" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="400" data-parsley-minlength-message="Enter at least 3 characters. ">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputState" class="mandlabel">State</label>
-									<select id="inputState" name="" class="form-control mandatory" required data-parsley-trigger="keyup" data-parsley-trigger="change">
-										<option selected>Choose...</option>
-										<option>...</option>
+									<label for="patientAddr2">Address Line 2</label>
+									<input type="text" name="" class="form-control" id="patientAddr2" placeholder="Apartment, studio, or floor">
+								</div>
+							</div>
+						</div>
+						<div class="row row-sm">
+							<div class="col">
+								<div class="form-group">
+									<label for="patientCity" class="mandlabel">City</label>
+									<input type="text" name="" class="form-control mandatory" id="patientCity" placeholder="City / Town name" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="50" data-parsley-minlength-message="Enter at least 3 characters. ">
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label for="patientState" class="mandlabel">State</label>
+									<select id="patientState" name="" class="form-control mandatory" required data-parsley-trigger="keyup" data-parsley-trigger="change">
+										<c:forEach items="${stateList}" var="state">
+											<option value="${state.stateCode }" data-alpha-code="${state.alphaCode }">${state.stateCode } - ${state.stateName }</option>
+										</c:forEach>
 									</select>
 								</div>
 							</div>
@@ -174,14 +175,14 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputZip" class="">Zip Code</label>
-									<input type="text" class="form-control" id="inputZip" placeholder="Zip / Pin code">
+									<label for="patientZip" class="">Zip Code</label>
+									<input type="text" class="form-control zipCleave1" id="patientZip" placeholder="Zip / Pin code">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputEducation" class="">Education</label>
-									<select id="inputEducation" class="form-control">
+									<label for="patientEdu" class="">Education</label>
+									<select id="patientEdu" class="form-control">
 										<option selected>Choose Education</option>
 										<option>...</option>
 									</select>
@@ -191,8 +192,8 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputOccupation" class="">Occupation</label>
-									<select id="inputOccupation" class="form-control">
+									<label for="patientOccup" class="">Occupation</label>
+									<select id="patientOccup" class="form-control">
 										<option selected>Choose Occupation</option>
 										<option>...</option>
 									</select>
@@ -200,8 +201,8 @@
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputMaritalStatus" class="mandlabel">Marital Status</label>
-									<select id="inputMaritalStatus" class="form-control mandatory" required>
+									<label for="patientMStatus" class="mandlabel">Marital Status</label>
+									<select id="patientMStatus" class="form-control mandatory" required>
 										<option selected>Choose Marital Status</option>
 										<option>...</option>
 									</select>
@@ -217,28 +218,28 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="gardianFName" class="mandlabel">First Name</label>
-									<input type="text" id="gardianFName" class="form-control gardianFName mandatory" required placeholder="Enter Gardian First Name" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="gardFName" class="">First Name</label>
+									<input type="text" id="gardFName" class="form-control gardianFName" placeholder="Enter Gardian First Name" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="gardianLName" class="mandlabel">Last Name</label>
-									<input type="text" id="gardianLName" class="form-control gardianLName mandatory" required placeholder="Enter Gardian Last Name" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="gardLName" class="">Last Name</label>
+									<input type="text" id="gardLName" class="form-control gardianLName" placeholder="Enter Gardian Last Name" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
 								</div>
 							</div>
 						</div>
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="gardianMName" class="">Middle Name</label>
-									<input type="text" id="gardianMName" class="form-control gardianMName" placeholder="Enter Gardian Middle Name">
+									<label for="gardMName" class="">Middle Name</label>
+									<input type="text" id="gardMName" class="form-control gardianMName" placeholder="Enter Gardian Middle Name">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGGender" class="">Gender</label>
-									<select id="inputGGender" class="form-control">
+									<label for="gardGender" class="">Gender</label>
+									<select id="gardGender" class="form-control">
 										<option selected value="Male">Male</option>
 										<option value="Female">Female</option>
 										<option value="Other">Other</option>
@@ -249,58 +250,59 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGDob" class="">Date Of Birth</label>
-									<input type="text" class="form-control" id="inputGDob" placeholder="Date Of Birth">
+									<label for="gardDob" class="">Date Of Birth</label>
+									<input type="text" class="form-control dobDateCleave2" id="gardDob" placeholder="Date Of Birth">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGMobile" class="mandlabel">Mobile No.</label>
-									<input type="text" class="form-control mandatory" id="inputGMobile" placeholder="Mobile Number" required data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-minlength-message="Enter valid mobile number. ">
-								</div>
-							</div>
-						</div>
-						<div class="row row-sm">
-							<div class="col">
-								<div class="form-group">
-									<label for="inputGAltMobile" class="">Alternate Mobile No.</label>
-									<input type="text" class="form-control" id="inputGAltMobile" placeholder="Alternate Mobile Number" data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-minlength-message="Enter valid mobile number. ">
-								</div>
-							</div>
-							<div class="col">
-								<div class="form-group">
-									<label for="inputGLandLineNo" class="">Land Line No.</label>
-									<input type="text" class="form-control" id="inputGLandLineNo" placeholder="Land Line Number">
+									<label for="gardMob" class="">Mobile No.</label>
+									<input type="text" class="form-control mobileCleave3" id="gardMob" placeholder="Mobile Number" data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-minlength-message="Enter valid mobile number. ">
 								</div>
 							</div>
 						</div>
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGAddress1" class="mandlabel">Address Line 1</label>
-									<input type="text" class="form-control mandatory" id="inputGAddress1" required placeholder="1234 Main St" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="400" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="gardAltMob" class="">Alternate Mobile No.</label>
+									<input type="text" class="form-control mobileCleave4" id="gardAltMob" placeholder="Alternate Mobile Number" data-parsley-trigger="keyup" data-parsley-minlength="10" data-parsley-validation-threshold="0" data-parsley-maxlength="10" data-parsley-minlength-message="Enter valid mobile number. ">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGAddress2">Address Line 2</label>
-									<input type="text" class="form-control" id="inputGAddress2" placeholder="Apartment, studio, or floor">
+									<label for="gardLLNo" class="">Land Line No.</label>
+									<input type="text" class="form-control" id="gardLLNo" placeholder="Land Line Number">
 								</div>
 							</div>
 						</div>
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGCity" class="mandlabel">City / Town</label>
-									<input type="text" class="form-control mandatory" id="inputGCity" required placeholder="City / Town name" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="gardAddr1" class="">Address Line 1</label>
+									<input type="text" class="form-control" id="gardAddr1" placeholder="1234 Main St" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="400" data-parsley-minlength-message="Enter at least 3 characters. ">
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGState" class="mandlabel">State</label>
-									<select id="inputGState" class="form-control mandatory" required data-parsley-trigger="keyup" data-parsley-trigger="change">
-										<option selected value="27">27 - Maharashtra</option>
-										<option value="12">12 - Gujarat</option>
+									<label for="gardAddr2">Address Line 2</label>
+									<input type="text" class="form-control" id="gardAddr2" placeholder="Apartment, studio, or floor">
+								</div>
+							</div>
+						</div>
+						<div class="row row-sm">
+							<div class="col">
+								<div class="form-group">
+									<label for="gardCity" class="">City / Town</label>
+									<input type="text" class="form-control" id="gardCity" placeholder="City / Town name" data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label for="gardState" class="">State</label>
+									<select id="gardState" class="form-control" data-parsley-trigger="keyup" data-parsley-trigger="change">
+										<c:forEach items="${stateList}" var="state">
+											<option value="${state.stateCode } - ${state.stateName }" data-alpha-code="${state.alphaCode }">${state.stateCode } - ${state.stateName }</option>
+										</c:forEach>
 									</select>
 								</div>
 							</div>
@@ -308,8 +310,8 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="inputGZip" class="">Zip Code</label>
-									<input type="text" class="form-control" id="inputGZip" placeholder="Zip / Pin code">
+									<label for="gardZip" class="">Zip Code</label>
+									<input type="text" class="form-control zipCleave2" id="gardZip" placeholder="Zip / Pin code">
 								</div>
 							</div>
 							<div class="col">
@@ -405,8 +407,8 @@
 						<div class="row row-sm">
 							<div class="col">
 								<div class="form-group">
-									<label for="insurSSN" class="mandlabel">Insured Social Security No</label>
-									<input type="text" id="insurSSN" class="form-control insurSSN mandatory" placeholder="Enter Insured Social Security No" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
+									<label for="insurSocialSecurityNo" class="mandlabel">Insured Social Security No</label>
+									<input type="text" id="insurSocialSecurityNo" class="form-control insurSSN mandatory" placeholder="Enter Insured Social Security No" required data-parsley-trigger="keyup" data-parsley-minlength="3" data-parsley-validation-threshold="0" data-parsley-maxlength="100" data-parsley-minlength-message="Enter at least 3 characters. ">
 								</div>
 							</div>
 							<div class="col">
@@ -425,8 +427,8 @@
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<label for="insurPolicyGroupNo" class="">Policy Group No</label>
-									<input type="text" id="insurPolicyGroupNo" class="form-control insurPolicyGroupNo" placeholder="Enter Policy Group No">
+									<label for="insurGroupNo" class="">Policy Group No</label>
+									<input type="text" id="insurGroupNo" class="form-control insurPolicyGroupNo" placeholder="Enter Policy Group No">
 								</div>
 							</div>
 						</div>
@@ -451,40 +453,40 @@
 									<span class="avalue patientLName"></span>
 								</td>
 								<th><b>Gender : </b></th>
-								<td class="valueTd avalue inputGender"></td>
+								<td class="valueTd avalue patientGender"></td>
 							</tr>
 							<tr>
 								<th><b>Date Of Birth : </b></th>
-								<td class="valueTd avalue inputDob"></td>
+								<td class="valueTd avalue patientDob"></td>
 								<th><b>Mobile Number : </b></th>
-								<td class="valueTd avalue inputMobile"></td>
+								<td class="valueTd avalue patientMob"></td>
 							</tr>
 							<tr>
 								<th><b>Alternate Mobile Number : </b></th>
-								<td class="valueTd avalue inputAltMobile"></td>
+								<td class="valueTd avalue patientAltMob"></td>
 								<th><b>Land Line Number : </b></th>
-								<td class="valueTd avalue inputLandLineNo"></td>
+								<td class="valueTd avalue patientLLNo"></td>
 							</tr>
 							<tr>
 								<th><b>Address Line 1 : </b></th>
-								<td class="valueTd avalue inputAddress1"></td>
+								<td class="valueTd avalue patientAddr1"></td>
 								<th><b>Address Line 2 : </b></th>
 								<td class="valueTd  ">
-									<span class="avalue inputAddress2"></span>
-									<span class="avalue inputCity"></span>
-									<span class="avalue inputState"></span>
-									<span class="avalue inputZip"></span>
+									<span class="avalue patientAddr2"></span>
+									<span class="avalue patientCity"></span>
+									<span class="avalue patientState"></span>
+									<span class="avalue patientZip"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><b>Education : </b></th>
-								<td class="valueTd avalue inputEducation"></td>
+								<td class="valueTd avalue patientEdu"></td>
 								<th><b>Occupation : </b></th>
-								<td class="valueTd avalue inputOccupation"></td>
+								<td class="valueTd avalue patientOccup"></td>
 							</tr>
 							<tr>
 								<th><b>Marital Status : </b></th>
-								<td class="valueTd avalue inputMaritalStatus"></td>
+								<td class="valueTd avalue patientMStatus"></td>
 								<th><b></b></th>
 								<td class="valueTd avalue "></td>
 							</tr>
@@ -498,45 +500,45 @@
 							<tr>
 								<th><b>Gardian name : </b></th>
 								<td class="valueTd">
-								`	<span class="avalue gardianFName"></span> 
-									<span class="avalue gardianMName"></span> 
-									<span class="avalue gardianLName"></span>
+								`	<span class="avalue gardFName"></span> 
+									<span class="avalue gardMName"></span> 
+									<span class="avalue gardLName"></span>
 								</td>
 								<th><b>Gender : </b></th>
-								<td class="valueTd avalue inputGGender"></td>
+								<td class="valueTd avalue gardGender"></td>
 							</tr>
 							<tr>
 								<th><b>Date Of Birth : </b></th>
-								<td class="valueTd avalue inputGDob"></td>
+								<td class="valueTd avalue gardDob"></td>
 								<th><b>Mobile Number : </b></th>
-								<td class="valueTd avalue inputGMobile"></td>
+								<td class="valueTd avalue gardMob"></td>
 							</tr>
 							<tr>
 								<th><b>Alternate Mobile Number : </b></th>
-								<td class="valueTd avalue inputGAltMobile"></td>
+								<td class="valueTd avalue gardAltMob"></td>
 								<th><b>Land Line Number : </b></th>
-								<td class="valueTd avalue inputGLandLineNo"></td>
+								<td class="valueTd avalue gardLLNo"></td>
 							</tr>
 							<tr>
 								<th><b>Address Line 1 : </b></th>
-								<td class="valueTd avalue inputGAddress1"></td>
+								<td class="valueTd avalue gardAddr1"></td>
 								<th><b>Address Line 2 : </b></th>
 								<td class="valueTd avalue ">
-									<span class="avalue inputGAddress2"></span>
-									<span class="avalue inputGCity"></span>
-									<span class="avalue inputGState"></span>
-									<span class="avalue inputGZip"></span>
+									<span class="avalue gardAddr2"></span>
+									<span class="avalue gardCity"></span>
+									<span class="avalue gardState"></span>
+									<span class="avalue gardZip"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><b>Education : </b></th>
-								<td class="valueTd avalue "></td>
+								<td class="valueTd avalue gardEdu"></td>
 								<th><b>Occupation : </b></th>
-								<td class="valueTd avalue "></td>
+								<td class="valueTd avalue gardOccup"></td>
 							</tr>
 							<tr>
 								<th><b>Marital Status : </b></th>
-								<td class="valueTd avalue "></td>
+								<td class="valueTd avalue gardMStatus"></td>
 								<th><b></b></th>
 								<td class="valueTd avalue "></td>
 							</tr>
@@ -567,9 +569,9 @@
 							</tr>
 							<tr>
 								<th><b>Insured Social Security Number : </b></th>
-								<td class="valueTd avalue insurSSN"></td>
+								<td class="valueTd avalue insurSocialSecurityNo"></td>
 								<th><b>Insured Mobile Number : </b></th>
-								<td class="valueTd avalue insurMobNo"></td>
+								<td class="valueTd avalue insurMobile"></td>
 							</tr>
 							<tr>
 								<th><b>Policy Id : </b></th>
@@ -579,7 +581,7 @@
 							</tr>
 							<tr>
 								<th><b>Policy Group Number : </b></th>
-								<td class="valueTd avalue insurPolicyGroupNo"></td>
+								<td class="valueTd avalue insurGroupNo"></td>
 								<th><b> </b></th>
 								<td class="valueTd avalue "></td>
 							</tr>
@@ -604,7 +606,88 @@
 	<div class="webcamModalDiv" id="webcamModalDiv"></div>
 	<script type="text/javascript">
 
+		var $sections = $('.stepFormSectionDiv');
+		var $list = $('li.step-item');
+
 		$('#patientForm').parsley();
+
+		$(function(){
+			
+			$('#patientDob').datepicker({
+				  dateFormat: 'dd-mm-yy',
+				  showOtherMonths: true,
+				  selectOtherMonths: true,
+				  changeMonth: true,
+				  changeYear: true,
+			});
+
+			$('#patientDob').datepicker().on('changeDate', function(e) {
+				$('#patientDob').parsley().validate();
+		    });
+
+			$('#gardDob').datepicker({
+				  dateFormat: 'dd-mm-yy',
+				  showOtherMonths: true,
+				  selectOtherMonths: true,
+				  changeMonth: true,
+				  changeYear: true,
+			});
+
+			new Cleave('.dobDateCleave1', {
+				 date: true,
+				 delimiter: '-',
+				 datePattern: ['d', 'm', 'Y']
+			});
+
+			new Cleave('.dobDateCleave2', {
+				 date: true,
+				 delimiter: '-',
+				 datePattern: ['d', 'm', 'Y']
+			});
+			
+			new Cleave('.mobileCleave1', {
+	        	numeral: true,
+	        	numeralIntegerScale: 10,
+	        	numeralPositiveOnly: true,
+	        	delimiter: ''
+	        });
+
+			new Cleave('.mobileCleave2', {
+	        	numeral: true,
+	        	numeralIntegerScale: 10,
+	        	numeralPositiveOnly: true,
+	        	delimiter: ''
+	        });
+
+			new Cleave('.mobileCleave3', {
+	        	numeral: true,
+	        	numeralIntegerScale: 10,
+	        	numeralPositiveOnly: true,
+	        	delimiter: ''
+	        });
+
+			new Cleave('.mobileCleave4', {
+	        	numeral: true,
+	        	numeralIntegerScale: 10,
+	        	numeralPositiveOnly: true,
+	        	delimiter: ''
+	        });
+
+			new Cleave('.zipCleave1', {
+	        	numeral: true,
+	        	numeralIntegerScale: 6,
+	        	numeralPositiveOnly: true,
+	        	delimiter: ''
+	        });
+
+			new Cleave('.zipCleave2', {
+	        	numeral: true,
+	        	numeralIntegerScale: 6,
+	        	numeralPositiveOnly: true,
+	        	delimiter: ''
+	        });
+
+		});
 		 
 		$(function() {
 
@@ -620,42 +703,6 @@
 				}
 			});
 
-			var $sections = $('.stepFormSectionDiv');
-			var $list = $('li.step-item');
-
-			function navigateTo(index) {
-				// Mark the current section with the class 'current'
-				$sections.removeClass('current').removeClass('active')
-						.eq(index).addClass('current').addClass('active');
-				$list.removeClass('current').removeClass('active').eq(index)
-						.addClass('current').addClass('active');
-				if (index > 0) {
-					$list.eq(index).removeClass('complete');
-					$list.eq(index - 1).addClass('complete');
-				}
-				// Show only the navigation buttons that make sense for the current section:
-				$('.form-navigation .previous').toggle(index > 0);
-				var atTheEnd = index >= $sections.length - 1;
-				$('.form-navigation .next').toggle(!atTheEnd);
-
-				if(atTheEnd){
-					var po = formToJson($('#patientForm'));
-					console.log("patientForm", po);
-					
-					Object.keys(po).forEach(function(key) {
-						//console.log(key, po[key]);
-						$('#confirmDiv').find('.avalue.'+key).text(po[key]);
-					});
-				}
-
-				$('.form-navigation .savePatientBtn').toggle(atTheEnd);
-			}
-
-			function curIndex() {
-				// Return the current index by looking at which section has the class 'current'
-				return $sections.index($sections.filter('.current.active'));
-			}
-
 			$('.form-navigation .previous').click(function() {
 				navigateTo(curIndex() - 1);
 			});
@@ -670,8 +717,7 @@
 			});
 
 			$sections.each(function(index, section) {
-				$(section).find('.form-control.mandatory').attr(
-						'data-parsley-group', 'block-' + index);
+				$(section).find('.form-control.mandatory').attr('data-parsley-group', 'block-' + index);
 			});
 
 			navigateTo(0);
@@ -683,15 +729,51 @@
 			setFormData();
 		});
 
+		function navigateTo(index) {
+			// Mark the current section with the class 'current'
+			$('.form-navigation').find('.alert').remove();
+			$sections.removeClass('current').removeClass('active')
+					.eq(index).addClass('current').addClass('active');
+			$list.removeClass('current').removeClass('active').eq(index)
+					.addClass('current').addClass('active');
+			if (index > 0) {
+				$list.eq(index).removeClass('complete');
+				$list.eq(index - 1).addClass('complete');
+			}
+			// Show only the navigation buttons that make sense for the current section:
+			$('.form-navigation .previous').toggle(index > 0);
+			var atTheEnd = index >= $sections.length - 1;
+			$('.form-navigation .next').toggle(!atTheEnd);
+
+			if(atTheEnd){
+				var po = formToJson($('#patientForm'));
+				console.log("patientForm", po);
+				
+				Object.keys(po).forEach(function(key) {
+					//console.log(key, po[key]);
+					$('#confirmDiv').find('.avalue.'+key).text(po[key]);
+				});
+			}
+
+			$('.form-navigation .savePatientBtn').toggle(atTheEnd);
+		}
+
+		function curIndex() {
+			// Return the current index by looking at which section has the class 'current'
+			return $sections.index($sections.filter('.current.active'));
+		}
+
 		function setFormData() {
 			if ($('#patientFlag').val() != 'N') {
-				var catJsonObj = JSON.parse(JSON.stringify(<%=mapper.writeValueAsString(request.getAttribute("patient"))%>));
-				console.log('catJsonObj::', catJsonObj);
-				$('.patientForm-div').find('.alert').remove();
-				$('#patientForm').find('input.patientName').val(catJsonObj.patientName);
-				$('#patientForm').find('select.statusSelect').val(catJsonObj.status);
-				$('#patientForm').find('textarea.patientDesc').val(catJsonObj.desc);
-				$('#patientForm').find('input.patientId').val(catJsonObj.id);
+				var patientJsonObj = JSON.parse(JSON.stringify(<%=mapper.writeValueAsString(request.getAttribute("patient"))%>));
+				console.log('patientJsonObj::', patientJsonObj);
+				Object.keys(patientJsonObj).forEach(function(key) {
+					$('#patientForm').find('#'+key).val(patientJsonObj[key]).trigger('input');
+				});
+				//$('#patientForm').find('input.patientName').val(catJsonObj.patientName);
+				//$('#patientForm').find('select.statusSelect').val(catJsonObj.status);
+				//$('#patientForm').find('textarea.patientDesc').val(catJsonObj.desc);
+				//$('#patientForm').find('input.patientId').val(catJsonObj.id);
 				$('#patientForm').parsley().validate();
 			}
 		}
@@ -706,13 +788,10 @@
 				patientId = $('#patientId').val();
 			}
 
-			var formData = {
-				'patientName' : $('#patientForm').find('.patientName').val(),
-				'statusSelect' : $('#patientForm').find('.statusSelect').val(),
-				'desc' : $('#patientForm').find('.patientDesc').val(),
-				'flag' : flag,
-				'patientId' : patientId
-			}
+			
+			var formData = formToJson($('#patientForm'));
+			formData["flag"] = flag;
+			formData["patientId"] = patientId;
 
 			$.ajax({
 				url : '/app/patient/patientMaster/saveUpdateDeletePatient',
@@ -723,15 +802,29 @@
 					console.log('resp', resp);
 					if (resp.status == "success") {
 						clearPatientForm($('#patientForm'));
-						$('.patientForm-div').find('.alert').remove();
-						$('.patientForm-div').append('<div class="alert alert-solid alert-success d-flex align-items-center mg-b-0" role="alert">'
-												+ '<i class="fa fa-check-circle" style="font-size: 22px;margin-right: 10px;"></i> '
-												+ resp.msg + '</div>')
+						$.confirm({
+							icon: 'fa fa-check-circle',
+						    title: 'Success !',
+						    columnClass: 'medium',
+						    content: resp.msg,
+						    type: 'green',
+						    theme: 'bootstrap',
+						    animationSpeed: 100,
+						    typeAnimated: true,
+						    buttons: {
+						        Ok: {
+						            text: 'Ok',
+						            btnClass: 'btn-green',
+						            keys: ['enter'],
+						            action: function(){
+						            	$list.removeClass('complete');
+						            	navigateTo(0);
+						            }
+						        }
+						    }
+						});
 					} else {
-						$('.patientForm-div').find('.alert').remove();
-						$('.patientForm-div').append('<div class="alert alert-solid alert-danger d-flex align-items-center mg-b-0" role="alert">'
-												+ '<i class="fa fa-times-circle" style="font-size: 22px;margin-right: 10px;"></i> '
-												+ resp.msg + '</div>')
+						alert(resp.msg,'E')
 					}
 				}
 			});
@@ -848,27 +941,15 @@
 		function clearPatientForm(formObj) {
 			console.log('clearPatientForm')
 			$('#patientForm').find('input').val('');
-			$('#patientForm').find('select').val('');
-			$('#patientForm').find('.select2-hidden-accessible').val(null)
-					.trigger('change');
+			$('#patientForm').find('select').find('option:first').prop('selected',true);
+			$('#patientForm').find('.select2-hidden-accessible').val(null).trigger('change');
 			$('#patientForm').find('textarea').val('');
-			$('#patientForm').find('.alert').remove();
-
-			$('#patientForm').find('.select2-hidden-accessible').removeClass(
-					'parsley-error');
-			$('#patientForm').find('.parsley-error').removeClass(
-					'.parsley-error');
-			$('#patientForm').find('.parsley-success').removeClass(
-					'.parsley-success');
-			$('#patientForm').find('.select2-selection').removeClass(
-					'.parsley-error');
-			$('#patientForm').find('.patientId').val("0"), $('#patientForm')
-					.find('.patientSave').attr('onclick',
-							"savePatient(this,'N')");
-			$('#patientForm').find('.patientSave').removeClass('btn-danger')
-					.addClass('btn-primary');
-			$('#patientForm').find('.patientSave').text('Save Info');
-			$('#patientForm').find('.patientSave').prop('disabled', true);
+			$('#patientForm').find('.select2-hidden-accessible').removeClass('parsley-error');
+			$('#patientForm').find('.parsley-error').removeClass('.parsley-error');
+			$('#patientForm').find('.parsley-success').removeClass('.parsley-success');
+			$('#patientForm').find('.select2-selection').removeClass('.parsley-error');
+			$('#patientForm').find('select').find('option:first').prop('selected',true).trigger('change');
+			$('#patientForm').find('input[type="radio"][name="inputInsuranceYesNo"]').val('Y').trigger('change');
 			$('#patientForm').parsley().reset();
 		}
 

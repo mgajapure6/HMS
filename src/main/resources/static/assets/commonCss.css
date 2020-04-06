@@ -283,3 +283,7 @@
   top: 0;
   width: 100%;
 }
+
+ul .nav-item.moduleLi.with-sub{
+	border-bottom: 1px #ccc dotted;
+}

@@ -30,14 +30,13 @@ import com.mgsoft.module.admin.repository.MenuRepository;
 import com.mgsoft.module.admin.repository.ModuleRepository;
 import com.mgsoft.module.customer.beans.PartyMaster;
 import com.mgsoft.module.customer.repositories.PartyMasterRepository;
-import com.mgsoft.module.doctor.beans.EmployeeType;
-import com.mgsoft.module.doctor.repositories.EmployeeRepository;
-import com.mgsoft.module.doctor.repositories.EmployeeTypeRepository;
 import com.mgsoft.module.inventory.beans.InvItem;
 import com.mgsoft.module.inventory.beans.ItemCategory;
 import com.mgsoft.module.inventory.repositories.InvItemRepository;
 import com.mgsoft.module.inventory.repositories.ItemCategoryRepository;
+import com.mgsoft.module.setting.beans.StateMaster;
 import com.mgsoft.module.setting.beans.Tax;
+import com.mgsoft.module.setting.repositories.StateMasterRepository;
 import com.mgsoft.module.setting.repositories.TaxRepository;
 
 @SpringBootApplication
@@ -64,11 +63,11 @@ public class HMSApplication extends SpringBootServletInitializer {
 	private InvItemRepository invItemRepository;
 	
 	@Autowired
-	ServletContext context;
+	private StateMasterRepository stateMasterRepository;
 	
 	@Autowired
-	EmployeeTypeRepository employeeTypeRepository;
-	
+	ServletContext context;
+
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(HMSApplication.class);
@@ -178,19 +177,6 @@ public class HMSApplication extends SpringBootServletInitializer {
 			
 			invItemRepository.save(bottal);
 			
-			EmployeeType empType = new EmployeeType();
-			empType.setName("Doctor");
-			empType.setNameOl("Doctor");
-			empType.setStatus("E");
-			
-			employeeTypeRepository.save(empType);
-			
-			EmployeeType empType2 = new EmployeeType();
-			empType2.setName("Nurse");
-			empType2.setNameOl("Nurse");
-			empType2.setStatus("E");
-			employeeTypeRepository.save(empType2);
-			
 			
 //			JSONParser parser = new JSONParser();
 //			JSONArray a1 = (JSONArray) parser.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/module.json")));//"C:\\Users\\EPS01\\Desktop\\JSON_DATA\\MODULE.json"));
@@ -268,6 +254,18 @@ public class HMSApplication extends SpringBootServletInitializer {
 				m.setMenus(menus);
 				moduleRepository.save(m);
 			}
+			
+			JsonArray stateArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/state_list.json"))).getAsJsonArray();
+			for (int i = 0; i < stateArrays.size(); i++) {
+				JsonObject state = stateArrays.get(i).getAsJsonObject();
+				StateMaster sm = new StateMaster();
+				sm.setStateName( state.has("state_name") ? state.get("state_name").getAsString() : null);
+				sm.setAlphaCode( state.has("alpha_code") ? state.get("alpha_code").getAsString() : null);
+				sm.setStateCode( state.has("state_code") ? state.get("state_code").getAsInt() : null);
+				stateMasterRepository.save(sm);
+			}
+			
+			
 		};
 	}
 

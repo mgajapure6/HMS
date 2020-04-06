@@ -49,8 +49,8 @@
 						<c:set value="${rCount + 1}" var="rCount"></c:set>
 						<tr>
 							<td class="mCount">${rCount}</td>
-							<td class="mName">${patient.patientName}</td>
-							<td class="mStatus">${patient.status}<span class="modStatus hide">${patient.status}</span></td>
+							<td class="mName">${patient.patientFName} ${patient.patientMName} ${patient.patientLName}</td>
+							<td class="mStatus">${patient.patientStatus}<span class="modStatus hide">${patient.patientStatus}</span></td>
 							<td class="center">
 								<div class="text-center">
 									<button type="button" onclick="loadPatientForm(this,'M')" data-patientid="${patient.id}" class="btn btn-success btn-icon btn-sm">
