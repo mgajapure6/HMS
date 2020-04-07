@@ -19,6 +19,6 @@
 <link href="lib/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
 <link href="lib/dualListboxTransfer/css/jquery.transfer.css?v=0.0.3" rel="stylesheet"/>
 
-
 <link href="assets/css/dashforge.css" rel="stylesheet">
+<link href="assets/css/dashforge.contacts.css" rel="stylesheet">
 <link href="assets/commonCss.css" rel="stylesheet">

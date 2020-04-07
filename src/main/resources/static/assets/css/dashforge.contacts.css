@@ -70,9 +70,10 @@
 
 .contact-navleft {
   background-color: #fff;
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
+  height: 100%;
   border-right: 1px solid rgba(72, 94, 144, 0.16);
   width: 54px;
   padding: 15px 10px; }

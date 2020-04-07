@@ -6,6 +6,12 @@
 		"url": "app/dashboard/s"
 	},
 	{
+		"module_name": "My Contact Book",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"url": "app/contactBook"
+	},
+	{
 		"module_name": "Admin",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -157,7 +163,8 @@
 				"url": "app/appointment/appointmentMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Patient",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -180,7 +187,8 @@
 				"url": "app/doctor/doctorMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Billing",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -191,7 +199,8 @@
 				"url": "app/billing/billingMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Blood Bank",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -202,7 +211,8 @@
 				"url": "app/bloodBank/bloodBankMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Lab",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -213,7 +223,8 @@
 				"url": "app/lab/labMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Ward / Room",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -224,7 +235,8 @@
 				"url": "app/room/roomMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Payroll",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -235,7 +247,8 @@
 				"url": "app/payroll/payrollMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Employee",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -246,7 +259,8 @@
 				"url": "app/employee/employeeMaster"
 			}
 		]
-	},{
+	},
+	{
 		"module_name": "Donation",
 		"isLink": false,
 		"module_icon": "shopping-bag",
@@ -267,6 +281,71 @@
 				"menu_name": "Login",
 				"isLink": true,
 				"url": "app/login"
+			}
+		]
+	},
+	{
+		"module_name": "Medical Store",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Store Master",
+				"isLink": true,
+				"url": "app/medicalStore/storeMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Procurement",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Procurement Master",
+				"isLink": true,
+				"url": "app/procurement/procurementMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Asset Management",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Asset Master",
+				"isLink": true,
+				"url": "app/assetManagement/assetMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Pharmacy",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Pharmacy Master",
+				"isLink": true,
+				"url": "app/pharmacy/pharmacyMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Diagnostic",
+		"isLink": false,
+		"module_icon": "shopping-bag",
+		"menu": [
+			{
+				"menu_name": "Test Group",
+				"isLink": true,
+				"url": "app/diagnostic/testGroup"
+			},
+			{
+				"menu_name": "Test Master",
+				"isLink": true,
+				"url": "app/diagnostic/testMaster"
 			}
 		]
 	}

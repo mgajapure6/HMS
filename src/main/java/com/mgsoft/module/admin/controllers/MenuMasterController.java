@@ -69,7 +69,6 @@ public class MenuMasterController {
 			menu.setId((long) 0);
 		}else {
 			menu = menuRepository.getOne(id);
-			
 		}
 		System.out.println(" module id:"+module.getId());
 		System.out.println(" menu module id:"+menu.getModule().getId());

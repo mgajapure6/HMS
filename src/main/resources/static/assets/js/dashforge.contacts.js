@@ -2,11 +2,13 @@ $(function(){
 
   'use strict'
 
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({
+	  delay: { "show": 0, "hide": 10 }
+  });
 
   // set active contact from list to show in desktop view by default
   if(window.matchMedia('(min-width: 992px)').matches) {
-    $('.contact-list .media:first-of-type').addClass('active');
+    //$('.contact-list .media:first-of-type').addClass('active');
   }
 
 
@@ -14,13 +16,13 @@ $(function(){
     suppressScrollX: true
   });
 
-  new PerfectScrollbar('.contact-content-body', {
-    suppressScrollX: true
-  });
+//  new PerfectScrollbar('.contact-content-body', {
+//    suppressScrollX: true
+//  });
 
-  new PerfectScrollbar('.contact-content-sidebar', {
-    suppressScrollX: true
-  });
+//  new PerfectScrollbar('.contact-content-sidebar', {
+//    suppressScrollX: true
+//  });
 
   $('.contact-navleft .nav-link').on('shown.bs.tab', function(e) {
     contactSidebar.update()
@@ -78,5 +80,5 @@ $(function(){
   $(window).resize(function(){
     $('body').removeClass('contact-options-show');
   })
-
+  
 })

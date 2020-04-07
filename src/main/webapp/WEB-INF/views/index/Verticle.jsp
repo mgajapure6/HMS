@@ -22,7 +22,7 @@
 				<div class="loading-dot"></div>
 				<div class="loading-dot"></div>
 			</div>
-			<div class="container mainContainer pd-x-0" style="max-width: 98%;"></div>
+			<div class="mainContainer pd-x-0"></div>
 			<jsp:include page="../util/footer-lv.jsp"></jsp:include>
 		</div>
 	</div>

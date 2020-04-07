@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -28,6 +29,8 @@ import com.mgsoft.module.admin.beans.Menu;
 import com.mgsoft.module.admin.beans.Module;
 import com.mgsoft.module.admin.repository.MenuRepository;
 import com.mgsoft.module.admin.repository.ModuleRepository;
+import com.mgsoft.module.contactBook.beans.ContactBook;
+import com.mgsoft.module.contactBook.repositories.ContactBookRepository;
 import com.mgsoft.module.customer.beans.PartyMaster;
 import com.mgsoft.module.customer.repositories.PartyMasterRepository;
 import com.mgsoft.module.inventory.beans.InvItem;
@@ -66,6 +69,9 @@ public class HMSApplication extends SpringBootServletInitializer {
 	private StateMasterRepository stateMasterRepository;
 	
 	@Autowired
+	private ContactBookRepository contactBookRepository;
+	
+	@Autowired
 	ServletContext context;
 
 	@Override
@@ -87,6 +93,45 @@ public class HMSApplication extends SpringBootServletInitializer {
 			    Files.delete(filePath);
 			    //f1.delete();
 			}
+			
+			ContactBook cb1 = new ContactBook();
+			cb1.setContStartLatter("N");
+			cb1.setContFName("Nikhil");
+			cb1.setContMName("Ramkrushna");
+			cb1.setContLName("Wandhare");
+			cb1.setContMob("7856898980");
+			cb1.setContHomeLLNo("0719 2453098");
+			cb1.setContHomeMob("9288909899");
+			cb1.setContWorkLLNo("0754 4567453");
+			cb1.setContEmail("nikhil.wandhare@vgipl.in");
+			cb1.setContCompany("Virtual Galaxy Infotech");
+			cb1.setContJobPost("Team Lead");
+			cb1.setContHomeAddr("PN. 465 Ayodhya Nagar\r\n" + "Nagpur, Maharashtra, India");
+			cb1.setContWorkAddr("PN. 68 Dattatry Nagar\r\n" + "Nagpur, Maharashtra, India");
+			cb1.setContPersonalWeb("www.nw.in");
+			cb1.setContDob(new Date());
+			contactBookRepository.save(cb1);
+			
+			ContactBook cb = new ContactBook();
+			cb.setContStartLatter("M");
+			cb.setContFName("Mayur");
+			cb.setContMName("Gunvant");
+			cb.setContLName("Gajapure");
+			cb.setContMob("8055880605");
+			cb.setContHomeLLNo("0719 2323098");
+			cb.setContHomeMob("7890890989");
+			cb.setContWorkLLNo("0712 2525457");
+			cb.setContEmail("mayur.gajapure@vgipl.in");
+			cb.setContCompany("Virtual Galaxy Infotech");
+			cb.setContJobPost("Sr. Java Developer");
+			cb.setContHomeAddr("4658 Kenwood Place\r\n" + "Pompano Beach, FL 33060, United States");
+			cb.setContWorkAddr("819 Waldeck Street\r\n" + "Farmers Branch, TX 75244, United States");
+			cb.setContPersonalWeb("www.mgg.in");
+			cb.setContDob(new Date());
+			cb.setContFavoriteFlag("Y");
+			contactBookRepository.save(cb);
+			
+			
 
 			Tax tax = new Tax();
 			tax.setAuthName("MGG");
@@ -264,8 +309,6 @@ public class HMSApplication extends SpringBootServletInitializer {
 				sm.setStateCode( state.has("state_code") ? state.get("state_code").getAsInt() : null);
 				stateMasterRepository.save(sm);
 			}
-			
-			
 		};
 	}
 

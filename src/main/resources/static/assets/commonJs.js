@@ -1,5 +1,5 @@
 $(function() {
-	$('li.moduleLi>a.m-link_0').click();
+	$('li.moduleLi_1>a.m-link_0').click();
 });
 function loadPage(obj, link, eleClassName, eleLiClassName, VorH) {
 	$('.loading').removeClass('hide');
@@ -18,6 +18,9 @@ function loadPage(obj, link, eleClassName, eleLiClassName, VorH) {
 			  minimumResultsForSearch : -1
 		  });
 		  $('#ui-datepicker-div').remove();
+		  $('.content-body').removeClass('pd-0');
+		  $('body').removeClass('app-contact');
+		  $('.mainContainer').removeClass('ht-100p');
 		  feather.replace();
 		  if (obj == null) {
 			  if (VorH == 'V') {

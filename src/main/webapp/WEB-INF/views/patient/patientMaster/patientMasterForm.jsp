@@ -950,6 +950,8 @@
 			$('#patientForm').find('.select2-selection').removeClass('.parsley-error');
 			$('#patientForm').find('select').find('option:first').prop('selected',true).trigger('change');
 			$('#patientForm').find('input[type="radio"][name="inputInsuranceYesNo"]').val('Y').trigger('change');
+			$('#patientId').val(0);
+		    $('#patientFlag').val('N');
 			$('#patientForm').parsley().reset();
 		}
 
