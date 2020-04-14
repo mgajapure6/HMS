@@ -99,10 +99,10 @@
 							<td class="modTotMenu center">${fn:length(module.menus)}</td>
 							<td class="center">
 								<div class="text-center">
-									<button type="button" onclick="setFormData(this,'M')" data-moduleid="${module.id}" class="btn btn-success btn-icon btn-sm">
+									<button type="button" onclick="setFormData(this,'M')" data-moduleid="${module.id}" class="btn btn-success btn-icon btn-sm editRecordBtn">
 										<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 									</button>
-									<button type="button" onclick="setFormData(this,'D')" data-moduleid="${module.id}" class="btn btn-danger btn-icon btn-sm">
+									<button type="button" onclick="setFormData(this,'D')" data-moduleid="${module.id}" class="btn btn-danger btn-icon btn-sm deleteRecordBtn">
 										<i class="fa fa-trash-alt" aria-hidden="true"></i>
 									</button>
 								</div>

@@ -16,12 +16,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table
 public class Menu implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column
 	private String menuName;
+	@Column
+	private String menuCssClasses;
 	@Column
 	private String menuNameOl;
 	@Column
@@ -31,19 +33,19 @@ public class Menu implements Serializable {
 	@Column
 	private String menuIcon;
 	@Column
-	private String addRight;
+	private Boolean addRight;
 	@Column
-	private String modRight;
+	private Boolean editRight;
 	@Column
-	private String delRight;
+	private Boolean delRight;
 	@Column
-	private String viewRight;
+	private Boolean viewRight;
 	@Column
-	private String printRight;
+	private Boolean printRight;
 	@Column
-	private String specialRight;
+	private Boolean specialRight;
 	@Column
-	private boolean hasLink;
+	private Boolean hasLink;
 	@Column
 	private String status;
 	@Column
@@ -69,6 +71,14 @@ public class Menu implements Serializable {
 
 	public void setMenuName(String menuName) {
 		this.menuName = menuName;
+	}
+
+	public String getMenuCssClasses() {
+		return menuCssClasses;
+	}
+
+	public void setMenuCssClasses(String menuCssClasses) {
+		this.menuCssClasses = menuCssClasses;
 	}
 
 	public String getMenuNameOl() {
@@ -103,60 +113,84 @@ public class Menu implements Serializable {
 		this.menuIcon = menuIcon;
 	}
 
-	public String getAddRight() {
+	public Boolean getAddRight() {
 		return addRight;
 	}
 
-	public void setAddRight(String addRight) {
+	public void setAddRight(Boolean addRight) {
 		this.addRight = addRight;
 	}
 
-	public String getModRight() {
-		return modRight;
+	public Boolean getEditRight() {
+		return editRight;
 	}
 
-	public void setModRight(String modRight) {
-		this.modRight = modRight;
+	public void setEditRight(Boolean editRight) {
+		this.editRight = editRight;
 	}
 
-	public String getDelRight() {
+	public Boolean getDelRight() {
 		return delRight;
 	}
 
-	public void setDelRight(String delRight) {
+	public void setDelRight(Boolean delRight) {
 		this.delRight = delRight;
 	}
 
-	public String getViewRight() {
+	public Boolean getViewRight() {
 		return viewRight;
 	}
 
-	public void setViewRight(String viewRight) {
+	public void setViewRight(Boolean viewRight) {
 		this.viewRight = viewRight;
 	}
 
-	public String getPrintRight() {
+	public Boolean getPrintRight() {
 		return printRight;
 	}
 
-	public void setPrintRight(String printRight) {
+	public void setPrintRight(Boolean printRight) {
 		this.printRight = printRight;
 	}
 
-	public String getSpecialRight() {
+	public Boolean getSpecialRight() {
 		return specialRight;
 	}
 
-	public void setSpecialRight(String specialRight) {
+	public void setSpecialRight(Boolean specialRight) {
 		this.specialRight = specialRight;
 	}
 
-	public boolean isHasLink() {
+	public Boolean getHasLink() {
 		return hasLink;
 	}
 
-	public void setHasLink(boolean hasLink) {
+	public void setHasLink(Boolean hasLink) {
 		this.hasLink = hasLink;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Long getParentId() {
+		return parentId;
+	}
+
+	public void setParentId(Long parentId) {
+		this.parentId = parentId;
+	}
+
+	public String getParentName() {
+		return parentName;
+	}
+
+	public void setParentName(String parentName) {
+		this.parentName = parentName;
 	}
 
 	public Module getModule() {
@@ -167,38 +201,13 @@ public class Menu implements Serializable {
 		this.module = module;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	public String getParentName() {
-		return parentName;
-	}
-
-	public void setParentName(String moduleName) {
-		this.parentName = moduleName;
-	}
-	
-	public Long getParentId() {
-		return parentId;
-	}
-
-	public void setParentId(Long moduleId) {
-		this.parentId = moduleId;
-	}
-
 	@Override
 	public String toString() {
-		return "Menu [id=" + id + ", menuName=" + menuName + ", menuNameOl=" + menuNameOl + ", link=" + link
-				+ ", menuCount=" + menuCount + ", menuIcon=" + menuIcon + ", addRight=" + addRight + ", modRight="
-				+ modRight + ", delRight=" + delRight + ", viewRight=" + viewRight + ", printRight=" + printRight
-				+ ", specialRight=" + specialRight + ", hasLink=" + hasLink + ", status=" + status + "]";
+		return "Menu [id=" + id + ", menuName=" + menuName + ", menuCssClasses=" + menuCssClasses + ", menuNameOl="
+				+ menuNameOl + ", link=" + link + ", menuCount=" + menuCount + ", menuIcon=" + menuIcon + ", addRight="
+				+ addRight + ", editRight=" + editRight + ", delRight=" + delRight + ", viewRight=" + viewRight
+				+ ", printRight=" + printRight + ", specialRight=" + specialRight + ", hasLink=" + hasLink + ", status="
+				+ status + ", parentId=" + parentId + ", parentName=" + parentName + "]";
 	}
-	
-	
 
 }

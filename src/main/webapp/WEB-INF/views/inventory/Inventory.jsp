@@ -290,7 +290,7 @@
 				
 					$('#allItmTabPane').find('.dataTables_filter').append('<a href="javascript:;" style="float: right;" onclick="reloadPage()" class="btn btn-sm pd-x-15 btn-white btn-uppercase mg-l-5">'+
 							'<i data-feather="refresh-cw"></i></a>'+
-							'<a href="javascript:;" style="float: right;" onclick="openItemModal()" class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5">'+
+							'<a href="javascript:;" style="float: right;" onclick="openItemModal()" class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn">'+
 								'<i class="fa fa-plus"></i> Add New Item</a>');
 					feather.replace();
 				}
@@ -313,7 +313,7 @@
 					
 					$('#categoryTabPane').find('.dataTables_filter').append('<a href="javascript:;" style="float: right;" onclick="reloadPage()" class="btn btn-sm pd-x-15 btn-white btn-uppercase mg-l-5">'+
 							'<i data-feather="refresh-cw"></i></a>'+
-							'<a href="javascript:;" style="float: right;" onclick="openCategoryModalNew()" class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5">'+
+							'<a href="javascript:;" style="float: right;" onclick="openCategoryModalNew()" class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn">'+
 								'<i class="fa fa-plus"></i> Add New Category</a>');
 					feather.replace();
 				}

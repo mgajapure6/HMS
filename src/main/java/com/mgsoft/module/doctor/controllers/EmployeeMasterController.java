@@ -19,7 +19,7 @@ import com.mgsoft.module.doctor.repositories.EmployeeTypeRepository;
 import com.mgsoft.module.inventory.beans.ItemCategory;
 
 @Controller
-@RequestMapping(value="app/doctor/doctorMaster")
+@RequestMapping(value="app/emp/doctorMaster")
 public class EmployeeMasterController {
 
 	@Autowired

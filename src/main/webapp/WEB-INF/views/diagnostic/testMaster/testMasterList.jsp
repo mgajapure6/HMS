@@ -27,7 +27,7 @@
 			<h4 class="mg-b-0 tx-spacing--1">Test Master</h4>
 		</div>
 		<div class="d-md-block">
-			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onclick="loadTestForm(this,'N')">
+			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn" onclick="loadTestForm(this,'N')">
 				<i class="fa fa-plus"></i> <span class="spinner-border spinner-border-sm hide spinIcon"></span> <span class="title"> Add New Test</span>
 			</button>
 		</div>
@@ -53,10 +53,10 @@
 							<td class="mStatus">${test.testStatus}<span class="status hide">${test.testStatus}</span></td>
 							<td class="center">
 								<div class="text-center">
-									<button type="button" onclick="loadTestForm(this,'M')" data-testid="${test.id}" class="btn btn-success btn-icon btn-sm">
+									<button type="button" onclick="loadTestForm(this,'M')" data-testid="${test.id}" class="btn btn-success btn-icon btn-sm editRecordBtn">
 										<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 									</button>
-									<button type="button" onclick="loadTestForm(this,'D')" data-testid="${test.id}" class="btn btn-danger btn-icon btn-sm">
+									<button type="button" onclick="loadTestForm(this,'D')" data-testid="${test.id}" class="btn btn-danger btn-icon btn-sm deleteRecordBtn">
 										<i class="fa fa-trash-alt" aria-hidden="true"></i>
 									</button>
 								</div>

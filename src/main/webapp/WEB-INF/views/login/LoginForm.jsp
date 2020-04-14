@@ -16,6 +16,11 @@
 .alert {
 	margin-top: 10px;
 }
+
+.img-fluid {
+	max-width: 100%;
+	height: 480px;
+}
 </style>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -30,6 +35,24 @@
 <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
 <meta name="author" content="ThemePixels">
 <title>Login Page</title>
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+<title>DashForge Responsive Bootstrap 4 Dashboard Template</title>
+<!-- vendor css -->
+<link href="lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<!-- DashForge CSS -->
+<link rel="stylesheet" href="assets/css/dashforge.css">
+<link rel="stylesheet" href="assets/css/dashforge.auth.css">
+<style type="text/css">
+.hide {
+	display: none !important;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: 480px !important;
+}
+</style>
 </head>
 <body>
 	<div class="content content-fixed content-auth">
@@ -37,7 +60,7 @@
 			<div class="media align-items-stretch justify-content-center ht-100p pos-relative">
 				<div class="media-body align-items-center d-none d-lg-flex">
 					<div class="mx-wd-600">
-						<img src="../../assets/img/img15.png" class="img-fluid" alt="">
+						<img src="/img/login.png" class="img-fluid" alt="">
 					</div>
 				</div>
 				<!-- media-body -->
@@ -52,12 +75,12 @@
 						<div class="form-group">
 							<div class="d-flex justify-content-between mg-b-5">
 								<label class="mg-b-0-f">Password</label>
-								<a href="#" class="tx-13">Forgot password?</a>
+								<a href="#" class="tx-13" tabindex="-1">Forgot password?</a>
 							</div>
 							<input type="password" class="form-control" placeholder="Enter your password" id="loginPassword">
 						</div>
-						<button class="btn btn-brand-02 btn-block" onClick="checkLogin(this)">Login</button>
-						<div class="tx-13 mg-t-20 tx-center">
+						<button type="button" id="checkLoginBtn" class="btn btn-brand-02 btn-block" onClick="checkLogin(this)">Login</button>
+						<div class="tx-13 mg-t-20 tx-center hide">
 							Don't have an account?
 							<a href="page-signup.html">Create an Account</a>
 						</div>
@@ -70,38 +93,66 @@
 		<!-- container -->
 	</div>
 	<!-- content -->
+	<footer class="footer">
+		<div>
+			<span>&copy; 2019 DashForge v1.0.0. </span> <span>Created by <a href="http://themepixels.me">ThemePixels</a></span>
+		</div>
+		<div>
+			<nav class="nav">
+				<a href="javascript:;" class="nav-link">Licenses</a>
+				<a href="javascript:;" class="nav-link">Change Log</a>
+				<a href="javascript:;" class="nav-link">Get Help</a>
+			</nav>
+		</div>
+	</footer>
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/feather-icons/feather.min.js"></script>
+	<script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="assets/js/dashforge.js"></script>
+	<!-- append theme customizer -->
+	<script src="lib/js-cookie/js.cookie.js"></script>
+	<script src="assets/js/dashforge.settings.js"></script>
 	<script type="text/javascript">
-var needPageReload = false;
-function checkLogin(btnObj) {
-	
-	var formData = {
-		'loginName' : $('#loginName').val(),
-		'loginPassword' : $('#loginPassword').val(),
-	}
+		function checkLogin(btnObj) {
 
-	$.ajax({
-		url : '/app/login/checkUserLogin',
-		method : 'POST',
-		data : formData,
-		async : false,
-		success : function(resp) {
-			//console.log('resp', resp);
-			if (resp.status == "success") {
-				needPageReload = true;
-				$('.login-div').append('<div class="alert alert-solid alert-success d-flex align-items-center mg-b-0" role="alert">'
-										+ '<i class="fa fa-check-circle" style="font-size: 22px;margin-right: 10px;"></i> '
-										+ resp.msg + '</div>')
-				
-			} else {
-				needPageReload = false;
-				$('.login-div').find('.alert').remove();
-				$('.login-div').append('<div class="alert alert-solid alert-danger d-flex align-items-center mg-b-0" role="alert">'
-										+ '<i class="fa fa-times-circle" style="font-size: 22px;margin-right: 10px;"></i> '
-										+ resp.msg + '</div>')
+			var formData = {
+				'loginName' : $('#loginName').val(),
+				'loginPassword' : $('#loginPassword').val(),
 			}
+
+			$.ajax({
+				url : '/login/doLogin',
+				method : 'POST',
+				data : formData,
+				async : false,
+				success : function(resp) {
+					if (resp.status == "success") {
+						$('.login-div').append('<div class="alert alert-solid alert-success d-flex align-items-center mg-b-0 mg-t-15 wd-100p" role="alert">'
+												+ '<i class="fa fa-check-circle close" data-dismiss="alert" style="font-size: 22px;margin-right: 15px;color: #fff;"></i> '
+												+ resp.msg + '</div>');
+						
+						window.location.replace('/app/index');
+					} else {
+						$('.login-div').find('.alert').remove();
+						$('.login-div').append('<div class="alert alert-solid alert-danger d-flex align-items-center mg-b-0 mg-t-15 wd-100p" role="alert">'
+												+ '<i class="fa fa-times-circle close" data-dismiss="alert" style="font-size: 22px;margin-right: 15px;color: #fff;"></i> '
+												+ resp.msg + '</div>');
+					}
+
+					setTimeout(function() {
+						$('.alert').remove();
+					}, 2000)
+				}
+			});
 		}
-	});
-}
-</script>
+
+		$('body').on('keypress', function(event) {
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if (keycode == '13') {
+				$('#checkLoginBtn').click();
+			}
+		});
+	</script>
 </body>
 </html>

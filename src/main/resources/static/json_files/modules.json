@@ -1,20 +1,37 @@
 [
 	{
 		"module_name": "Dashboard",
-		"isLink": true,
-		"module_icon": "shopping-bag",
-		"url": "app/dashboard/s"
+		"isLink": false,
+		"srNo": 1,
+		"module_icon": "package",
+		"classes": "startModule dashboardModule",
+		"menu": [
+			{
+				"menu_name": "Sales Dashboard",
+				"isLink": true,
+				"classes": "startLink",
+				"url": "app/dashboard/s"
+			}
+		]
 	},
 	{
-		"module_name": "My Contact Book",
+		"module_name": "Contact Book",
 		"isLink": false,
-		"module_icon": "shopping-bag",
-		"url": "app/contactBook"
+		"srNo": 2,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Contact List",
+				"isLink": true,
+				"url": "app/contactBook"
+			}
+		]
 	},
 	{
 		"module_name": "Admin",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 3,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Entity Master",
@@ -38,11 +55,6 @@
 				"url": "app/admin/roleMaster"
 			},
 			{
-				"menu_name": "Role Rights",
-				"isLink": true,
-				"url": "app/admin/roleRight"
-			},
-			{
 				"menu_name": "User Master",
 				"isLink": true,
 				"url": "app/admin/userMaster"
@@ -57,7 +69,8 @@
 	{
 		"module_name": "Accounting",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 17,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Account Master",
@@ -79,7 +92,8 @@
 	{
 		"module_name": "Inventory",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 22,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Category Master",
@@ -111,8 +125,34 @@
 	{
 		"module_name": "Settings",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 4,
+		"module_icon": "package",
 		"menu": [
+			{
+				"menu_name": "Hospital Master",
+				"isLink": true,
+				"url": "app/setting/hospitalMaster"
+			},
+			{
+				"menu_name": "Department Master",
+				"isLink": true,
+				"url": "app/setting/departmentMaster"
+			},
+			{
+				"menu_name": "Symptoms Master",
+				"isLink": true,
+				"url": "app/setting/symptomsMaster"
+			},
+			{
+				"menu_name": "Diseases Master",
+				"isLink": true,
+				"url": "app/setting/diseasesMaster"
+			},
+			{
+				"menu_name": "Ambulance Master",
+				"isLink": true,
+				"url": "app/setting/ambulanceMaster"
+			},
 			{
 				"menu_name": "Tax Master",
 				"isLink": true,
@@ -124,26 +164,17 @@
 				"url": "app/setting/discountMaster"
 			},
 			{
-				"menu_name": "Unit Of Measurment",
+				"menu_name": "Other Settings",
 				"isLink": true,
-				"url": "app/setting/uomMaster"
-			},
-			{
-				"menu_name": "Rate Of Interest Master",
-				"isLink": true,
-				"url": "app/setting/roiMaster"
-			},
-			{
-				"menu_name": "Loan Duration Master",
-				"isLink": true,
-				"url": "app/setting/loanDurationMaster"
+				"url": "app/setting/otherSettings"
 			}
 		]
 	},
 	{
 		"module_name": "Party",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 23,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Party Master",
@@ -155,7 +186,8 @@
 	{
 		"module_name": "Aappointment",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 5,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Appointment Master",
@@ -167,7 +199,8 @@
 	{
 		"module_name": "Patient",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 6,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Patient Master",
@@ -179,7 +212,8 @@
 	{
 		"module_name": "Doctor",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 7,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Doctor Master",
@@ -191,7 +225,8 @@
 	{
 		"module_name": "Billing",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 18,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Billing Master",
@@ -203,19 +238,36 @@
 	{
 		"module_name": "Blood Bank",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 8,
+		"module_icon": "package",
 		"menu": [
 			{
-				"menu_name": "Blood Bank Master",
+				"menu_name": "Blood Group Master",
 				"isLink": true,
-				"url": "app/bloodBank/bloodBankMaster"
+				"url": "appdBank/bloodGroupMaster"
+			},
+			{
+				"menu_name": "Blood Bank Status",
+				"isLink": true,
+				"url": "app/bloodBank/bloodBankStatus"
+			},
+			{
+				"menu_name": "Blood Issue Detail",
+				"isLink": true,
+				"url": "app/bloodBank/bloodIssueDetail"
+			},
+			{
+				"menu_name": "Blood Donor Detail",
+				"isLink": true,
+				"url": "app/bloodBank/bloodDonorDetail"
 			}
 		]
 	},
 	{
 		"module_name": "Lab",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 9,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Lab Master",
@@ -227,7 +279,8 @@
 	{
 		"module_name": "Ward / Room",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 10,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Room Master",
@@ -239,7 +292,8 @@
 	{
 		"module_name": "Payroll",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 19,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Payroll Master",
@@ -251,7 +305,8 @@
 	{
 		"module_name": "Employee",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 20,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Employee Master",
@@ -263,7 +318,8 @@
 	{
 		"module_name": "Donation",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 11,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Organ Donation Master",
@@ -275,7 +331,8 @@
 	{
 		"module_name": "Login",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 24,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Login",
@@ -287,7 +344,8 @@
 	{
 		"module_name": "Medical Store",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 12,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Store Master",
@@ -299,7 +357,8 @@
 	{
 		"module_name": "Procurement",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 13,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Procurement Master",
@@ -311,7 +370,8 @@
 	{
 		"module_name": "Asset Management",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 21,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Asset Master",
@@ -323,7 +383,8 @@
 	{
 		"module_name": "Pharmacy",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 14,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Pharmacy Master",
@@ -335,7 +396,8 @@
 	{
 		"module_name": "Diagnostic",
 		"isLink": false,
-		"module_icon": "shopping-bag",
+		"srNo": 15,
+		"module_icon": "package",
 		"menu": [
 			{
 				"menu_name": "Test Group",
@@ -346,6 +408,37 @@
 				"menu_name": "Test Master",
 				"isLink": true,
 				"url": "app/diagnostic/testMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Operation Theatre",
+		"isLink": false,
+		"srNo": 16,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Operation Master",
+				"isLink": true,
+				"url": "app/ot/operationMaster"
+			},
+			{
+				"menu_name": "OT Detail",
+				"isLink": true,
+				"url": "app/ot/otDetail"
+			}
+		]
+	},
+	{
+		"module_name": "Reports",
+		"isLink": false,
+		"srNo": 25,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Reports List",
+				"isLink": true,
+				"url": "app/contactBook"
 			}
 		]
 	}

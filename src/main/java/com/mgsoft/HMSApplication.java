@@ -7,7 +7,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.ServletContext;
 
@@ -27,12 +29,19 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mgsoft.module.admin.beans.Menu;
 import com.mgsoft.module.admin.beans.Module;
+import com.mgsoft.module.admin.beans.RoleMaster;
+import com.mgsoft.module.admin.beans.RoleRights;
+import com.mgsoft.module.admin.beans.UserMaster;
 import com.mgsoft.module.admin.repository.MenuRepository;
 import com.mgsoft.module.admin.repository.ModuleRepository;
+import com.mgsoft.module.admin.repository.RoleMasterRepository;
+import com.mgsoft.module.admin.repository.UserRepository;
 import com.mgsoft.module.contactBook.beans.ContactBook;
 import com.mgsoft.module.contactBook.repositories.ContactBookRepository;
 import com.mgsoft.module.customer.beans.PartyMaster;
 import com.mgsoft.module.customer.repositories.PartyMasterRepository;
+import com.mgsoft.module.doctor.beans.DoctorMaster;
+import com.mgsoft.module.doctor.repositories.DoctorMasterRepository;
 import com.mgsoft.module.inventory.beans.InvItem;
 import com.mgsoft.module.inventory.beans.ItemCategory;
 import com.mgsoft.module.inventory.repositories.InvItemRepository;
@@ -72,6 +81,15 @@ public class HMSApplication extends SpringBootServletInitializer {
 	private ContactBookRepository contactBookRepository;
 	
 	@Autowired
+	DoctorMasterRepository doctorMasterRepository;
+	
+	@Autowired
+	RoleMasterRepository roleMasterRepository;
+	
+	@Autowired
+	UserRepository userRepository;
+	
+	@Autowired
 	ServletContext context;
 
 	@Override
@@ -84,7 +102,7 @@ public class HMSApplication extends SpringBootServletInitializer {
 	}
 
 
-	@Bean
+	//@Bean
 	InitializingBean sendDatabase() {
 		return () -> {
 			File f1 = new File(context.getRealPath("h2db/invoicingDb.mv.db"));
@@ -93,6 +111,115 @@ public class HMSApplication extends SpringBootServletInitializer {
 			    Files.delete(filePath);
 			    //f1.delete();
 			}
+			
+			JsonParser p = new JsonParser();
+			JsonArray moArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/modules.json"))).getAsJsonArray();
+			for (int i = 0; i < moArrays.size(); i++) {
+				JsonObject module = moArrays.get(i).getAsJsonObject();
+				Module m = new Module();
+				m.setModuleName( module.has("module_name") ? module.get("module_name").getAsString() : null);
+				m.setModuleIcon( module.has("module_icon") ? module.get("module_icon").getAsString() : null);
+				m.setModuleCssClasses(module.has("classes") ? module.get("classes").getAsString() : null);
+				m.setSrNo(module.has("srNo") ? module.get("srNo").getAsInt() : null);
+				if(module.has("isLink") && module.get("isLink").getAsBoolean()) {
+					m.setHasLink(true);
+				}else {
+					m.setHasLink(false);
+				}
+				if(module.has("url")) {
+					m.setLink(module.get("url").getAsString());
+				}
+				List<Menu> menus = new ArrayList<>();
+				if(module.has("menu")) {
+					JsonArray menuArrays = module.get("menu").getAsJsonArray();
+					for (int k = 0; k < menuArrays.size(); k++) {
+						JsonObject menu = menuArrays.get(k).getAsJsonObject();
+						Menu men = new Menu();
+						men.setMenuName(menu.has("menu_name") ? menu.get("menu_name").getAsString() : null);
+						men.setHasLink(menu.has("isLink") ? menu.get("isLink").getAsBoolean() : null);
+						men.setLink(menu.has("url") ? menu.get("url").getAsString() : null);
+						men.setStatus(menu.has("status") ? menu.get("status").getAsString() : null);
+						men.setMenuCssClasses(menu.has("classes") ? menu.get("classes").getAsString() : null);
+						men.setModule(m);
+						menus.add(men);
+					}
+				}
+				m.setMenus(menus);
+				moduleRepository.save(m);
+			}
+			
+			RoleMaster rm3 = new RoleMaster();
+			rm3.setRoleName("Nurse");
+			rm3.setRoleStatus("Active");
+			
+			RoleMaster rm2 = new RoleMaster();
+			rm2.setRoleName("Doctor");
+			rm2.setRoleStatus("Active");
+			
+			roleMasterRepository.save(rm3);
+			roleMasterRepository.save(rm2);
+			
+			
+			RoleMaster rm1 = new RoleMaster();
+			rm1.setRoleName("Admin");
+			rm1.setRoleStatus("Active");
+			
+			Set<RoleRights> roleRightList = new HashSet<>();
+			List<Module> moduleList = moduleRepository.findAll();
+			for (Module module : moduleList) {
+				for (Menu menu : module.getMenus()) {
+					RoleRights rr1 = new RoleRights();
+					rr1.setModuleId(module.getId());
+					rr1.setModuleName(module.getModuleName());
+					rr1.setModuleView(true);
+					rr1.setModuleAdd(true);
+					rr1.setModuleEdit(true);
+					rr1.setModuleDelete(true);
+					rr1.setMenuId(menu.getId());
+					rr1.setMenuName(menu.getMenuName());
+					rr1.setMenuView(true);
+					rr1.setMenuAdd(true);
+					rr1.setMenuEdit(true);
+					rr1.setMenuDelete(true);
+					rr1.setRoleMaster(rm1);
+					roleRightList.add(rr1);
+				}
+			}
+			
+			rm1.setRoleMasterRights(roleRightList);  
+			
+			UserMaster um = new UserMaster();
+			um.setUserLoginName("admin");
+			um.setUserLoginPassword("admin");
+			um.setUserStatus("Active");
+			um.setUserName("Administration");
+			um.setUserContact("8055880605");
+			Set<RoleMaster> rmList = new HashSet<>();
+			
+			rmList.add(rm1);
+			um.setRoles(rmList);
+			UserMaster umRes = userRepository.save(um);
+			
+			rm1.getUsers().add(um);
+			roleMasterRepository.save(rm1);
+			
+			DoctorMaster dm = new DoctorMaster();
+			dm.setDoctStartLatter("N");
+			dm.setDoctFName("Nikhil");
+			dm.setDoctMName("Ramkrushna");
+			dm.setDoctLName("Wandhare");
+			dm.setDoctMob("7856898980");
+			dm.setDoctHomeLLNo("0719 2453098");
+			dm.setDoctHomeMob("9288909899");
+			dm.setDoctWorkLLNo("0754 4567453");
+			dm.setDoctEmailOfficial("nikhil.wandhare@vgipl.in");
+			dm.setDoctCompany("Virtual Galaxy Infotech");
+			dm.setDoctJobPost("Team Lead");
+			dm.setDoctHomeAddr1("PN. 465 Ayodhya Nagar\r\n" + "Nagpur, Maharashtra, India");
+			dm.setDoctPersonalWeb("www.nw.in");
+			dm.setDoctDob(new Date());
+			dm.setDoctGender("M");
+			doctorMasterRepository.save(dm);
 			
 			ContactBook cb1 = new ContactBook();
 			cb1.setContStartLatter("N");
@@ -221,84 +348,6 @@ public class HMSApplication extends SpringBootServletInitializer {
 			bottal.setStatus("Active");
 			
 			invItemRepository.save(bottal);
-			
-			
-//			JSONParser parser = new JSONParser();
-//			JSONArray a1 = (JSONArray) parser.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/module.json")));//"C:\\Users\\EPS01\\Desktop\\JSON_DATA\\MODULE.json"));
-//			JSONArray a2 = (JSONArray) parser.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/menu.json")));//"C:\\Users\\EPS01\\Desktop\\JSON_DATA\\menu.json"));
-//			for (int i = 0; i < a1.size(); i++) {
-//				JSONObject obj = (JSONObject) a1.get(i);
-//				System.out.println("obj module:"+obj.toString());
-//				Module m = new Module();
-//				m.setId((Long) obj.get("module_id"));
-//				m.setModuleName((String) obj.get("module_name"));
-//				m.setModuleIcon((String) obj.get("module_icon"));
-//				m.setModuleUnder((String) obj.get("module_under"));
-//				if((Long) obj.get("hasLink") == 1) {
-//					m.setHasLink(true);
-//				}else {
-//					m.setHasLink(false);
-//				}
-//				m.setLink((String) obj.get("link"));
-//				moduleRepository.save(m);
-//			}
-//			
-//			for (int i = 0; i < a2.size(); i++) {
-//				JSONObject obj = (JSONObject) a2.get(i);
-//				Menu m = new Menu();
-//				m.setId((Long) obj.get("id"));
-//				m.setMenuName((String) obj.get("menuName"));
-//				m.setParentMenuId((Long) obj.get("parentMenuId"));
-//				m.setModuleId((Long) obj.get("moduleId"));
-//				if((Long) obj.get("haslink") == 1) {
-//					m.setHasLink(true);
-//				}else {
-//					m.setHasLink(false);
-//				}
-//				m.setLink((String) obj.get("link"));
-//				Menu mr = menuRepository.save(m);
-//				System.out.println("obj menu:"+mr);
-//			}
-			
-			JsonParser p = new JsonParser();
-			JsonArray moArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/modules.json"))).getAsJsonArray();
-			//JSONArray a2 = (JSONArray) parser.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/menu.json")));//"C:\\Users\\EPS01\\Desktop\\JSON_DATA\\menu.json"));
-			for (int i = 0; i < moArrays.size(); i++) {
-				JsonObject module = moArrays.get(i).getAsJsonObject();
-				//System.out.println("obj module:"+module.toString());
-				Module m = new Module();
-				m.setModuleName( module.has("module_name") ? module.get("module_name").getAsString() : null);
-				m.setModuleIcon( module.has("module_icon") ? module.get("module_icon").getAsString() : null);
-				if(module.has("isLink") && module.get("isLink").getAsBoolean()) {
-					m.setHasLink(true);
-				}else {
-					m.setHasLink(false);
-				}
-				if(module.has("url")) {
-					m.setLink(module.get("url").getAsString());
-				}
-				
-				List<Menu> menus = new ArrayList<>();
-				if(module.has("menu")) {
-					JsonArray menuArrays = module.get("menu").getAsJsonArray();
-					//System.out.println("menuArrays::"+menuArrays);
-					for (int k = 0; k < menuArrays.size(); k++) {
-						JsonObject menu = menuArrays.get(k).getAsJsonObject();
-						Menu men = new Menu();
-						men.setMenuName(menu.has("menu_name") ? menu.get("menu_name").getAsString() : null);
-						men.setHasLink(menu.has("isLink") ? menu.get("isLink").getAsBoolean() : null);
-						men.setLink(menu.has("url") ? menu.get("url").getAsString() : null);
-						men.setStatus(menu.has("status") ? menu.get("status").getAsString() : null);
-						men.setModule(m);
-						menus.add(men);
-						
-						//System.out.println("menuuu:::"+men.toString());
-					}
-				}
-				
-				m.setMenus(menus);
-				moduleRepository.save(m);
-			}
 			
 			JsonArray stateArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/state_list.json"))).getAsJsonArray();
 			for (int i = 0; i < stateArrays.size(); i++) {

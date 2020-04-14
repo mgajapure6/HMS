@@ -114,10 +114,10 @@
 							<td class="menuStatus">${menu.status}<span class="menuStatus hide">${menu.status}</span></td>
 							<td class="">
 								<div class="text-center">
-									<button type="button" onclick="setFormData(this,'M')" data-menuid="${menu.id}" data-moduleid="${menu.module.id}" class="btn btn-success btn-icon btn-sm">
+									<button type="button" onclick="setFormData(this,'M')" data-menuid="${menu.id}" data-moduleid="${menu.module.id}" class="btn btn-success btn-icon btn-sm editRecordBtn">
 										<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 									</button>
-									<button type="button" onclick="setFormData(this,'D')" data-menuid="${menu.id}" class="btn btn-danger btn-icon btn-sm">
+									<button type="button" onclick="setFormData(this,'D')" data-menuid="${menu.id}" class="btn btn-danger btn-icon btn-sm deleteRecordBtn">
 										<i class="fa fa-trash-alt" aria-hidden="true"></i>
 									</button>
 								</div>

@@ -7,6 +7,7 @@ import java.util.Collection;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,10 +20,14 @@ import javax.persistence.Table;
 @Table
 public class Module implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	@Column(unique = true)
+	private Integer srNo;
+	@Column
+	private String moduleCssClasses;
 	@Column
 	private String moduleName;
 	@Column
@@ -40,21 +45,17 @@ public class Module implements Serializable {
 	@Column
 	private String link;
 	@Column
-	private String addRight;
+	private Boolean addRight;
 	@Column
-	private String modRight;
+	private Boolean editRight;
 	@Column
-	private String delRight;
+	private Boolean delRight;
 	@Column
-	private String viewRight;
-	@Column
-	private String printRight;
-	@Column
-	private String specialRight;
+	private Boolean viewRight;
 	@Column
 	private String status;
 
-	@OneToMany(cascade = { CascadeType.ALL })
+	@OneToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
 	@JoinTable(name = "module_menu", joinColumns = { @JoinColumn(name = "module_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "menu_id") })
 	private Collection<Menu> menus = new ArrayList<Menu>();
@@ -65,6 +66,22 @@ public class Module implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Integer getSrNo() {
+		return srNo;
+	}
+
+	public void setSrNo(Integer srNo) {
+		this.srNo = srNo;
+	}
+
+	public String getModuleCssClasses() {
+		return moduleCssClasses;
+	}
+
+	public void setModuleCssClasses(String moduleCssClasses) {
+		this.moduleCssClasses = moduleCssClasses;
 	}
 
 	public String getModuleName() {
@@ -131,52 +148,36 @@ public class Module implements Serializable {
 		this.moduleIcon = moduleIcon;
 	}
 
-	public String getAddRight() {
+	public Boolean getAddRight() {
 		return addRight;
 	}
 
-	public void setAddRight(String addRight) {
+	public void setAddRight(Boolean addRight) {
 		this.addRight = addRight;
 	}
 
-	public String getModRight() {
-		return modRight;
+	public Boolean getEditRight() {
+		return editRight;
 	}
 
-	public void setModRight(String modRight) {
-		this.modRight = modRight;
+	public void setEditRight(Boolean editRight) {
+		this.editRight = editRight;
 	}
 
-	public String getDelRight() {
+	public Boolean getDelRight() {
 		return delRight;
 	}
 
-	public void setDelRight(String delRight) {
+	public void setDelRight(Boolean delRight) {
 		this.delRight = delRight;
 	}
 
-	public String getViewRight() {
+	public Boolean getViewRight() {
 		return viewRight;
 	}
 
-	public void setViewRight(String viewRight) {
+	public void setViewRight(Boolean viewRight) {
 		this.viewRight = viewRight;
-	}
-
-	public String getPrintRight() {
-		return printRight;
-	}
-
-	public void setPrintRight(String printRight) {
-		this.printRight = printRight;
-	}
-
-	public String getSpecialRight() {
-		return specialRight;
-	}
-
-	public void setSpecialRight(String specialRight) {
-		this.specialRight = specialRight;
 	}
 
 	public String getStatus() {
@@ -196,38 +197,12 @@ public class Module implements Serializable {
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		return result;
+	public String toString() {
+		return "Module [id=" + id + ", srNo=" + srNo + ", moduleCssClasses=" + moduleCssClasses + ", moduleName="
+				+ moduleName + ", moduleNameOl=" + moduleNameOl + ", parentModuleId=" + parentModuleId + ", entityId="
+				+ entityId + ", moduleIcon=" + moduleIcon + ", moduleUnder=" + moduleUnder + ", hasLink=" + hasLink
+				+ ", link=" + link + ", addRight=" + addRight + ", editRight=" + editRight + ", delRight=" + delRight
+				+ ", viewRight=" + viewRight + ", status=" + status + "]";
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-			
-		if (obj == null) {
-			return false;
-		}
-			
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-			
-		Module other = (Module) obj;
-		if (id != other.id) {
-			return false;
-		}else {
-			return true;
-		}
-			
-		
-	}
-
-	
-
-	
 }

@@ -35,7 +35,7 @@
 					<line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
 				Share
 			</button>
-			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5">
+			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus wd-10 mg-r-5">
 					<line x1="12" y1="5" x2="12" y2="19"></line>
 					<line x1="5" y1="12" x2="19" y2="12"></line></svg>

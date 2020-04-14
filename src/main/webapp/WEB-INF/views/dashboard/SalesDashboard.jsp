@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- <link rel="stylesheet" href="assets/css/dashforge.dashboard.css"> -->
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/dashforge.dashboard.css"> -->
 <style type="text/css">
 </style>
 </head>
@@ -494,7 +494,7 @@
 					</li>
 					<li class="list-group-item d-flex pd-x-20">
 						<div class="avatar">
-							<img src="../../assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="pd-l-10">
 							<p class="tx-medium mg-b-0">Reynante Labares</p>
@@ -519,7 +519,7 @@
 					</li>
 					<li class="list-group-item d-flex pd-x-20">
 						<div class="avatar">
-							<img src="../../assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="pd-l-10">
 							<p class="tx-medium mg-b-0">Marianne Audrey</p>
@@ -649,14 +649,14 @@
 		</div>
 	</div>
 	<!-- row -->
-	<script src="lib/jquery.flot/jquery.flot.js"></script>
-	<script src="lib/jquery.flot/jquery.flot.stack.js"></script>
-	<script src="lib/jquery.flot/jquery.flot.resize.js"></script>
-	<script src="lib/chart.js/Chart.bundle.min.js"></script>
-	<script src="lib/jqvmap/jquery.vmap.min.js"></script>
-	<script src="lib/jqvmap/maps/jquery.vmap.usa.js"></script>
-	<script src="assets/js/dashforge.sampledata.js"></script>
-	<script src="assets/api.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery.flot/jquery.flot.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery.flot/jquery.flot.stack.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery.flot/jquery.flot.resize.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/chart.js/Chart.bundle.min.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jqvmap/jquery.vmap.min.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.sampledata.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/api.js"></script>
 	<script>
 	$(document).ready(function(){
 		setTimeout(function(){

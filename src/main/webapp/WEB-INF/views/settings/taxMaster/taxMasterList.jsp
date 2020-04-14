@@ -30,7 +30,7 @@
 				<h4 class="mg-b-0 tx-spacing--1">Tax Master</h4>
 			</div>
 			<div class="d-md-block">
-				<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-taxid="0" onclick="loadTaxForm(this,'N')">
+				<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn" data-taxid="0" onclick="loadTaxForm(this,'N')">
 					<i class="fa fa-plus"></i> <span class="spinner-border spinner-border-sm hide spinIcon"></span> <span class="title"> Add New Tax</span>
 				</button>
 			</div>
@@ -64,10 +64,10 @@
 								<td class="modTotMenu center">${tax.status}</td>
 								<td class="center">
 									<div class="text-center">
-										<button type="button" onclick="loadTaxForm(this,'M')" data-taxid="${tax.id}" class="btn btn-success btn-icon btn-sm">
+										<button type="button" onclick="loadTaxForm(this,'M')" data-taxid="${tax.id}" class="btn btn-success btn-icon btn-sm editRecordBtn">
 											<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 										</button>
-										<button type="button" onclick="loadTaxForm(this,'D')" data-taxid="${tax.id}" class="btn btn-danger btn-icon btn-sm">
+										<button type="button" onclick="loadTaxForm(this,'D')" data-taxid="${tax.id}" class="btn btn-danger btn-icon btn-sm deleteRecordBtn">
 											<i class="fa fa-trash-alt" aria-hidden="true"></i>
 										</button>
 									</div>

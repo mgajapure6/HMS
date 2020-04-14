@@ -27,7 +27,7 @@
 			<h4 class="mg-b-0 tx-spacing--1">UOM Master</h4>
 		</div>
 		<div class="d-md-block">
-			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onclick="loadUOMForm(this,'N')">
+			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn" onclick="loadUOMForm(this,'N')">
 				<i class="fa fa-plus"></i> <span class="spinner-border spinner-border-sm hide spinIcon"></span> <span class="title"> Add New UOM</span>
 			</button>
 		</div>
@@ -55,10 +55,10 @@
 							<td class="mStatus">${uom.status}<span class="modStatus hide">${uom.status}</span></td>
 							<td class="center">
 								<div class="text-center">
-									<button type="button" onclick="loadUOMForm(this,'M')" data-uomid="${uom.id}" class="btn btn-success btn-icon btn-sm">
+									<button type="button" onclick="loadUOMForm(this,'M')" data-uomid="${uom.id}" class="btn btn-success btn-icon btn-sm editRecordBtn">
 										<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 									</button>
-									<button type="button" onclick="loadUOMForm(this,'D')" data-uomid="${uom.id}" class="btn btn-danger btn-icon btn-sm">
+									<button type="button" onclick="loadUOMForm(this,'D')" data-uomid="${uom.id}" class="btn btn-danger btn-icon btn-sm deleteRecordBtn">
 										<i class="fa fa-trash-alt" aria-hidden="true"></i>
 									</button>
 								</div>

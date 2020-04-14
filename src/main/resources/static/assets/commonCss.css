@@ -75,7 +75,7 @@
 }
 
 .hide, .hidden {
-	display: none;
+	display: none !important;
 }
 
 .footer {
@@ -291,3 +291,19 @@ ul .nav-item.moduleLi.with-sub{
 /* .mainContainer{
 	height: 100% !important;
 } */
+
+select.parsley-success, select.parsley-success:focus {
+	box-shadow: none !important;
+	border-color: #10b759;
+}
+
+select.parsley-error, select.parsley-error:focus{
+    box-shadow: none !important;
+    border-color: #dc3545;
+}
+
+.center-div{
+	position: absolute;
+	left: 45%;
+	top: 45%;
+}

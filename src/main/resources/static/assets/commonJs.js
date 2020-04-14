@@ -1,5 +1,21 @@
 $(function() {
-	$('li.moduleLi_1>a.m-link_0').click();
+	if($('li').find('.startLink').length){
+		$('li').find('.startLink').click();
+	}else{
+		var userName = $('#topUsername').text();
+		var element = $('<div><h3>Welcome '+userName+'</h3></div>');
+		$('.mainContainer').empty().html($(element));
+		//$(element).center();
+		$(element).css({
+	        'position' : 'absolute',
+	        'left' : '50%',
+	        'top' : '50%',
+	        'margin-left' : function() {return -$(this).outerWidth()/2},
+	        'margin-top' : function() {return -$(this).outerHeight()/2}
+	    });
+		$('.footer').addClass('hide');
+	}
+	
 });
 function loadPage(obj, link, eleClassName, eleLiClassName, VorH) {
 	$('.loading').removeClass('hide');
@@ -23,38 +39,34 @@ function loadPage(obj, link, eleClassName, eleLiClassName, VorH) {
 		  $('.mainContainer').removeClass('ht-100p');
 		  feather.replace();
 		  if (obj == null) {
-			  if (VorH == 'V') {
-				  $('.nav-aside').find('.moduleLi').removeClass('active');
-				  $('.nav-aside').find('.active').removeClass('active');
-				  $('.nav-aside').find('.activeLink').removeClass('activeLink');
-				  $('.nav-aside').find('.' + eleLiClassName).addClass('active');
-				  $('.nav-aside').find('.' + eleLiClassName).find('.' + eleClassName).addClass('activeLink');
-			  } else {
-				  $('.navbar-menu').find('.moduleLi').removeClass('active');
-				  $('.navbar-menu').find('.activeLink').removeClass('activeLink');
-				  $('.navbar-menu').find('.active').removeClass('active');
-				  $('.navbar-menu').find('.' + eleLiClassName).addClass('active');
-				  $('.navbar-menu').find('.' + eleLiClassName).find('.' + eleClassName).addClass('activeLink');
-			  }
+			  $('.nav-aside').find('.moduleLi').removeClass('active');
+			  $('.nav-aside').find('.active').removeClass('active');
+			  $('.nav-aside').find('.activeLink').removeClass('activeLink');
+			  $('.nav-aside').find('.' + eleLiClassName).addClass('active');
+			  $('.nav-aside').find('.' + eleLiClassName).find('.' + eleClassName).addClass('activeLink');
 		  } else {
-			  if (VorH == 'V') {
-				  $('.nav-aside').find('.moduleLi').removeClass('active');
-				  $('.nav-aside').find('.active').removeClass('active');
-				  $('.nav-aside').find('.activeLink').removeClass('activeLink');
-				  $(obj).closest('.moduleLi').addClass('active');
-				  $(obj).addClass('activeLink');
-			  } else {
-				  $('.navbar-menu').find('.moduleLi').removeClass('active');
-				  $('.navbar-menu').find('.activeLink').removeClass('activeLink');
-				  $('.navbar-menu').find('.active').removeClass('active');
-				  $(obj).closest('.moduleLi').addClass('active');
-				  $(obj).addClass('activeLink');
-			  }
+			  $('.nav-aside').find('.moduleLi').removeClass('active');
+			  $('.nav-aside').find('.active').removeClass('active');
+			  $('.nav-aside').find('.activeLink').removeClass('activeLink');
+			  $(obj).closest('.moduleLi').addClass('active');
+			  $(obj).closest('.moduleLi').addClass('show');
+			  $(obj).addClass('activeLink');
 		  }
 		  setTimeout(function() {
+			  if(obj && $(obj).attr('data-addright')=="false"){
+				  $('.addNewBtn').addClass('hide');
+			  }
+			  if(obj && $(obj).attr('data-editright')=="false"){
+				  $('.editRecordBtn').addClass('hide');  
+			  }
+			  if(obj && $(obj).attr('data-deleteright')=="false"){
+				  $('.deleteRecordBtn').addClass('hide');
+			  }
+			  
 			  $('.loading').addClass('hide');
 			  $('.mainContainer').removeClass('hide');
 			  $('.footer').removeClass('hide');
+			  
 		  }, 1000);
 		  $('html,body').animate({
 			  scrollTop : parseInt($('body').offset().top)
@@ -161,3 +173,15 @@ $( document ).ajaxError(function( event, jqxhr, settings ) {
 	//var alertData = '<p>Status : <b style="color: #b30e0e;">' + (jqxhr.responseJSON.status) + '</b><br/>Error : <b style="color: #b30e0e;">' + (jqxhr.responseJSON.error) + '</b><br/>Message : <b style="color: #b30e0e;">' + (jqxhr.responseJSON.message) + '</b></p>';
 	//alert(alertData,'E');
 });
+
+
+jQuery.fn.center = function () {
+	this.css({
+        'position' : 'absolute',
+        'left' : '50%',
+        'top' : '50%',
+        'margin-left' : function() {return -$(this).outerWidth()/2},
+        'margin-top' : function() {return -$(this).outerHeight()/2}
+    });
+    return this;
+}

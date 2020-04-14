@@ -31,10 +31,10 @@
 				<div class="d-flex align-items-center justify-content-between mg-b-25">
 					<h6 class="mg-b-0">Personal Details</h6>
 					<div class="d-flex">
-						<a href="javascript:;" data-contactid="${contact.id }" onclick="loadContactFormEdit(this)" class="btn btn-sm btn-white d-flex align-items-center mg-r-5">
+						<a href="javascript:;" data-contactid="${contact.id }" onclick="loadContactFormEdit(this)" class="btn btn-sm btn-white d-flex align-items-center mg-r-5 editRecordBtn">
 							<i data-feather="edit-2"></i><span class="d-none d-sm-inline mg-l-5"> Edit</span>
 						</a>
-						<a href="javascript:;" data-contactid="${contact.id }" onclick="deleteContact(this)" class="btn btn-sm btn-white d-flex align-items-center">
+						<a href="javascript:;" data-contactid="${contact.id }" onclick="deleteContact(this)" class="btn btn-sm btn-white d-flex align-items-center deleteRecordBtn">
 							<i data-feather="trash"></i><span class="d-none d-sm-inline mg-l-5"> Delete</span>
 						</a>
 					</div>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="content-header">
 	<div class="content-search">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
@@ -17,7 +18,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Socrates Itumay</strong>
@@ -31,7 +32,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Joyce Chua</strong>
@@ -45,7 +46,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Althea Cabardo</strong>
@@ -59,7 +60,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Adrian Monino</strong>
@@ -86,7 +87,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -101,7 +102,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -116,7 +117,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -131,7 +132,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="assets/img/img1.jpg" class="rounded-circle" alt="">
+							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -153,36 +154,40 @@
 		<div class="dropdown dropdown-profile">
 			<a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
 				<div class="avatar avatar-sm">
-					<img src="assets/img/img1.png" class="rounded-circle" alt="">
+					<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 				</div>
 			</a>
 			<!-- dropdown-link -->
 			<div class="dropdown-menu dropdown-menu-right tx-13">
 				<div class="avatar avatar-lg mg-b-15">
-					<img src="assets/img/img1.png" class="rounded-circle" alt="">
+					<img src="/assets/img/img1.png" class="rounded-circle" alt="">
 				</div>
-				<h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
-				<p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
-				<a href="" class="dropdown-item">
+				<h6 class="tx-semibold mg-b-5" id="topUsername">${sessionScope.loggedUser.userName }</h6>
+				<p class="mg-b-25 tx-12 tx-color-03">
+					<c:forEach items="${sessionScope.loggedUserRoles}" var="role">
+						Role : ${role.roleName}
+					</c:forEach>
+				</p>
+				<a href="javascript:;" class="dropdown-item">
 					<i data-feather="edit-3"></i> Edit Profile
 				</a>
-				<a href="page-profile-view.html" class="dropdown-item">
+				<a href="javascript:;" class="dropdown-item">
 					<i data-feather="user"></i> View Profile
 				</a>
 				<div class="dropdown-divider"></div>
-				<a href="page-help-center.html" class="dropdown-item">
+				<a href="javascript:;" class="dropdown-item">
 					<i data-feather="help-circle"></i> Help Center
 				</a>
-				<a href="" class="dropdown-item">
+				<a href="javascript:;" class="dropdown-item">
 					<i data-feather="life-buoy"></i> Forum
 				</a>
-				<a href="" class="dropdown-item">
+				<a href="javascript:;" class="dropdown-item">
 					<i data-feather="settings"></i>Account Settings
 				</a>
-				<a href="" class="dropdown-item">
+				<a href="javascript:;" class="dropdown-item">
 					<i data-feather="settings"></i>Privacy Settings
 				</a>
-				<a href="page-signin.html" class="dropdown-item">
+				<a href="/login/logout" class="dropdown-item">
 					<i data-feather="log-out"></i>Sign Out
 				</a>
 			</div>

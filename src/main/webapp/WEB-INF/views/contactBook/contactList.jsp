@@ -66,7 +66,7 @@
 				<div class="search-form">
 					<input type="search" class="form-control" placeholder="Search contacts">
 				</div>
-				<a href="javascript:;" class="btn btn-xs btn-icon btn-primary" onclick="loadContactForm(this,'N')">
+				<a href="javascript:;" class="btn btn-xs btn-icon btn-primary addNewBtn" onclick="loadContactForm(this,'N')">
 					<span data-toggle="tooltip" title="Add New Contact"><i data-feather="user-plus"></i></span>
 				</a>
 				<!-- contact-add -->
@@ -104,7 +104,7 @@
 												</a>
 											</c:otherwise>
 										</c:choose>
-										<a href="javascript:;" title="Edit Contact" data-contactid="${contact.id}" onclick="loadContactForm(this,'E')">
+										<a href="javascript:;" class="editRecordBtn" title="Edit Contact" data-contactid="${contact.id}" onclick="loadContactForm(this,'E')">
 											<i data-feather="edit-2"></i>
 										</a>
 									</nav>
@@ -142,7 +142,7 @@
 												</a>
 											</c:otherwise>
 										</c:choose>
-										<a href="javascript:;" title="Edit Contact" data-contactid="${contact.id}" onclick="loadContactForm(this,'E')">
+										<a href="javascript:;" class="editRecordBtn" title="Edit Contact" data-contactid="${contact.id}" onclick="loadContactForm(this,'E')">
 											<i data-feather="edit-2"></i>
 										</a>
 									</nav>
@@ -179,7 +179,7 @@
 												</a>
 											</c:otherwise>
 										</c:choose>
-										<a href="javascript:;" title="Edit Contact" data-contactid="${contact.id}" onclick="loadContactForm(this,'E')">
+										<a href="javascript:;" class="editRecordBtn" title="Edit Contact" data-contactid="${contact.id}" onclick="loadContactForm(this,'E')">
 											<i data-feather="edit-2"></i>
 										</a>
 									</nav>
@@ -228,7 +228,7 @@
 		</div>
 		<!-- contact-content -->
 	</div>
-	<script src="assets/js/dashforge.contacts.js"></script>
+	<script src="/assets/js/dashforge.contacts.js"></script>
 	<script type="text/javascript">
 	
 		setTimeout(function(){
@@ -253,6 +253,15 @@
 					  $('.contact-detail-main-div').empty().html(resp);
 					  feather.replace();
 					  setTimeout(function() {
+						  if($('a.activeLink').attr('data-addright')=="false"){
+							  $('.addNewBtn').addClass('hide');
+						  }
+						  if($('a.activeLink').attr('data-editright')=="false"){
+							  $('.editRecordBtn').addClass('hide');			  
+						  }
+						  if($('a.activeLink').attr('data-deleteright')=="false"){
+							  $('.deleteRecordBtn').addClass('hide');
+						  }
 						  $('.mini-loading').addClass('hide');
 						  $('.contact-detail-main-div').removeClass('hide');
 					  }, 500);

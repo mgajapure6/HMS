@@ -27,7 +27,7 @@
 			<h4 class="mg-b-0 tx-spacing--1">Employee Master</h4>
 		</div>
 		<div class="d-md-block">
-			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" onclick="loadEmployeeForm(this,'N')">
+			<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5 addNewBtn" onclick="loadEmployeeForm(this,'N')">
 				<i class="fa fa-plus"></i> <span class="spinner-border spinner-border-sm hide spinIcon"></span> <span class="title"> Add New Employee</span>
 			</button>
 		</div>
@@ -57,10 +57,10 @@
 							<td class="modStatus">${emp.status}<span class="modStatus hide">${emp.status}</span></td>
 							<td class="center">
 								<div class="text-center">
-									<button type="button" onclick="loadEmployeeForm(this,'M')" data-employeeid="${emp.id}" class="btn btn-success btn-icon btn-sm">
+									<button type="button" onclick="loadEmployeeForm(this,'M')" data-employeeid="${emp.id}" class="btn btn-success btn-icon btn-sm editRecordBtn">
 										<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 									</button>
-									<button type="button" onclick="loadEmployeeForm(this,'D')" data-employeeid="${emp.id}" class="btn btn-danger btn-icon btn-sm">
+									<button type="button" onclick="loadEmployeeForm(this,'D')" data-employeeid="${emp.id}" class="btn btn-danger btn-icon btn-sm deleteRecordBtn">
 										<i class="fa fa-trash-alt" aria-hidden="true"></i>
 									</button>
 								</div>
