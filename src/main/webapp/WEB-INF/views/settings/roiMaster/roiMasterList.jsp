@@ -83,7 +83,7 @@
 			$('.footer').addClass('hide');
 			var roiid = $(btnObj).attr('data-roiid');
 			$.ajax({
-				  url : "/app/setting/roiMaster/roiMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/setting/roiMaster/roiMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

@@ -205,7 +205,7 @@
 		formData["testId"] = testId;
 
 	    $.ajax({
-	        url : '/app/diagnostic/testMaster/saveUpdateDeleteTest',
+	        url : '${pageContext.request.contextPath }/app/diagnostic/testMaster/saveUpdateDeleteTest',
 	        method : 'POST',
 	        data : formData,
 	        async : false,

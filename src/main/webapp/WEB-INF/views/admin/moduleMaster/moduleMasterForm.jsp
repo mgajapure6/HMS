@@ -140,7 +140,7 @@
 			}
 
 			$.ajax({
-				url : '/app/admin/moduleMaster/saveUpdateDeleteModule',
+				url : '${pageContext.request.contextPath }/app/admin/moduleMaster/saveUpdateDeleteModule',
 				method : 'POST',
 				data : formData,
 				async : false,

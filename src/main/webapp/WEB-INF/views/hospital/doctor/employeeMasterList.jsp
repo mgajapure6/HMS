@@ -88,7 +88,7 @@
 			$('.footer').addClass('hide');
 			var employeeid = $(btnObj).attr('data-employeeid');
 			$.ajax({
-				  url : "/app/doctor/doctorMaster/employeeMasterForm",
+				  url : "${pageContext.request.contextPath }/app/doctor/doctorMaster/employeeMasterForm",
 				  async : true,
 				  data : {
 					  'flag' : flag,

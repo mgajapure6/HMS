@@ -335,7 +335,7 @@
 			$('.mainContainer').addClass('hide');
 			$('.footer').addClass('hide');
 			$.ajax({
-				url : "/app/admin/roleRight/getRoleById",
+				url : "${pageContext.request.contextPath }/app/admin/roleRight/getRoleById",
 				async : false,
 				method : 'POST',
 				data : {
@@ -469,7 +469,7 @@
 			console.log('rrList::',rrList);
 
 			$.ajax({
-				url : '/app/admin/roleRight/saveRoleRights',
+				url : '${pageContext.request.contextPath }/app/admin/roleRight/saveRoleRights',
 				method : 'POST',
 				data : {
 					"roleId" : $('#roleSelect').val(),

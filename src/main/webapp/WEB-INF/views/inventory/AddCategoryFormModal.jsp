@@ -113,7 +113,7 @@
 	    }
 
 	    $.ajax({
-	        url : '/app/inventory/categoryMaster/saveUpdateDeleteCategory',
+	        url : '${pageContext.request.contextPath }/app/inventory/categoryMaster/saveUpdateDeleteCategory',
 	        method : 'POST',
 	        data : formData,
 	        async : false,

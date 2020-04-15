@@ -25,6 +25,7 @@ function loadPage(obj, link, eleClassName, eleLiClassName, VorH) {
 	if (slash != "/") {
 		link = "/" + link;
 	}
+	link = contextPath() + link;
 	$.ajax({
 	  url : link,
 	  async : true,
@@ -74,19 +75,19 @@ function loadPage(obj, link, eleClassName, eleLiClassName, VorH) {
 	  },
 		  error : function(e) {
 			if (e.status == 404) {
-				$.get("/err404", function(data) {
+				$.get(contextPath()+"/err404", function(data) {
 					$('.mainContainer').empty().html(data);
 				});
 			} else if (e.status == 500) {
-				$.get("/err500", function(data) {
+				$.get(contextPath()+"/err500", function(data) {
 					$('.mainContainer').empty().html(data);
 				});
 			} else if (e.status == 503) {
-				$.get("/err503", function(data) {
+				$.get(contextPath()+"/err503", function(data) {
 					$('.mainContainer').empty().html(data);
 				});
 			} else if (e.status == 505) {
-				$.get("/err505", function(data) {
+				$.get(contextPath()+"/err505", function(data) {
 					$('.mainContainer').empty().html(data);
 				});
 			} else {

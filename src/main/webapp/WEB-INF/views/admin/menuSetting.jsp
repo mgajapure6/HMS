@@ -225,7 +225,7 @@
 			}
 			
 			$.ajax({
-				url : '/app/admin/menuMaster/saveUpdateDeleteMenu',
+				url : '${pageContext.request.contextPath }/app/admin/menuMaster/saveUpdateDeleteMenu',
 				method : 'POST',
 				data : formData,
 				async : false,

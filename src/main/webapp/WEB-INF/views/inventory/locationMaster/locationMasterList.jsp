@@ -87,7 +87,7 @@
 			$('.footer').addClass('hide');
 			var locationid = $(btnObj).attr('data-locationid');
 			$.ajax({
-				  url : "/app/inventory/locationMaster/locationMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/inventory/locationMaster/locationMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

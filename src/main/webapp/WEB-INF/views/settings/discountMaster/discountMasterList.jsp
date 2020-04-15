@@ -87,7 +87,7 @@
 			$('.footer').addClass('hide');
 			var discountid = $(btnObj).attr('data-discountid');
 			$.ajax({
-				  url : "/app/setting/discountMaster/discountMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/setting/discountMaster/discountMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

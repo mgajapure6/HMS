@@ -76,7 +76,7 @@
 							<!-- media -->
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Archie Cantones</h6>
@@ -134,7 +134,7 @@
 							<label id="contactB" class="contact-list-divider">B</label>
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Brenda Aceron</h6>
@@ -192,7 +192,7 @@
 							<label id="contactC" class="contact-list-divider">C</label>
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Camille Audrey</h6>
@@ -211,7 +211,7 @@
 							<!-- media -->
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Christine Lerio</h6>
@@ -296,7 +296,7 @@
 							<label class="contact-list-divider">Recently Contacted</label>
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Camille Audrey</h6>
@@ -341,7 +341,7 @@
 							<label class="contact-list-divider">My Favorites</label>
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Archie Cantones</h6>
@@ -360,7 +360,7 @@
 							<!-- media -->
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Brenda Aceron</h6>
@@ -398,7 +398,7 @@
 							<!-- media -->
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Camille Audrey</h6>
@@ -462,7 +462,7 @@
 							<!-- media -->
 							<div class="media">
 								<div class="avatar avatar-sm avatar-online">
-									<img src="assets/img/img8.jpg" class="rounded-circle" alt="">
+									<img src="${pageContext.request.contextPath }/assets/img/img8.jpg" class="rounded-circle" alt="">
 								</div>
 								<div class="media-body mg-l-10">
 									<h6 class="tx-13 mg-b-3">Archie Cantones</h6>
@@ -758,7 +758,7 @@
 		</div>
 		<!-- contact-content -->
 	</div>
-	<script src="assets/js/dashforge.contacts.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.contacts.js"></script>
 	<script type="text/javascript">
 		setTimeout(function(){
 			$('.content-body').addClass('pd-0');

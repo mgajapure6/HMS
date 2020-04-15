@@ -30,7 +30,7 @@
 	border-bottom: 1px solid rgba(72, 94, 144, 0.16);
 }
 </style>
-<link href="assets/css/avatarSquare.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath }/assets/css/avatarSquare.css" rel="stylesheet">
 </head>
 <body>
 	<input type="hidden" value="${patient.id == null ? 0 : patient.id}" id="patientId">
@@ -794,7 +794,7 @@
 			formData["patientId"] = patientId;
 
 			$.ajax({
-				url : '/app/patient/patientMaster/saveUpdateDeletePatient',
+				url : '${pageContext.request.contextPath }/app/patient/patientMaster/saveUpdateDeletePatient',
 				method : 'POST',
 				data : formData,
 				async : false,
@@ -846,7 +846,7 @@
 		function loadWebcamModal() {
 			//var loanid = $('#giraviDetailId').val();
 			$.ajax({
-				url : '/app/patient/patientMaster/getWebcamModal',
+				url : '${pageContext.request.contextPath }/app/patient/patientMaster/getWebcamModal',
 				method : 'GET',
 				success : function(resp) {
 					$('#webcamModalDiv').empty();
@@ -860,7 +860,7 @@
 
 		function saveImageData(dataURI) {
 			/* $.ajax({
-				url : '/app/patient/patientMaster/saveWebcamImage',
+				url : '${pageContext.request.contextPath }/app/patient/patientMaster/saveWebcamImage',
 				method : 'POST',
 				data : {
 					//'customerId' : $('#giraviDetailDiv').find('input.customerId').val(),

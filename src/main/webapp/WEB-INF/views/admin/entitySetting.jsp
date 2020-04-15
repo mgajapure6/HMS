@@ -6,9 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="lib/prism/prism-vs.css">
-<link rel="stylesheet" href="lib/typicons/typicons.css">
-<!-- <link rel="stylesheet" href="lib/datatable/responsive.dataTables.min.css"> -->
+<link rel="stylesheet" href="${pageContext.request.contextPath }/lib/prism/prism-vs.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/lib/typicons/typicons.css">
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath }/lib/datatable/responsive.dataTables.min.css"> -->
 <style type="text/css">
 .alert {
 	margin-top: 10px;
@@ -221,7 +221,7 @@
 			}
 			
 			$.ajax({
-				url : '/app/admin/entityMaster/saveUpdateDeleteEntity',
+				url : '${pageContext.request.contextPath }/app/admin/entityMaster/saveUpdateDeleteEntity',
 				method : 'POST',
 				data : formData,
 				async : false,

@@ -197,7 +197,7 @@
 	  }
 	  
 	  $.ajax({
-	    url : '/app/setting/hospitalMaster/saveUpdateDeleteHospital',
+	    url : '${pageContext.request.contextPath }/app/setting/hospitalMaster/saveUpdateDeleteHospital',
 	    method : 'POST',
 	    data : formData,
 	    async : false,

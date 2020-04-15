@@ -85,7 +85,7 @@
 			$('.footer').addClass('hide');
 			var groupid = $(btnObj).attr('data-groupid');
 			$.ajax({
-				  url : "/app/diagnostic/testGroup/testGroupFrom",
+				  url : "${pageContext.request.contextPath }/app/diagnostic/testGroup/testGroupFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

@@ -177,7 +177,7 @@
 	    }
 
 	    $.ajax({
-	        url : '/app/inventory/locationMaster/saveUpdateDeleteLocation',
+	        url : '${pageContext.request.contextPath }/app/inventory/locationMaster/saveUpdateDeleteLocation',
 	        method : 'POST',
 	        data : formData,
 	        async : false,

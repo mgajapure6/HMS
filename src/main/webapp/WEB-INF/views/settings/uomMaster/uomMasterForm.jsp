@@ -133,7 +133,7 @@
 	  }
 	  
 	  $.ajax({
-	    url : '/app/setting/uomMaster/saveUpdateDeleteUOM',
+	    url : '${pageContext.request.contextPath }/app/setting/uomMaster/saveUpdateDeleteUOM',
 	    method : 'POST',
 	    data : formData,
 	    async : false,

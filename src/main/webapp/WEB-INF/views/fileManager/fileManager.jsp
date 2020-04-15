@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="assets/css/dashforge.filemgr.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/dashforge.filemgr.css">
 <style type="text/css">
 .footer {
 	display: none;
@@ -1509,7 +1509,7 @@
 		</div>
 		<!-- toast -->
 	</div>
-	<script src="assets/js/dashforge.filemgr.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.filemgr.js"></script>
 	<script>
       'use strict'
 

@@ -85,7 +85,7 @@
 			$('.footer').addClass('hide');
 			var uomid = $(btnObj).attr('data-uomid');
 			$.ajax({
-				  url : "/app/setting/uomMaster/uomMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/setting/uomMaster/uomMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

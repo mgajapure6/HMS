@@ -146,7 +146,7 @@
 	    'taxId' : taxId
 	  }
 	  $.ajax({
-	    url : '/app/setting/taxMaster/saveUpdateDeleteTax',
+	    url : '${pageContext.request.contextPath }/app/setting/taxMaster/saveUpdateDeleteTax',
 	    method : 'POST',
 	    data : formData,
 	    async : false,

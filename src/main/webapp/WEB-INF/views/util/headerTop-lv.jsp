@@ -18,7 +18,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Socrates Itumay</strong>
@@ -32,7 +32,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Joyce Chua</strong>
@@ -46,7 +46,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Althea Cabardo</strong>
@@ -60,7 +60,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<strong>Adrian Monino</strong>
@@ -87,7 +87,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -102,7 +102,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -117,7 +117,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -132,7 +132,7 @@
 				<a href="" class="dropdown-item">
 					<div class="media">
 						<div class="avatar avatar-sm avatar-online">
-							<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+							<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 						</div>
 						<div class="media-body mg-l-15">
 							<p>
@@ -154,13 +154,13 @@
 		<div class="dropdown dropdown-profile">
 			<a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
 				<div class="avatar avatar-sm">
-					<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+					<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 				</div>
 			</a>
 			<!-- dropdown-link -->
 			<div class="dropdown-menu dropdown-menu-right tx-13">
 				<div class="avatar avatar-lg mg-b-15">
-					<img src="/assets/img/img1.png" class="rounded-circle" alt="">
+					<img src="${pageContext.request.contextPath }/assets/img/img1.png" class="rounded-circle" alt="">
 				</div>
 				<h6 class="tx-semibold mg-b-5" id="topUsername">${sessionScope.loggedUser.userName }</h6>
 				<p class="mg-b-25 tx-12 tx-color-03">

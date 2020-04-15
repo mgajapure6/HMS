@@ -1,1 +1,0 @@
-java $JAVA_OPTS -jar target/hms-0.0.1-SNAPSHOT --server.port=$PORT $JAR_OPTS

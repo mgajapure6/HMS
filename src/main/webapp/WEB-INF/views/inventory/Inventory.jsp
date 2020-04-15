@@ -266,7 +266,7 @@
 			</div>
 		</div>
 	</div> -->
-	<!-- <script src="lib/parsleyjs/parsley.min.js"></script> -->
+	<!-- <script src="${pageContext.request.contextPath }/lib/parsleyjs/parsley.min.js"></script> -->
 	<script type="text/javascript">
 	var itmTable=null;
 	var catTable=null;

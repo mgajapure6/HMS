@@ -35,14 +35,14 @@
 <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
 <meta name="author" content="ThemePixels">
 <title>Login Page</title>
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath }/assets/img/favicon.png">
 <title>DashForge Responsive Bootstrap 4 Dashboard Template</title>
 <!-- vendor css -->
-<link href="lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath }/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath }/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 <!-- DashForge CSS -->
-<link rel="stylesheet" href="assets/css/dashforge.css">
-<link rel="stylesheet" href="assets/css/dashforge.auth.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/dashforge.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/dashforge.auth.css">
 <style type="text/css">
 .hide {
 	display: none !important;
@@ -60,7 +60,7 @@
 			<div class="media align-items-stretch justify-content-center ht-100p pos-relative">
 				<div class="media-body align-items-center d-none d-lg-flex">
 					<div class="mx-wd-600">
-						<img src="/img/login.png" class="img-fluid" alt="">
+						<img src="${pageContext.request.contextPath }/img/login.png" class="img-fluid" alt="">
 					</div>
 				</div>
 				<!-- media-body -->
@@ -105,14 +105,14 @@
 			</nav>
 		</div>
 	</footer>
-	<script src="lib/jquery/jquery.min.js"></script>
-	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="lib/feather-icons/feather.min.js"></script>
-	<script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-	<script src="assets/js/dashforge.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/feather-icons/feather.min.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.js"></script>
 	<!-- append theme customizer -->
-	<script src="lib/js-cookie/js.cookie.js"></script>
-	<script src="assets/js/dashforge.settings.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/js-cookie/js.cookie.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.settings.js"></script>
 	<script type="text/javascript">
 		function checkLogin(btnObj) {
 
@@ -122,7 +122,7 @@
 			}
 
 			$.ajax({
-				url : '/login/doLogin',
+				url : '${pageContext.request.contextPath }/login/doLogin',
 				method : 'POST',
 				data : formData,
 				async : false,
@@ -132,7 +132,7 @@
 												+ '<i class="fa fa-check-circle close" data-dismiss="alert" style="font-size: 22px;margin-right: 15px;color: #fff;"></i> '
 												+ resp.msg + '</div>');
 						
-						window.location.replace('/app/index');
+						window.location.replace('${pageContext.request.contextPath }/app/index');
 					} else {
 						$('.login-div').find('.alert').remove();
 						$('.login-div').append('<div class="alert alert-solid alert-danger d-flex align-items-center mg-b-0 mg-t-15 wd-100p" role="alert">'
@@ -153,6 +153,10 @@
 				$('#checkLoginBtn').click();
 			}
 		});
+
+		function contextPath() {
+			return "${pageContext.request.contextPath}";
+		}
 	</script>
 </body>
 </html>

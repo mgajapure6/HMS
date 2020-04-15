@@ -79,7 +79,7 @@
 		var $table = $('#table');
 		
 		$.ajax({
-			url : 'json_files/modules.json',
+			url : '${pageContext.request.contextPath }/json_files/modules.json',
 			method : 'GET',
 			async : false,
 			success : function(resp){
@@ -159,7 +159,7 @@
 
 		/* $(function() {
 			$table.bootstrapTable({
-				url : 'json_files/modules.json',
+				url : '${pageContext.request.contextPath }/json_files/modules.json',
 				striped : true,
 				//sidePagination : 'server',
 				// idField : 'id',

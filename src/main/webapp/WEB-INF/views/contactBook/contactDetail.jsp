@@ -214,7 +214,7 @@
 		$('.footer').addClass('hide');
 		var contactid = $(btnObj).attr('data-contactid');
 		$.ajax({
-			  url : "/app/contactBook/contactForm",
+			  url : "${pageContext.request.contextPath }/app/contactBook/contactForm",
 			  async : true,
 			  data : {
 				  'flag' : 'E',

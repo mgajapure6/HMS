@@ -139,7 +139,7 @@
 	  }
 	  
 	  $.ajax({
-	    url : '/app/setting/discountMaster/saveUpdateDeleteDiscount',
+	    url : '${pageContext.request.contextPath }/app/setting/discountMaster/saveUpdateDeleteDiscount',
 	    method : 'POST',
 	    data : formData,
 	    async : false,

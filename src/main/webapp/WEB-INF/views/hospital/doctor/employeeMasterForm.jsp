@@ -177,7 +177,7 @@
 			}
 
 			$.ajax({
-				url : '/app/doctor/doctorMaster/saveUpdateDeleteEmployee',
+				url : '${pageContext.request.contextPath }/app/doctor/doctorMaster/saveUpdateDeleteEmployee',
 				method : 'POST',
 				data : formData,
 				async : false,

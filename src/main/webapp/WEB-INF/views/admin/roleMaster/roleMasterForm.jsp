@@ -633,7 +633,7 @@
 			console.log('formData::',formData);
 
 			$.ajax({
-				url : '/app/admin/roleMaster/saveUpdateDeleteRole',
+				url : '${pageContext.request.contextPath }/app/admin/roleMaster/saveUpdateDeleteRole',
 				method : 'POST',
 				data : formData,
 				async : false,

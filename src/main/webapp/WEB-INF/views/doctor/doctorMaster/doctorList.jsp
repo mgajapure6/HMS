@@ -142,7 +142,7 @@
 		</div>
 		<!-- contact-content -->
 	</div>
-	<script src="/assets/js/dashforge.contacts.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.contacts.js"></script>
 	<script type="text/javascript">
 	
 		setTimeout(function(){
@@ -157,7 +157,7 @@
 			$('.doctor-detail-main-div').addClass('hide');
 			var doctorid = $(ob).attr('data-doctorid');
 			$.ajax({
-				  url : "/app/doctor/doctorMaster/doctorMasterDetail",
+				  url : "${pageContext.request.contextPath }/app/doctor/doctorMaster/doctorMasterDetail",
 				  async : true,
 				  data : {
 					  'doctorid' : doctorid
@@ -193,7 +193,7 @@
 			$('.footer').addClass('hide');
 			var doctorid = $(btnObj).attr('data-doctorid');
 			$.ajax({
-				  url : "/app/doctor/doctorMaster/doctorMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/doctor/doctorMaster/doctorMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

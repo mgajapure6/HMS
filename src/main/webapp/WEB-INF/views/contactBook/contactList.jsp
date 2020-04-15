@@ -228,7 +228,7 @@
 		</div>
 		<!-- contact-content -->
 	</div>
-	<script src="/assets/js/dashforge.contacts.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dashforge.contacts.js"></script>
 	<script type="text/javascript">
 	
 		setTimeout(function(){
@@ -243,7 +243,7 @@
 			$('.contact-detail-main-div').addClass('hide');
 			var contactid = $(ob).attr('data-contactid');
 			$.ajax({
-				  url : "/app/contactBook/contactDetail",
+				  url : "${pageContext.request.contextPath }/app/contactBook/contactDetail",
 				  async : true,
 				  data : {
 					  'contactid' : contactid
@@ -279,7 +279,7 @@
 			$('.footer').addClass('hide');
 			var contactid = $(btnObj).attr('data-contactid');
 			$.ajax({
-				  url : "/app/contactBook/contactForm",
+				  url : "${pageContext.request.contextPath }/app/contactBook/contactForm",
 				  async : true,
 				  data : {
 					  'flag' : flag,
@@ -307,7 +307,7 @@
 		function removeFavorite(ob){
 			var contactid = $(ob).attr('data-contactid');
 			$.ajax({
-				  url : "/app/contactBook/removeFavorite",
+				  url : "${pageContext.request.contextPath }/app/contactBook/removeFavorite",
 				  async : true,
 				  data : {
 					  'contactid' : contactid
@@ -326,7 +326,7 @@
 		function makeFavorite(ob){
 			var contactid = $(ob).attr('data-contactid');
 			$.ajax({
-				  url : "/app/contactBook/makeFavorite",
+				  url : "${pageContext.request.contextPath }/app/contactBook/makeFavorite",
 				  async : true,
 				  data : {
 					  'contactid' : contactid

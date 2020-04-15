@@ -250,7 +250,7 @@
 		}
 		
 		$.ajax({
-			url : '/app/inventory/itemServiceMaster/saveUpdateDeleteItem',
+			url : '${pageContext.request.contextPath }/app/inventory/itemServiceMaster/saveUpdateDeleteItem',
 			method : 'POST',
 			data : formData,
 			async : false,

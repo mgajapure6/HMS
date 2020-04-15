@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/dashforge.dashboard.css">
 </head>
 <body>
 	<div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
@@ -646,13 +646,13 @@
 		</div>
 		<!-- col -->
 	</div>
-	<script src="lib/jquery.flot/jquery.flot.js"></script>
-	<script src="lib/jquery.flot/jquery.flot.stack.js"></script>
-	<script src="lib/jquery.flot/jquery.flot.resize.js"></script>
-	<script src="lib/flot.curvedlines/curvedLines.js"></script>
-	<script src="lib/peity/jquery.peity.min.js"></script>
-	<script src="lib/chart.js/Chart.bundle.min.js"></script>
-	<script src="assets/horizontal/js/dashforge.sampledata.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery.flot/jquery.flot.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery.flot/jquery.flot.stack.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/jquery.flot/jquery.flot.resize.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/flot.curvedlines/curvedLines.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/peity/jquery.peity.min.js"></script>
+	<script src="${pageContext.request.contextPath }/lib/chart.js/Chart.bundle.min.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/horizontal/js/dashforge.sampledata.js"></script>
 	<script>
       $(function(){
         'use strict'

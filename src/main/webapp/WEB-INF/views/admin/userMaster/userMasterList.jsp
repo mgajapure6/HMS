@@ -93,7 +93,7 @@
 			$('.footer').addClass('hide');
 			var userid = $(btnObj).attr('data-userid');
 			$.ajax({
-				url : "/app/admin/userMaster/userMasterFrom",
+				url : "${pageContext.request.contextPath }/app/admin/userMaster/userMasterFrom",
 				async : true,
 				data : {
 					'flag' : flag,

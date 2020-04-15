@@ -14,7 +14,7 @@
 	border: none;
 }
 </style>
-<link href="/assets/css/avatarSquare.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath }/assets/css/avatarSquare.css" rel="stylesheet">
 <div class="contact-content">
 	<div class="contact-content-header">
 		<nav class="nav">
@@ -60,7 +60,7 @@
 									</button> -->
 									<input type='file' class="hide" id="avatarImageUpload" accept=".png, .jpg, .jpeg" />
 									<div class="avatar-preview">
-										<div id="avatarImagePreview" style="background-image: url(/img/avatar.png);"></div>
+										<div id="avatarImagePreview" style="background-image: url(${pageContext.request.contextPath }/img/avatar.png);"></div>
 										<%-- <c:choose>
 									<c:when test="${loan.customer.imageString()==''}">
 										<div id="avatarImagePreview" style="background-image: url(img/avatar.png);"></div>
@@ -240,9 +240,9 @@
 		$('#informationTab').find('.avalue.'+key).text(doctorJsonObj[key]);
 	});
 	if(doctorJsonObj.doctGender=='M'){
-		$('#avatarImagePreview').css('background-image','url(/img/avatar/doctor-m.png)');
+		$('#avatarImagePreview').css('background-image','url(${pageContext.request.contextPath }/img/avatar/doctor-m.png)');
 	}else{
-		$('#avatarImagePreview').css('background-image','url(/img/avatar/doctor-f.png)');
+		$('#avatarImagePreview').css('background-image','url(${pageContext.request.contextPath }/img/avatar/doctor-f.png)');
 	}
 
 	function loadDoctorFormEdit(btnObj) {
@@ -251,7 +251,7 @@
 		$('.footer').addClass('hide');
 		var doctorid = $(btnObj).attr('data-doctorid');
 		$.ajax({
-			url : "/app/doctor/doctorMaster/doctorForm",
+			url : "${pageContext.request.contextPath }/app/doctor/doctorMaster/doctorForm",
 			async : true,
 			data : {
 				'flag' : 'E',

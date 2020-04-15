@@ -125,7 +125,7 @@
 	  }
 	  
 	  $.ajax({
-	    url : '/app/setting/roiMaster/saveUpdateDeleteROI',
+	    url : '${pageContext.request.contextPath }/app/setting/roiMaster/saveUpdateDeleteROI',
 	    method : 'POST',
 	    data : formData,
 	    async : false,

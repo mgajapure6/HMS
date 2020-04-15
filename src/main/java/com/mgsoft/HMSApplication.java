@@ -23,6 +23,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.util.ResourceUtils;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -52,6 +53,7 @@ import com.mgsoft.module.setting.repositories.StateMasterRepository;
 import com.mgsoft.module.setting.repositories.TaxRepository;
 
 @SpringBootApplication
+@EnableWebMvc
 @EnableConfigurationProperties
 @EntityScan(basePackages = { "com.mgsoft" })
 public class HMSApplication extends SpringBootServletInitializer {
@@ -105,9 +107,9 @@ public class HMSApplication extends SpringBootServletInitializer {
 	@Bean
 	InitializingBean sendDatabase() {
 		return () -> {
-			File f1 = new File(context.getRealPath("h2db/invoicingDb.mv.db"));
+			File f1 = new File(context.getRealPath("h2db/hmsDb.mv.db"));
 			if(f1.exists()) {
-			    Path filePath = Paths.get(context.getRealPath("h2db/invoicingDb.mv.db"));
+			    Path filePath = Paths.get(context.getRealPath("h2db/hmsDb.mv.db"));
 			    Files.delete(filePath);
 			    //f1.delete();
 			}

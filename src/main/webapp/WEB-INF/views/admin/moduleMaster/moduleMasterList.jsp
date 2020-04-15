@@ -87,7 +87,7 @@
 			$('.footer').addClass('hide');
 			var moduleid = $(btnObj).attr('data-moduleid');
 			$.ajax({
-				  url : "/app/admin/moduleMaster/moduleMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/admin/moduleMaster/moduleMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

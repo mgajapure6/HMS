@@ -151,7 +151,7 @@
 		formData["testGroupId"] = testGroupId;
 
 	    $.ajax({
-	        url : '/app/diagnostic/testGroup/saveUpdateDeleteTestGroup',
+	        url : '${pageContext.request.contextPath }/app/diagnostic/testGroup/saveUpdateDeleteTestGroup',
 	        method : 'POST',
 	        data : formData,
 	        async : false,

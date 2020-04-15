@@ -295,7 +295,7 @@
 			formData["contactid"] = contactId;
 
 			$.ajax({
-				url : '/app/contactBook/saveUpdateDeleteContact',
+				url : '${pageContext.request.contextPath }/app/contactBook/saveUpdateDeleteContact',
 				method : 'POST',
 				data : formData,
 				async : false,

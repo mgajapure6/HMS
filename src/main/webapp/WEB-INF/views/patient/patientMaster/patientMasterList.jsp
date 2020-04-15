@@ -83,7 +83,7 @@
 			$('.footer').addClass('hide');
 			var patientid = $(btnObj).attr('data-patientid');
 			$.ajax({
-				  url : "/app/patient/patientMaster/patientMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/patient/patientMaster/patientMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

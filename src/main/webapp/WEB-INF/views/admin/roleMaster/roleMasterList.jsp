@@ -87,7 +87,7 @@
 			$('.footer').addClass('hide');
 			var roleid = $(btnObj).attr('data-roleid');
 			$.ajax({
-				url : "/app/admin/roleMaster/roleMasterFrom",
+				url : "${pageContext.request.contextPath }/app/admin/roleMaster/roleMasterFrom",
 				async : true,
 				data : {
 					'flag' : flag,

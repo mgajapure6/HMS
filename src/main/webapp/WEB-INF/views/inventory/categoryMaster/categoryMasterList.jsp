@@ -87,7 +87,7 @@
 			$('.footer').addClass('hide');
 			var categoryid = $(btnObj).attr('data-categoryid');
 			$.ajax({
-				  url : "/app/inventory/categoryMaster/categoryMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/inventory/categoryMaster/categoryMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

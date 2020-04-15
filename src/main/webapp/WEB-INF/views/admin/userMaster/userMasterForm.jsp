@@ -169,7 +169,7 @@
 			formData["userId"] = userId;
 
 			$.ajax({
-				url : '/app/admin/userMaster/saveUpdateDeleteUser',
+				url : '${pageContext.request.contextPath }/app/admin/userMaster/saveUpdateDeleteUser',
 				method : 'POST',
 				data : formData,
 				async : false,

@@ -83,7 +83,7 @@
 			$('.footer').addClass('hide');
 			var testid = $(btnObj).attr('data-testid');
 			$.ajax({
-				  url : "/app/diagnostic/testMaster/testMasterFrom",
+				  url : "${pageContext.request.contextPath }/app/diagnostic/testMaster/testMasterFrom",
 				  async : true,
 				  data : {
 					  'flag' : flag,

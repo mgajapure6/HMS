@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="assets/css/dual-table.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/dual-table.css">
 <style type="text/css">
 .alert {
 	margin-top: 10px;
@@ -191,7 +191,7 @@
 		</div>
 		<!-- table-responsive -->
 	</div>
-	<script src="assets/js/dual-table.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/dual-table.js"></script>
 	<script type="text/javascript">
 	
 		$('.listToFormBtn').on('click',function(){
