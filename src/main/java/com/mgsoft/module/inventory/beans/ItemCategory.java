@@ -2,11 +2,12 @@ package com.mgsoft.module.inventory.beans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,48 +29,60 @@ public class ItemCategory implements Serializable {
 	@Column
 	private String parentCategoryId;
 	@Column
-	private String desc;
+	private String catDesc;
 	@Column
 	private String status;
-	
-	@OneToMany(cascade = {CascadeType.ALL})
-	@JoinTable(name="itemCategory_invItem", joinColumns = {@JoinColumn(name="itemCategory_id")}, inverseJoinColumns = {@JoinColumn(name="invItem_id")})
-	private List<InvItem> invItems = new ArrayList<>();
-	
+
+	@OneToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
+	@JoinTable(name = "category_item", joinColumns = { @JoinColumn(name = "category_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "item_id") })
+	private Collection<InvItem> invItems = new ArrayList<>();
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getCategoryName() {
 		return categoryName;
 	}
+
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
+
 	public String getParentCategoryId() {
 		return parentCategoryId;
 	}
+
 	public void setParentCategoryId(String parentCategoryId) {
 		this.parentCategoryId = parentCategoryId;
 	}
-	public String getDesc() {
-		return desc;
+
+	public String getCatDesc() {
+		return catDesc;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+
+	public void setCatDesc(String catDesc) {
+		this.catDesc = catDesc;
 	}
+
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public List<InvItem> getInvItems() {
+
+	public Collection<InvItem> getInvItems() {
 		return invItems;
 	}
-	public void setInvItems(List<InvItem> invItems) {
+
+	public void setInvItems(Collection<InvItem> invItems) {
 		this.invItems = invItems;
 	}
 }

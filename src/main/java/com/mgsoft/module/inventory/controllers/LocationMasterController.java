@@ -71,8 +71,8 @@ public class LocationMasterController {
 		loc.setState(state);
 		loc.setPincode(pincode);
 		loc.setStatus(status);
-		loc.setDesc(desc);
-		loc.setInvItems(new ArrayList<>());
+		loc.setLocDesc(desc);
+		//loc.setInvItems(new ArrayList<>());
 		if(flag.equals("D")) {
 			locationRepository.delete(loc);
 			res.put("status","success");

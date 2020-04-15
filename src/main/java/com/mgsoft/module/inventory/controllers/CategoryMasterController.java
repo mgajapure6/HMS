@@ -62,7 +62,7 @@ public class CategoryMasterController {
 		itemCategory.setCategoryName(categoryName);
 		itemCategory.setParentCategoryId(null);
 		itemCategory.setStatus(statusSelect);
-		itemCategory.setDesc(desc);
+		itemCategory.setCatDesc(desc);
 		itemCategory.setInvItems(new ArrayList<>());
 		if(flag.equals("D")) {
 			itemCategoryRepository.delete(itemCategory);
