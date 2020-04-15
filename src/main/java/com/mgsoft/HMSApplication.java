@@ -283,73 +283,73 @@ public class HMSApplication extends SpringBootServletInitializer {
 			customer.setEmail("mgg@gmail.com");
 			customer = partyMasterRepository.save(customer);
 			
-			ItemCategory category1 = new ItemCategory();
-			ItemCategory category2 = new ItemCategory();
-			
-			InvItem mobile = new InvItem();
-			mobile.setBrand("Samsung");
-			mobile.setCostPrice("13500");
-			mobile.setExpiryDate(null);
-			mobile.setHsnDesc("Mobile and accessories");
-			mobile.setHsnNo("4324");
-			mobile.setItemCategory(category1);
-			mobile.setItemName("Samsung Note 10 Plus");
-			mobile.setLowStockQty("2");
-			mobile.setMainQty("10");
-			mobile.setMeasurementUnit("Nos");
-			mobile.setSellingPrice("15000");
-			mobile.setStatus("Active");
-			
-			
-			InvItem shirt = new InvItem();
-			shirt.setBrand("Indigo Nation");
-			shirt.setCostPrice("1500");
-			shirt.setExpiryDate(null);
-			shirt.setHsnDesc("Clothing");
-			shirt.setHsnNo("8799");
-			shirt.setItemCategory(category2);
-			shirt.setItemName("Mens Shirt L (40) Indigo Nation");
-			shirt.setLowStockQty("2");
-			shirt.setMainQty("20");
-			shirt.setMeasurementUnit("Nos");
-			shirt.setSellingPrice("2000");
-			shirt.setStatus("Active");
-			
-			
-			List<InvItem> invItems1 = new ArrayList<>();
-			invItems1.add(mobile);
-			category1.setCategoryName("Electronics");
-			category1.setDesc("Electronics and appliances");
-			category1.setParentCategoryId(null);
-			category1.setInvItems(invItems1);
-			category1.setStatus("Active");
-			
-			List<InvItem> invItems2 = new ArrayList<>();
-			invItems2.add(shirt);
-			category2.setCategoryName("Clothing");
-			category2.setDesc("Mens Womens Clothings");
-			category2.setParentCategoryId(null);
-			category2.setInvItems(invItems2);
-			category2.setStatus("Active");
-			
-			categoryRepository.save(category1);
-			categoryRepository.save(category2);
-			
-			InvItem bottal = new InvItem();
-			bottal.setBrand("H2");
-			bottal.setCostPrice("30");
-			bottal.setExpiryDate(null);
-			bottal.setHsnDesc("Water Bottal");
-			bottal.setHsnNo("4894");
-			bottal.setItemCategory(null);
-			bottal.setItemName("H2O 1 Litter Water Bottal");
-			bottal.setLowStockQty("2");
-			bottal.setMainQty("100");
-			bottal.setMeasurementUnit("Nos");
-			bottal.setSellingPrice("45");
-			bottal.setStatus("Active");
-			
-			invItemRepository.save(bottal);
+//			ItemCategory category1 = new ItemCategory();
+//			ItemCategory category2 = new ItemCategory();
+//			
+//			InvItem mobile = new InvItem();
+//			mobile.setBrand("Samsung");
+//			mobile.setCostPrice("13500");
+//			mobile.setExpiryDate(null);
+//			mobile.setHsnDesc("Mobile and accessories");
+//			mobile.setHsnNo("4324");
+//			mobile.setItemCategory(category1);
+//			mobile.setItemName("Samsung Note 10 Plus");
+//			mobile.setLowStockQty("2");
+//			mobile.setMainQty("10");
+//			mobile.setMeasurementUnit("Nos");
+//			mobile.setSellingPrice("15000");
+//			mobile.setStatus("Active");
+//			
+//			
+//			InvItem shirt = new InvItem();
+//			shirt.setBrand("Indigo Nation");
+//			shirt.setCostPrice("1500");
+//			shirt.setExpiryDate(null);
+//			shirt.setHsnDesc("Clothing");
+//			shirt.setHsnNo("8799");
+//			shirt.setItemCategory(category2);
+//			shirt.setItemName("Mens Shirt L (40) Indigo Nation");
+//			shirt.setLowStockQty("2");
+//			shirt.setMainQty("20");
+//			shirt.setMeasurementUnit("Nos");
+//			shirt.setSellingPrice("2000");
+//			shirt.setStatus("Active");
+//			
+//			
+//			List<InvItem> invItems1 = new ArrayList<>();
+//			invItems1.add(mobile);
+//			category1.setCategoryName("Electronics");
+//			category1.setDesc("Electronics and appliances");
+//			category1.setParentCategoryId(null);
+//			category1.setInvItems(invItems1);
+//			category1.setStatus("Active");
+//			
+//			List<InvItem> invItems2 = new ArrayList<>();
+//			invItems2.add(shirt);
+//			category2.setCategoryName("Clothing");
+//			category2.setDesc("Mens Womens Clothings");
+//			category2.setParentCategoryId(null);
+//			category2.setInvItems(invItems2);
+//			category2.setStatus("Active");
+//			
+//			categoryRepository.save(category1);
+//			categoryRepository.save(category2);
+//			
+//			InvItem bottal = new InvItem();
+//			bottal.setBrand("H2");
+//			bottal.setCostPrice("30");
+//			bottal.setExpiryDate(null);
+//			bottal.setHsnDesc("Water Bottal");
+//			bottal.setHsnNo("4894");
+//			bottal.setItemCategory(null);
+//			bottal.setItemName("H2O 1 Litter Water Bottal");
+//			bottal.setLowStockQty("2");
+//			bottal.setMainQty("100");
+//			bottal.setMeasurementUnit("Nos");
+//			bottal.setSellingPrice("45");
+//			bottal.setStatus("Active");
+//			
+//			invItemRepository.save(bottal);
 			
 			JsonArray stateArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/state_list.json"))).getAsJsonArray();
 			for (int i = 0; i < stateArrays.size(); i++) {
