@@ -107,12 +107,12 @@ public class HMSApplication extends SpringBootServletInitializer {
 	@Bean
 	InitializingBean sendDatabase() {
 		return () -> {
-			File f1 = new File(context.getRealPath("h2db/hmsDb.mv.db"));
-			if(f1.exists()) {
-			    Path filePath = Paths.get(context.getRealPath("h2db/hmsDb.mv.db"));
-			    Files.delete(filePath);
-			    //f1.delete();
-			}
+//			File f1 = new File(context.getRealPath("h2db/hmsDb.mv.db"));
+//			if(f1.exists()) {
+//			    Path filePath = Paths.get(context.getRealPath("h2db/hmsDb.mv.db"));
+//			    Files.delete(filePath);
+//			    //f1.delete();
+//			}
 			
 			JsonParser p = new JsonParser();
 			JsonArray moArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/modules.json"))).getAsJsonArray();
