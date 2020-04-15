@@ -46,11 +46,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-tomcat</artifactId>
-		    <scope>provided</scope>
-		</dependency>
 
 		<!-- JSTL for JSP -->
 		<dependency>
@@ -63,14 +58,17 @@
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-core</artifactId>
+			<version>9.0.30</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>9.0.30</version>
 		</dependency>
 	    <dependency>
 	        <groupId>org.apache.tomcat</groupId>
 	        <artifactId>tomcat-jsp-api</artifactId>
+	        <version>9.0.30</version>
 	    </dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
@@ -138,6 +136,26 @@
 				<testFailureIgnore>true</testFailureIgnore>
 			</configuration>
 		</plugin>
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.heroku</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>9.0.30.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 	</plugins>
 </build>
 
