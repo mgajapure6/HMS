@@ -53,7 +53,7 @@ import com.mgsoft.module.setting.repositories.StateMasterRepository;
 import com.mgsoft.module.setting.repositories.TaxRepository;
 
 @SpringBootApplication
-@EnableWebMvc
+//@EnableWebMvc
 @EnableConfigurationProperties
 @EntityScan(basePackages = { "com.mgsoft" })
 public class HMSApplication extends SpringBootServletInitializer {

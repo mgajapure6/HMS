@@ -30,7 +30,6 @@ public class SessionFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse) res;
 		String url = request.getServletPath();
 		System.out.println("url::"+url);
-		System.out.println("is session null::"+request.getSession().getAttribute("loggedUser")==null);
 		
 		response.setHeader("pragma", "no-cache");              
         response.setHeader("Cache-control", "no-cache, no-store, must-revalidate");             
