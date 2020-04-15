@@ -102,11 +102,11 @@
 			<artifactId>commons-codec</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>oracle</groupId>
 			<artifactId>oracle</artifactId>
 			<version>12.1.0</version>
-		</dependency>
+		</dependency> -->
 
 
 	</dependencies>
