@@ -1,0 +1,445 @@
+[
+	{
+		"module_name": "Dashboard",
+		"isLink": false,
+		"srNo": 1,
+		"module_icon": "package",
+		"classes": "startModule dashboardModule",
+		"menu": [
+			{
+				"menu_name": "Sales Dashboard",
+				"isLink": true,
+				"classes": "startLink",
+				"url": "app/dashboard/s"
+			}
+		]
+	},
+	{
+		"module_name": "Contact Book",
+		"isLink": false,
+		"srNo": 2,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Contact List",
+				"isLink": true,
+				"url": "app/contactBook"
+			}
+		]
+	},
+	{
+		"module_name": "Admin",
+		"isLink": false,
+		"srNo": 3,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Entity Master",
+				"isLink": true,
+				"status": "E",
+				"url": "app/admin/entityMaster"
+			},
+			{
+				"menu_name": "Module Master",
+				"isLink": true,
+				"url": "app/admin/moduleMaster"
+			},
+			{
+				"menu_name": "Menu Master",
+				"isLink": true,
+				"url": "app/admin/menuMaster"
+			},
+			{
+				"menu_name": "Role Master",
+				"isLink": true,
+				"url": "app/admin/roleMaster"
+			},
+			{
+				"menu_name": "User Master",
+				"isLink": true,
+				"url": "app/admin/userMaster"
+			},
+			{
+				"menu_name": "Branch Master",
+				"isLink": true,
+				"url": "app/admin/branchMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Accounting",
+		"isLink": false,
+		"srNo": 17,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Account Master",
+				"isLink": true,
+				"url": "app/accounting/accountMaster"
+			},
+			{
+				"menu_name": "Journal Master",
+				"isLink": true,
+				"url": "app/accounting/journalMaster"
+			},
+			{
+				"menu_name": "Ledger Master",
+				"isLink": true,
+				"url": "app/accounting/ledgerMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Inventory",
+		"isLink": false,
+		"srNo": 22,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Category Master",
+				"isLink": true,
+				"url": "app/inventory/categoryMaster"
+			},
+			{
+				"menu_name": "Location Master",
+				"isLink": true,
+				"url": "app/inventory/locationMaster"
+			},
+			{
+				"menu_name": "Attribute Master",
+				"isLink": true,
+				"url": "app/inventory/attributeMaster"
+			},
+			{
+				"menu_name": "Item / Service Master",
+				"isLink": true,
+				"url": "app/inventory/itemServiceMaster"
+			},
+			{
+				"menu_name": "Stock Adjustment",
+				"isLink": true,
+				"url": "app/inventory/stockAdjustment"
+			}
+		]
+	},
+	{
+		"module_name": "Settings",
+		"isLink": false,
+		"srNo": 4,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Hospital Master",
+				"isLink": true,
+				"url": "app/setting/hospitalMaster"
+			},
+			{
+				"menu_name": "Department Master",
+				"isLink": true,
+				"url": "app/setting/departmentMaster"
+			},
+			{
+				"menu_name": "Symptoms Master",
+				"isLink": true,
+				"url": "app/setting/symptomsMaster"
+			},
+			{
+				"menu_name": "Diseases Master",
+				"isLink": true,
+				"url": "app/setting/diseasesMaster"
+			},
+			{
+				"menu_name": "Ambulance Master",
+				"isLink": true,
+				"url": "app/setting/ambulanceMaster"
+			},
+			{
+				"menu_name": "Tax Master",
+				"isLink": true,
+				"url": "app/setting/taxMaster"
+			},
+			{
+				"menu_name": "Discount Master",
+				"isLink": true,
+				"url": "app/setting/discountMaster"
+			},
+			{
+				"menu_name": "Other Settings",
+				"isLink": true,
+				"url": "app/setting/otherSettings"
+			}
+		]
+	},
+	{
+		"module_name": "Party",
+		"isLink": false,
+		"srNo": 23,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Party Master",
+				"isLink": true,
+				"url": "app/party/partyMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Aappointment",
+		"isLink": false,
+		"srNo": 5,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Appointment Master",
+				"isLink": true,
+				"url": "app/appointment/appointmentMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Patient",
+		"isLink": false,
+		"srNo": 6,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Patient Master",
+				"isLink": true,
+				"url": "app/patient/patientMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Doctor",
+		"isLink": false,
+		"srNo": 7,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Doctor Master",
+				"isLink": true,
+				"url": "app/doctor/doctorMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Billing",
+		"isLink": false,
+		"srNo": 18,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Billing Master",
+				"isLink": true,
+				"url": "app/billing/billingMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Blood Bank",
+		"isLink": false,
+		"srNo": 8,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Blood Group Master",
+				"isLink": true,
+				"url": "appdBank/bloodGroupMaster"
+			},
+			{
+				"menu_name": "Blood Bank Status",
+				"isLink": true,
+				"url": "app/bloodBank/bloodBankStatus"
+			},
+			{
+				"menu_name": "Blood Issue Detail",
+				"isLink": true,
+				"url": "app/bloodBank/bloodIssueDetail"
+			},
+			{
+				"menu_name": "Blood Donor Detail",
+				"isLink": true,
+				"url": "app/bloodBank/bloodDonorDetail"
+			}
+		]
+	},
+	{
+		"module_name": "Lab",
+		"isLink": false,
+		"srNo": 9,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Lab Master",
+				"isLink": true,
+				"url": "app/lab/labMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Ward / Room",
+		"isLink": false,
+		"srNo": 10,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Room Master",
+				"isLink": true,
+				"url": "app/room/roomMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Payroll",
+		"isLink": false,
+		"srNo": 19,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Payroll Master",
+				"isLink": true,
+				"url": "app/payroll/payrollMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Employee",
+		"isLink": false,
+		"srNo": 20,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Employee Master",
+				"isLink": true,
+				"url": "app/employee/employeeMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Donation",
+		"isLink": false,
+		"srNo": 11,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Organ Donation Master",
+				"isLink": true,
+				"url": "app/donation/organDonationMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Login",
+		"isLink": false,
+		"srNo": 24,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Login",
+				"isLink": true,
+				"url": "app/login"
+			}
+		]
+	},
+	{
+		"module_name": "Medical Store",
+		"isLink": false,
+		"srNo": 12,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Store Master",
+				"isLink": true,
+				"url": "app/medicalStore/storeMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Procurement",
+		"isLink": false,
+		"srNo": 13,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Procurement Master",
+				"isLink": true,
+				"url": "app/procurement/procurementMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Asset Management",
+		"isLink": false,
+		"srNo": 21,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Asset Master",
+				"isLink": true,
+				"url": "app/assetManagement/assetMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Pharmacy",
+		"isLink": false,
+		"srNo": 14,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Pharmacy Master",
+				"isLink": true,
+				"url": "app/pharmacy/pharmacyMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Diagnostic",
+		"isLink": false,
+		"srNo": 15,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Test Group",
+				"isLink": true,
+				"url": "app/diagnostic/testGroup"
+			},
+			{
+				"menu_name": "Test Master",
+				"isLink": true,
+				"url": "app/diagnostic/testMaster"
+			}
+		]
+	},
+	{
+		"module_name": "Operation Theatre",
+		"isLink": false,
+		"srNo": 16,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Operation Master",
+				"isLink": true,
+				"url": "app/ot/operationMaster"
+			},
+			{
+				"menu_name": "OT Detail",
+				"isLink": true,
+				"url": "app/ot/otDetail"
+			}
+		]
+	},
+	{
+		"module_name": "Reports",
+		"isLink": false,
+		"srNo": 25,
+		"module_icon": "package",
+		"menu": [
+			{
+				"menu_name": "Reports List",
+				"isLink": true,
+				"url": "app/contactBook"
+			}
+		]
+	}
+]

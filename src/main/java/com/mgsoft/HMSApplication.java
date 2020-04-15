@@ -115,7 +115,7 @@ public class HMSApplication extends SpringBootServletInitializer {
 //			}
 			
 			JsonParser p = new JsonParser();
-			JsonArray moArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/modules.json"))).getAsJsonArray();
+			JsonArray moArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:WEB-INF/modules.json"))).getAsJsonArray();
 			for (int i = 0; i < moArrays.size(); i++) {
 				JsonObject module = moArrays.get(i).getAsJsonObject();
 				Module m = new Module();
@@ -351,7 +351,7 @@ public class HMSApplication extends SpringBootServletInitializer {
 //			
 //			invItemRepository.save(bottal);
 			
-			JsonArray stateArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:static/json_files/state_list.json"))).getAsJsonArray();
+			JsonArray stateArrays = p.parse(new FileReader(ResourceUtils.getFile("classpath:WEB-INF/state_list.json"))).getAsJsonArray();
 			for (int i = 0; i < stateArrays.size(); i++) {
 				JsonObject state = stateArrays.get(i).getAsJsonObject();
 				StateMaster sm = new StateMaster();
