@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/hms-0.0.1-SNAPSHOT.war -Dserver.port=$PORT $JAR_OPTS
+web: java -jar target/hms-0.0.1-SNAPSHOT.war
