@@ -102,7 +102,7 @@ public class HMSApplication extends SpringBootServletInitializer {
 	}
 
 
-	//@Bean
+	@Bean
 	InitializingBean sendDatabase() {
 		return () -> {
 			File f1 = new File(context.getRealPath("h2db/invoicingDb.mv.db"));
