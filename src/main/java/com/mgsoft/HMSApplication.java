@@ -37,6 +37,8 @@ import com.mgsoft.module.admin.repository.MenuRepository;
 import com.mgsoft.module.admin.repository.ModuleRepository;
 import com.mgsoft.module.admin.repository.RoleMasterRepository;
 import com.mgsoft.module.admin.repository.UserRepository;
+import com.mgsoft.module.appointment.beans.AppointmentStatus;
+import com.mgsoft.module.appointment.repositories.AppointmentStatusRepository;
 import com.mgsoft.module.contactBook.beans.ContactBook;
 import com.mgsoft.module.contactBook.repositories.ContactBookRepository;
 import com.mgsoft.module.customer.beans.PartyMaster;
@@ -94,6 +96,9 @@ public class HMSApplication extends SpringBootServletInitializer {
 	@Autowired
 	ServletContext context;
 
+	@Autowired
+	AppointmentStatusRepository appointmentStatusRepository;
+	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(HMSApplication.class);
@@ -285,6 +290,15 @@ public class HMSApplication extends SpringBootServletInitializer {
 			customer.setName("Mayur G Gajapure");
 			customer.setEmail("mgg@gmail.com");
 			customer = partyMasterRepository.save(customer);
+			
+			String[] statusName = {"In","Out","Present","Absent","Canceld","Bill Paid","Bill Unpaid"};
+			for(int i=0;i<statusName.length;i++)
+			{
+			AppointmentStatus appointmentStatus = new AppointmentStatus();
+			appointmentStatus.setName(statusName[i]);
+			appointmentStatus.setStatus("E");
+			appointmentStatusRepository.save(appointmentStatus);
+			}
 			
 //			ItemCategory category1 = new ItemCategory();
 //			ItemCategory category2 = new ItemCategory();
